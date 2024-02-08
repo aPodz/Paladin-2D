@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] Rigidbody2D playerRigidBody;
-
+    [SerializeField] Animator playerAnimator;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +20,16 @@ public class Player : MonoBehaviour
         float verticalMovement = Input.GetAxisRaw("Vertical");
 
         playerRigidBody.velocity = new Vector2 (horizontalMovement, verticalMovement);
-    }
+
+        playerAnimator.SetFloat("movementX", playerRigidBody.velocity.x);
+        playerAnimator.SetFloat("movementY", playerRigidBody.velocity.y);
+
+        if (horizontalMovement == 1 || horizontalMovement == -1 || verticalMovement == 1 || verticalMovement == -1)
+        {
+            playerAnimator.SetFloat("lastX", horizontalMovement);
+            playerAnimator.SetFloat("lastY", verticalMovement); 
+        }
+
+        
+    }   
 }
