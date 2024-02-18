@@ -133,11 +133,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6989206773947584, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.22
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: 6989206773947584, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.75
+      value: -17.18
       objectReference: {fileID: 0}
     - target: {fileID: 6989206773947584, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -176,8 +176,12 @@ PrefabInstance:
       value: AreaExit
       objectReference: {fileID: 0}
     - target: {fileID: 5544541734810951126, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
-      propertyPath: sceneToLoad
-      value: Village
+      propertyPath: transitionArea
+      value: Forest - 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8509763245716718709, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
+      propertyPath: transitionAreaName
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
