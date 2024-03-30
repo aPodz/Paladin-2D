@@ -762,49 +762,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2949610149976425387, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
-      propertyPath: transitionAreaName
-      value: Village - 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4455049120505306389, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: m_Name
       value: AreaExit
       objectReference: {fileID: 0}
     - target: {fileID: 5544541734810951126, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
-      propertyPath: sceneToLoad
-      value: Forest
+      propertyPath: areaEntry
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5544541734810951126, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: transitionArea
-      value: Village - 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5544541734810951126, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
-      propertyPath: transitionName
       value: Forest - 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6641352421925324980, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.08999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 6641352421925324980, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.69
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170738557100468659, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.19
-      objectReference: {fileID: 0}
     - target: {fileID: 7170738557100468659, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.99
+      value: -2.62
       objectReference: {fileID: 0}
     - target: {fileID: 8509763245716718709, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: transitionAreaName
-      value: 
+      value: Village - 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 2115340561356692862, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}

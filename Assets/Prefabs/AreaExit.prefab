@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 3399102820246048158}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.099999994, y: 1.46, z: -0.17851165}
+  m_LocalPosition: {x: -0.19, y: -1.99, z: -0.17851165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d20090c90183384ca16e7ca23ed4c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionAreaName: Forest - 1
+  transitionAreaName: 
 --- !u!1 &4455049120505306389
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,6 +136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb6795ec0b442484294636c2db4bb3af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Village
-  transitionArea: Forest - 1
+  sceneToLoad: Forest
+  transitionArea: Village - 1
   areaEntry: {fileID: 8509763245716718709}
