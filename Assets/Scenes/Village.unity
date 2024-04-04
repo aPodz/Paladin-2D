@@ -289,6 +289,7 @@ MonoBehaviour:
   playerAnimator: {fileID: 280018689}
   moveSpeed: 10
   playerTransition: 
+  movementDisabled: 0
 --- !u!95 &280018689
 Animator:
   serializedVersion: 5
@@ -685,8 +686,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
+  - '#Blacksmith'
   - Oy! What ye starin' at?!
   - Oh, new tae the town, ey?
+  - '#Dagon'
   - I'm Dagon, a local blacksmith.
   - Need a weapon? Well ye're in luck!
   - I just finished a sword that could fit someone like you.

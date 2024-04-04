@@ -38,6 +38,7 @@ public class DialogController : MonoBehaviour
                     }
                     else
                     {
+                        SetDialogName();
                         dialogText.text = dialogLines[currentLine];
                     }
                 }
@@ -53,6 +54,8 @@ public class DialogController : MonoBehaviour
     {
         dialogLines = newLines;
         currentLine = 0;
+
+        SetDialogName();
         dialogText.text = dialogLines[currentLine];
         dialogBox.SetActive(true);
         dialogJustStarted = true;
@@ -62,5 +65,15 @@ public class DialogController : MonoBehaviour
     public bool isDialogBoxActive()
     {
         return dialogBox.activeInHierarchy;
+    }
+
+    private void SetDialogName()
+    {
+        if (dialogLines[currentLine].StartsWith("#"))
+        {
+            nameText.text = dialogLines[currentLine].Replace("#", "");
+            currentLine++;
+        }
+
     }
 }
