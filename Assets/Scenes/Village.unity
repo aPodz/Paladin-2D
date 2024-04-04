@@ -561,6 +561,8 @@ GameObject:
   - component: {fileID: 1097410744}
   - component: {fileID: 1097410743}
   - component: {fileID: 1097410745}
+  - component: {fileID: 1097410747}
+  - component: {fileID: 1097410746}
   m_Layer: 0
   m_Name: NPC_Blacksmith
   m_TagString: Untagged
@@ -670,6 +672,69 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.41767406}
   serializedVersion: 2
   m_Radius: 1.2927103
+--- !u!114 &1097410746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097410742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8af05321a73f834f9111764767f0cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines:
+  - Oy! What ye starin' at?!
+  - Oh, new tae the town, ey?
+  - I'm Dagon, a local blacksmith.
+  - Need a weapon? Well ye're in luck!
+  - I just finished a sword that could fit someone like you.
+--- !u!61 &1097410747
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097410742}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.16142845, y: -0.06457138}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.4, y: 6.4}
+    newSize: {x: 6.4, y: 6.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 15.375408, y: 12.211414}
+  m_EdgeRadius: 0
 --- !u!1 &1202217448
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,7 +886,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1203451744
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1180,7 +1245,7 @@ MonoBehaviour:
   - Wow, this village has a dwarf blacksmith!
   - They say dwarfs make the best weapons by far
   - I should go talk to him!
-  currentLine: 1
+  currentLine: 0
 --- !u!1001 &2495675796481369128
 PrefabInstance:
   m_ObjectHideFlags: 0
