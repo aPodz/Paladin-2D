@@ -25,7 +25,7 @@ public class DialogController : MonoBehaviour
     void Update()
     {
         if (dialogBox.activeInHierarchy)
-        {           
+        {               
             if (Input.GetButtonUp("Fire1"))
             {   
                 if (!dialogJustStarted)
@@ -34,6 +34,7 @@ public class DialogController : MonoBehaviour
                     if (currentLine >= dialogLines.Length)
                     {
                         dialogBox.SetActive(false);
+                        Player.instance.movementDisabled = false;
                     }
                     else
                     {
@@ -45,9 +46,7 @@ public class DialogController : MonoBehaviour
                     dialogJustStarted = false;
                 }
             }
-        }
-        
-        
+        }   
     }
 
     public void ActivateDialog(string[] newLines)
@@ -57,6 +56,7 @@ public class DialogController : MonoBehaviour
         dialogText.text = dialogLines[currentLine];
         dialogBox.SetActive(true);
         dialogJustStarted = true;
+        Player.instance.movementDisabled = true;
     }
 
     public bool isDialogBoxActive()
