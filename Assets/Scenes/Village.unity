@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 280018684}
   - component: {fileID: 280018688}
   - component: {fileID: 280018689}
+  - component: {fileID: 280018690}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -311,6 +312,30 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &280018690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280018683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2995cc8f7c6438f409f2fe03e16eb286, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: Player
+  playerLevel: 1
+  currentXP: 20
+  maxLevel: 20
+  xpPerLevel: 
+  baseLevelXP: 100
+  maxHP: 100
+  currentHP: 0
+  maxEnergy: 100
+  currentEnergy: 0
+  armor: 5
+  strength: 10
 --- !u!1 &929349822
 GameObject:
   m_ObjectHideFlags: 0

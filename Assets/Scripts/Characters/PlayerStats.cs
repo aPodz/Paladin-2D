@@ -9,7 +9,7 @@ public class PlayerStats : MonoBehaviour
 
     [SerializeField] int playerLevel = 1;
     [SerializeField] int currentXP;
-    [SerializeField] int maxLevel = 6;
+    [SerializeField] int maxLevel = 21;
     [SerializeField] int[] xpPerLevel;
     [SerializeField] int baseLevelXP = 100;
 
@@ -37,6 +37,33 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyUp(KeyCode.L)) 
+        {
+            AddXP(100);
+        }
+    }
+
+    public void AddXP(int addedXP)
+    {
+        currentXP += addedXP;
+        if (currentXP > xpPerLevel[playerLevel])
+        {
+            currentXP -= xpPerLevel[playerLevel];
+            playerLevel++;
+
+            if (playerLevel % 2 == 0)
+            {
+                maxHP += 20;
+                strength += 2;
+            }
+            else
+            {
+                maxEnergy += 2;
+            }
+
+            currentHP = maxHP;
+            currentEnergy = maxEnergy;
+
+        }
     }
 }
