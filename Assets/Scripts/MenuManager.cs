@@ -8,6 +8,7 @@ public class MenuManager : MonoBehaviour
 {
 
     [SerializeField] Image imageToFade;
+    [SerializeField] GameObject menu;
     public static MenuManager instance;
 
     // Start is called before the first frame update
@@ -19,11 +20,23 @@ public class MenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape)) 
+        { 
+            if (menu.activeInHierarchy)
+            {
+                menu.SetActive(false);
+            }
+            else
+            {
+                menu.SetActive(true);
+            }
+        }
     }
 
     public void FadeImage()
     {
         imageToFade.GetComponent<Animator>().SetTrigger("Start Fade");
     }
+
+
 }

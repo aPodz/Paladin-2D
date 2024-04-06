@@ -8,7 +8,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] string playerName;
 
     [SerializeField] int playerLevel = 1;
-    [SerializeField] int currentXP;
+    [SerializeField] public int currentXP;
     [SerializeField] int maxLevel = 21;
     [SerializeField] int[] xpPerLevel;
     [SerializeField] int baseLevelXP = 100;
