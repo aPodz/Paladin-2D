@@ -34,7 +34,7 @@ public class DialogController : MonoBehaviour
                     if (currentLine >= dialogLines.Length)
                     {
                         dialogBox.SetActive(false);
-                        Player.instance.movementDisabled = false;
+                        GameManager.instance.dialogBoxOpen = false;
                     }
                     else
                     {
@@ -59,7 +59,7 @@ public class DialogController : MonoBehaviour
         dialogText.text = dialogLines[currentLine];
         dialogBox.SetActive(true);
         dialogJustStarted = true;
-        Player.instance.movementDisabled = true;
+        GameManager.instance.dialogBoxOpen = true;
     }
 
     public bool isDialogBoxActive()
