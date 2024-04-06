@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
             instance = this;
         }
         
-        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
