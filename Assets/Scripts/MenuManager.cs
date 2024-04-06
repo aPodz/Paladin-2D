@@ -52,6 +52,8 @@ public class MenuManager : MonoBehaviour
         {           
             characterPanel[i].SetActive(true);
 
+
+            lvlText[i].text = playerStats[i].playerLevel.ToString();
             nameText[i].text = playerStats[i].playerName;
             hpText[i].text = playerStats[i].currentHP + "/" + playerStats[i].maxHP;
             epText[i].text = playerStats[i].currentEnergy + "/" + playerStats[i].maxEnergy;

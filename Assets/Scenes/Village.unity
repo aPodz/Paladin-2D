@@ -2905,15 +2905,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -8985,15 +8985,15 @@ PrefabInstance:
     - target: {fileID: 1745340436470949061, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
       propertyPath: characterImage.Array.data[0]
       value: 
-      objectReference: {fileID: 987754986}
+      objectReference: {fileID: 0}
     - target: {fileID: 1745340436470949061, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
       propertyPath: characterImage.Array.data[1]
       value: 
-      objectReference: {fileID: 434249655}
+      objectReference: {fileID: 0}
     - target: {fileID: 1745340436470949061, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
       propertyPath: characterImage.Array.data[2]
       value: 
-      objectReference: {fileID: 519755986}
+      objectReference: {fileID: 0}
     - target: {fileID: 1745340436470949061, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
       propertyPath: characterPanel.Array.data[0]
       value: 
