@@ -1,23 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
 
-    [SerializeField] string playerName;
+    public string playerName;
 
-    [SerializeField] int playerLevel = 1;
-    [SerializeField] public int currentXP;
+    public Sprite characterImage;
+    public int playerLevel = 1;
+    public int currentXP;
     [SerializeField] int maxLevel = 21;
-    [SerializeField] int[] xpPerLevel;
+    public int[] xpPerLevel;
     [SerializeField] int baseLevelXP = 100;
 
-    [SerializeField] int maxHP;
-    [SerializeField] int currentHP;
+    public int maxHP;
+    public int currentHP;
 
-    [SerializeField] int maxEnergy;
-    [SerializeField] int currentEnergy;
+    public int maxEnergy;
+    public int currentEnergy;
 
     [SerializeField] int armor;
     [SerializeField] int strength;
@@ -46,7 +48,7 @@ public class PlayerStats : MonoBehaviour
     public void AddXP(int addedXP)
     {
         currentXP += addedXP;
-        if (currentXP > xpPerLevel[playerLevel])
+        if (currentXP >= xpPerLevel[playerLevel])
         {
             currentXP -= xpPerLevel[playerLevel];
             playerLevel++;
