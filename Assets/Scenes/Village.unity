@@ -6427,7 +6427,6 @@ GameObject:
   - component: {fileID: 1097410745}
   - component: {fileID: 1097410747}
   - component: {fileID: 1097410746}
-  - component: {fileID: 1097410748}
   m_Layer: 0
   m_Name: NPC_Blacksmith
   m_TagString: Untagged
@@ -6602,32 +6601,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 15.375408, y: 12.211414}
   m_EdgeRadius: 0
---- !u!114 &1097410748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1097410742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2995cc8f7c6438f409f2fe03e16eb286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerName: 
-  characterImage: {fileID: 21300000, guid: 3ff583b2e5871d74f918484e57ba2c68, type: 3}
-  playerLevel: 1
-  currentXP: 0
-  maxLevel: 21
-  xpPerLevel: 
-  baseLevelXP: 100
-  maxHP: 0
-  currentHP: 0
-  maxEnergy: 0
-  currentEnergy: 0
-  armor: 0
-  strength: 0
-  attackPower: 0
 --- !u!1 &1112404235
 GameObject:
   m_ObjectHideFlags: 0
