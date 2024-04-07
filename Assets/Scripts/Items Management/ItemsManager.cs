@@ -15,6 +15,9 @@ public class ItemsManager : MonoBehaviour
     public int itemEffect;
     
     public int weaponAP, weaponStr, armorDef;
+
+    public bool isStackable;
+    public int amount;
     
     // Start is called before the first frame update
     void Start()
@@ -41,6 +44,6 @@ public class ItemsManager : MonoBehaviour
 
     public void SelfDestruct()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

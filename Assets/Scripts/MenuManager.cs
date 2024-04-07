@@ -27,6 +27,8 @@ public class MenuManager : MonoBehaviour
     [SerializeField] GameObject itemBox;
     [SerializeField] Transform itemBoxParent;
 
+    public TextMeshProUGUI itemName, itemDesc;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -117,6 +119,19 @@ public class MenuManager : MonoBehaviour
 
             Image itemImage = itemSlot.Find("ItemImage").GetComponent<Image>();
             itemImage.sprite = item.itemImage;
+
+            TextMeshProUGUI itemAmountText = itemSlot.Find("Amount").GetComponent<TextMeshProUGUI>();
+
+            if(item.amount > 1)
+            {
+                itemAmountText.text = item.amount.ToString(); 
+            }
+            else
+            {
+                itemAmountText.text = "";
+            }
+
+            itemSlot.GetComponent<ItemButton>().itemOnButton = item;
         }
     }
 
