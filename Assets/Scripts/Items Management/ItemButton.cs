@@ -10,6 +10,10 @@ public class ItemButton : MonoBehaviour
     public void ButtonPress()
     {
         MenuManager.instance.itemName.text = itemOnButton.name; 
-        MenuManager.instance.itemDesc.text = itemOnButton.itemDesc; 
+        MenuManager.instance.itemDesc.text = itemOnButton.itemDesc;
+
+        MenuManager.instance.activeItem = itemOnButton;
     }
+
+
 }

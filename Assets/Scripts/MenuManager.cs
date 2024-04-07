@@ -29,6 +29,8 @@ public class MenuManager : MonoBehaviour
 
     public TextMeshProUGUI itemName, itemDesc;
 
+    public ItemsManager activeItem;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -133,6 +135,12 @@ public class MenuManager : MonoBehaviour
 
             itemSlot.GetComponent<ItemButton>().itemOnButton = item;
         }
+    }
+
+    public void DiscardItem()
+    {
+        Inventory.instance.RemoveItem(activeItem);
+        UpdateInventory();
     }
 
     public void QuitGame()
