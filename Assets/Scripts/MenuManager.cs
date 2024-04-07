@@ -24,6 +24,9 @@ public class MenuManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI statName, statHP, statEP, statArm, statStr, statAP;
     [SerializeField] Image characterStatImage;
 
+    [SerializeField] GameObject itemBox;
+    [SerializeField] Transform itemBoxParent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -99,6 +102,22 @@ public class MenuManager : MonoBehaviour
         characterStatImage.sprite = selectedPlayer.characterImage;
 
         
+    }
+
+    public void UpdateInventory()
+    {
+        foreach(Transform itemSlot in itemBoxParent)
+        {
+            Destroy(itemSlot.gameObject);
+        }
+       
+        foreach(ItemsManager item in Inventory.instance.GetItemList())
+        {
+            RectTransform itemSlot = Instantiate(itemBox, itemBoxParent).GetComponent<RectTransform>();
+
+            Image itemImage = itemSlot.Find("ItemImage").GetComponent<Image>();
+            itemImage.sprite = item.itemImage;
+        }
     }
 
     public void QuitGame()

@@ -12,7 +12,10 @@ public class Inventory : MonoBehaviour
     {
         instance = this;
         itemsList = new List<ItemsManager>();
-        Debug.Log("New inventory was created");
+        
+
+
+
     }
 
     // Update is called once per frame
@@ -26,5 +29,10 @@ public class Inventory : MonoBehaviour
         print(item.itemName + " has been added to inventory.");
         itemsList.Add(item);
         print(itemsList.Count);
+    }
+
+    public List<ItemsManager> GetItemList()
+    {
+        return itemsList;
     }
 }
