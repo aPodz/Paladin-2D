@@ -345,6 +345,7 @@ GameObject:
   - component: {fileID: 52206371}
   - component: {fileID: 52206370}
   - component: {fileID: 52206369}
+  - component: {fileID: 52206372}
   m_Layer: 0
   m_Name: TestLongsword
   m_TagString: Untagged
@@ -441,6 +442,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1397212832}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &52206372
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52206368}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.011960063}
+  serializedVersion: 2
+  m_Radius: 0.93316805
 --- !u!1 &52868567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,7 +1191,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.0510254, y: -59.4151}
+  m_AnchoredPosition: {x: 1.0510254, y: -59.41504}
   m_SizeDelta: {x: -140.8508, y: -249.1859}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &105444178
@@ -1526,6 +1562,7 @@ GameObject:
   - component: {fileID: 165483916}
   - component: {fileID: 165483915}
   - component: {fileID: 165483914}
+  - component: {fileID: 165483917}
   m_Layer: 0
   m_Name: TestHP
   m_TagString: Untagged
@@ -1622,6 +1659,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1397212832}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10.057}
+--- !u!58 &165483917
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165483913}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.002768125, y: 0.015612947}
+  serializedVersion: 2
+  m_Radius: 0.370439
 --- !u!1 &176857039
 GameObject:
   m_ObjectHideFlags: 0
@@ -3995,7 +4067,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00012207031, y: -305.90625}
+  m_AnchoredPosition: {x: 0.00024414062, y: -305.90613}
   m_SizeDelta: {x: 0.00012207, y: -611.8125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &501990392
@@ -4871,6 +4943,7 @@ GameObject:
   - component: {fileID: 611531904}
   - component: {fileID: 611531903}
   - component: {fileID: 611531902}
+  - component: {fileID: 611531905}
   m_Layer: 0
   m_Name: TestStr
   m_TagString: Untagged
@@ -4967,6 +5040,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1397212832}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10.057}
+--- !u!58 &611531905
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611531901}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0013845292, y: 0.007806678}
+  serializedVersion: 2
+  m_Radius: 0.42593673
 --- !u!1 &651341616
 GameObject:
   m_ObjectHideFlags: 0
@@ -6283,6 +6391,7 @@ GameObject:
   - component: {fileID: 892628788}
   - component: {fileID: 892628787}
   - component: {fileID: 892628786}
+  - component: {fileID: 892628789}
   m_Layer: 0
   m_Name: TestArmor2
   m_TagString: Untagged
@@ -6379,6 +6488,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1397212832}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10.057}
+--- !u!58 &892628789
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892628785}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &915457640
 GameObject:
   m_ObjectHideFlags: 0
@@ -6502,6 +6646,7 @@ GameObject:
   - component: {fileID: 942073360}
   - component: {fileID: 942073359}
   - component: {fileID: 942073358}
+  - component: {fileID: 942073361}
   m_Layer: 0
   m_Name: TestEP
   m_TagString: Untagged
@@ -6598,6 +6743,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1397212832}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10.057}
+--- !u!58 &942073361
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942073357}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.001384508, y: 0.0078065586}
+  serializedVersion: 2
+  m_Radius: 0.3625106
 --- !u!1 &949523831
 GameObject:
   m_ObjectHideFlags: 0
@@ -8207,6 +8387,7 @@ GameObject:
   - component: {fileID: 1239464238}
   - component: {fileID: 1239464237}
   - component: {fileID: 1239464236}
+  - component: {fileID: 1239464239}
   m_Layer: 0
   m_Name: TestArmor
   m_TagString: Untagged
@@ -8303,6 +8484,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1397212832}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 27.161}
+--- !u!58 &1239464239
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239464235}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.00000047683716}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &1261198341
 GameObject:
   m_ObjectHideFlags: 0
@@ -13457,6 +13673,7 @@ GameObject:
   - component: {fileID: 2016531348}
   - component: {fileID: 2016531347}
   - component: {fileID: 2016531346}
+  - component: {fileID: 2016531349}
   m_Layer: 0
   m_Name: TestSword
   m_TagString: Untagged
@@ -13553,6 +13770,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1397212832}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &2016531349
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016531345}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.04485773}
+  serializedVersion: 2
+  m_Radius: 1.010859
 --- !u!1 &2033787789
 GameObject:
   m_ObjectHideFlags: 0

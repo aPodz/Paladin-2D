@@ -23,6 +23,8 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(ItemsManager item)
     {
+        print(item.itemName + " has been added to inventory.");
         itemsList.Add(item);
+        print(itemsList.Count);
     }
 }
