@@ -13,6 +13,8 @@ public class MenuManager : MonoBehaviour
     [SerializeField] GameObject menu;
     public static MenuManager instance;
 
+    [SerializeField] GameObject[] statButtons;
+
     private PlayerStats[] playerStats;
     [SerializeField] TextMeshProUGUI[] nameText, hpText, epText, lvlText, xpText;
     [SerializeField] Slider[] xpSlider, epSlider, hpSlider;
@@ -68,6 +70,20 @@ public class MenuManager : MonoBehaviour
 
             
         }
+    }
+
+    public void StatsMenu()
+    {
+        for (int i = 0; i < playerStats.Length; i++)
+        {
+            statButtons[i].SetActive(true);
+        }
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+        Debug.Log("We've quit the game.");
     }
 
     public void FadeImage()
