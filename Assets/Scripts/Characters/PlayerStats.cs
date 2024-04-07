@@ -21,8 +21,9 @@ public class PlayerStats : MonoBehaviour
     public int maxEnergy;
     public int currentEnergy;
 
-    [SerializeField] int armor;
-    [SerializeField] int strength;
+    public int armor;
+    public int strength;
+    public int attackPower;
     // Start is called before the first frame update
     void Start()
     {

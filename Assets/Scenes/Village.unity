@@ -280,7 +280,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 52868570}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1648128797}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: StatsMenuUpdate
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &52868570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1057,7 +1069,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 118501752}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1648128797}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: StatsMenuUpdate
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &118501752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2362,6 +2386,7 @@ MonoBehaviour:
   currentEnergy: 100
   armor: 5
   strength: 10
+  attackPower: 100
 --- !u!1 &322267897
 GameObject:
   m_ObjectHideFlags: 0
@@ -5176,7 +5201,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &885610939
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6402,6 +6427,7 @@ GameObject:
   - component: {fileID: 1097410745}
   - component: {fileID: 1097410747}
   - component: {fileID: 1097410746}
+  - component: {fileID: 1097410748}
   m_Layer: 0
   m_Name: NPC_Blacksmith
   m_TagString: Untagged
@@ -6576,6 +6602,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 15.375408, y: 12.211414}
   m_EdgeRadius: 0
+--- !u!114 &1097410748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097410742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2995cc8f7c6438f409f2fe03e16eb286, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: 
+  characterImage: {fileID: 21300000, guid: 3ff583b2e5871d74f918484e57ba2c68, type: 3}
+  playerLevel: 1
+  currentXP: 0
+  maxLevel: 21
+  xpPerLevel: 
+  baseLevelXP: 100
+  maxHP: 0
+  currentHP: 0
+  maxEnergy: 0
+  currentEnergy: 0
+  armor: 0
+  strength: 0
+  attackPower: 0
 --- !u!1 &1112404235
 GameObject:
   m_ObjectHideFlags: 0
@@ -10574,7 +10626,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1838586333}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1648128797}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: StatsMenuUpdate
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1838586333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11797,6 +11861,30 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 836937833}
     - target: {fileID: 1745340436470949061, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
+      propertyPath: statAP
+      value: 
+      objectReference: {fileID: 1735700135}
+    - target: {fileID: 1745340436470949061, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
+      propertyPath: statEP
+      value: 
+      objectReference: {fileID: 211856924}
+    - target: {fileID: 1745340436470949061, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
+      propertyPath: statHP
+      value: 
+      objectReference: {fileID: 1323514031}
+    - target: {fileID: 1745340436470949061, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
+      propertyPath: statArm
+      value: 
+      objectReference: {fileID: 276385563}
+    - target: {fileID: 1745340436470949061, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
+      propertyPath: statStr
+      value: 
+      objectReference: {fileID: 1581589394}
+    - target: {fileID: 1745340436470949061, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
+      propertyPath: statName
+      value: 
+      objectReference: {fileID: 347645937}
+    - target: {fileID: 1745340436470949061, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
       propertyPath: epText.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -11808,6 +11896,10 @@ PrefabInstance:
       propertyPath: xpText.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1745340436470949061, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
+      propertyPath: characterStatImage
+      value: 
+      objectReference: {fileID: 344876479}
     - target: {fileID: 1745340436470949061, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
       propertyPath: lvlText.Array.size
       value: 3

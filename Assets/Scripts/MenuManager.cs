@@ -21,6 +21,9 @@ public class MenuManager : MonoBehaviour
     [SerializeField] Sprite[] characterImage;
     [SerializeField] GameObject[] characterPanel;
 
+    [SerializeField] TextMeshProUGUI statName, statHP, statEP, statArm, statStr, statAP;
+    [SerializeField] Image characterStatImage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -78,6 +81,24 @@ public class MenuManager : MonoBehaviour
         {
             statButtons[i].SetActive(true);
         }
+
+        StatsMenuUpdate(0);
+    }
+
+    public void StatsMenuUpdate(int playerNumber)
+    {
+        PlayerStats selectedPlayer = playerStats[playerNumber];
+
+        statName.text = selectedPlayer.playerName;
+        statHP.text = selectedPlayer.currentHP + "/" + selectedPlayer.maxHP;
+        statEP.text = selectedPlayer.currentEnergy + "/" + selectedPlayer.maxEnergy;
+        statStr.text = selectedPlayer.strength.ToString();
+        statArm.text = selectedPlayer.armor.ToString();
+        statAP.text = selectedPlayer.attackPower.ToString();
+
+        characterStatImage.sprite = selectedPlayer.characterImage;
+
+        
     }
 
     public void QuitGame()
