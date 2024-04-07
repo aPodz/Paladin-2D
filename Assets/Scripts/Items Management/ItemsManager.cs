@@ -6,7 +6,7 @@ public class ItemsManager : MonoBehaviour
 {
     public enum ItemType { Item, Weapon, Armor}
     public ItemType itemType;
-    public enum EffectType { HP, Energy, Strength }
+    public enum EffectType { HP, Energy, Strength, AP }
     public EffectType effectType;
 
     public string itemName, itemDesc;
