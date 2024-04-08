@@ -10,7 +10,7 @@ public class MenuManager : MonoBehaviour
 {
 
     [SerializeField] Image imageToFade;
-    [SerializeField] GameObject menu;
+    public GameObject menu;
     public static MenuManager instance;
 
     [SerializeField] GameObject[] statButtons;
@@ -22,6 +22,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] GameObject[] characterPanel;
 
     [SerializeField] TextMeshProUGUI statName, statHP, statEP, statArm, statStr, statAP;
+    [SerializeField] Image weaponImage, armorImage;
     [SerializeField] Image characterStatImage;
 
     [SerializeField] GameObject itemBox;
@@ -98,17 +99,40 @@ public class MenuManager : MonoBehaviour
     public void StatsMenuUpdate(int playerNumber)
     {
         PlayerStats selectedPlayer = playerStats[playerNumber];
+        
 
         statName.text = selectedPlayer.playerName;
         statHP.text = selectedPlayer.currentHP + "/" + selectedPlayer.maxHP;
         statEP.text = selectedPlayer.currentEnergy + "/" + selectedPlayer.maxEnergy;
         statStr.text = selectedPlayer.strength.ToString();
-        statArm.text = selectedPlayer.armor.ToString();
-        statAP.text = selectedPlayer.attackPower.ToString();
+        statArm.text = selectedPlayer.armor.ToString() + "+" + selectedPlayer.armorDef.ToString();
+        statAP.text = selectedPlayer.attackPower.ToString() + "+" + selectedPlayer.weaponAP.ToString();
+        
 
         characterStatImage.sprite = selectedPlayer.characterImage;
 
+        if (!selectedPlayer.equippedWeapon)
+        {
+            weaponImage.sprite = selectedPlayer.defaultWeapon;
+        }
+        else
+        {
+            weaponImage.sprite = selectedPlayer.equippedWeapon.itemImage;
+        }
+
+        if (!selectedPlayer.equippedArmor)
+        {
+            armorImage.sprite = selectedPlayer.defaultArmor;
+        }
+        else
+        {
+            armorImage.sprite = selectedPlayer.equippedArmor.itemImage;
+        }    
+
         
+        
+
+
     }
 
     public void UpdateInventory()

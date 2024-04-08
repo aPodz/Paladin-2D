@@ -14,7 +14,7 @@ public class ItemsManager : MonoBehaviour
     public Sprite itemImage;
     public int itemEffect;
     
-    public int weaponAP, weaponStr, armorDef;
+    public int weaponAP, armorDef;
 
     public bool isStackable;
     public int amount;
@@ -41,6 +41,27 @@ public class ItemsManager : MonoBehaviour
                 selectedCharacter.AddStr(itemEffect);
             }
         }
+
+        else if (itemType == ItemType.Weapon)
+        {
+            if (selectedCharacter.equippedWeaponName != "")
+            {
+                Inventory.instance.AddItem(selectedCharacter.equippedWeapon);
+            }
+
+            selectedCharacter.EquipWeapon(this);
+        }
+
+        else if (itemType == ItemType.Armor)
+        {
+            if (selectedCharacter.equippedArmorName != "")
+            {
+                Inventory.instance.AddItem(selectedCharacter.equippedArmor);
+            }
+
+            selectedCharacter.EquipArmor(this);
+        }
+
         
     }
 

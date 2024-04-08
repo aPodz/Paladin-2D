@@ -9,7 +9,7 @@ public class PlayerStats : MonoBehaviour
 
     public string playerName;
 
-    public Sprite characterImage;
+    public Sprite characterImage, defaultWeapon, defaultArmor;
     public int playerLevel = 1;
     public int currentXP;
     [SerializeField] int maxLevel = 21;
@@ -25,6 +25,15 @@ public class PlayerStats : MonoBehaviour
     public int armor;
     public int strength;
     public int attackPower;
+
+    public string equippedWeaponName;
+    public string equippedArmorName;
+
+    public int weaponAP;
+    public int armorDef;
+
+    public ItemsManager equippedWeapon, equippedArmor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -97,4 +106,17 @@ public class PlayerStats : MonoBehaviour
     {
         strength += addedStr;
     }
+
+    public void EquipWeapon(ItemsManager weaponToEquip)
+    {
+        equippedWeapon = weaponToEquip;
+        equippedWeaponName = equippedWeapon.itemName;
+        weaponAP = equippedWeapon.weaponAP;
+
+    }public void EquipArmor(ItemsManager armorToEquip)
+    {
+        equippedArmor = armorToEquip;
+        equippedArmorName = equippedArmor.itemName;
+        armorDef = equippedArmor.armorDef;
+    }    
 }

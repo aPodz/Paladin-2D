@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Http.Headers;
+using UnityEditor;
 using UnityEngine;
 
 public class DialogHandler : MonoBehaviour
@@ -18,7 +19,7 @@ public class DialogHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canActivateDialog && Input.GetButtonDown("Fire1") && !DialogController.instance.isDialogBoxActive())
+        if (canActivateDialog && Input.GetButtonDown("Fire1") && !DialogController.instance.isDialogBoxActive() && !MenuManager.instance.menu.activeInHierarchy)
         {            
             DialogController.instance.ActivateDialog(lines);
         }
