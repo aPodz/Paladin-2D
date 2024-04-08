@@ -19,15 +19,25 @@ public class ItemsManager : MonoBehaviour
     public bool isStackable;
     public int amount;
     
-    // Start is called before the first frame update
-    void Start()
+    public void UseItem()
     {
-        
-    }
+        if (itemType == ItemType.Item)
+        {
+            if (effectType == EffectType.HP)
+            {
+                PlayerStats.instance.AddHP(itemEffect);
+            }
 
-    // Update is called once per frame
-    void Update()
-    {
+            else if (effectType == EffectType.Energy)
+            {
+                PlayerStats.instance.AddEnergy(itemEffect);
+            }
+
+            else
+            {
+                PlayerStats.instance.AddStr(itemEffect);
+            }
+        }
         
     }
 
