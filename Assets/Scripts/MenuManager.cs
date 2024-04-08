@@ -179,19 +179,17 @@ public class MenuManager : MonoBehaviour
 
     public void OpenCharacterChoicePanel()
     {
-        characterChoicePanel.SetActive(true);
-
+       
         if (activeItem)
         {
+            characterChoicePanel.SetActive(true);
             for (int i = 0; i < playerStats.Length; i++)
             {
                 PlayerStats activePlayer = GameManager.instance.GetPlayerStats()[i];
                 itemCharacterChoiceName[i].text = activePlayer.playerName;
 
                 bool playerAvailable = activePlayer.gameObject.activeInHierarchy;
-
                 itemCharacterChoiceName[i].transform.parent.gameObject.SetActive(playerAvailable);
-
             }
         } 
     }
