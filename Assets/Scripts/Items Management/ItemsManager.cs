@@ -19,23 +19,26 @@ public class ItemsManager : MonoBehaviour
     public bool isStackable;
     public int amount;
     
-    public void UseItem()
+    public void UseItem(int characterToUse)
     {
+        PlayerStats selectedCharacter = GameManager.instance.GetPlayerStats()[characterToUse];
+
+
         if (itemType == ItemType.Item)
         {
             if (effectType == EffectType.HP)
             {
-                PlayerStats.instance.AddHP(itemEffect);
+                selectedCharacter.AddHP(itemEffect);
             }
 
             else if (effectType == EffectType.Energy)
             {
-                PlayerStats.instance.AddEnergy(itemEffect);
+                selectedCharacter.AddEnergy(itemEffect);
             }
 
             else
             {
-                PlayerStats.instance.AddStr(itemEffect);
+                selectedCharacter.AddStr(itemEffect);
             }
         }
         

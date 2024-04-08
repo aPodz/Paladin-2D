@@ -85,7 +85,7 @@ public class PlayerStats : MonoBehaviour
 
     public void AddEnergy(int addedEP)
     {
-        currentHP += addedEP;
+        currentEnergy += addedEP;
 
         if (currentEnergy > maxEnergy)
         {

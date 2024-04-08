@@ -146,9 +146,9 @@ public class MenuManager : MonoBehaviour
         UpdateInventory();
     }
 
-    public void UseItem()
+    public void UseItem(int selectedCharacter)
     {
-        activeItem.UseItem();
+        activeItem.UseItem(selectedCharacter);
         OpenCharacterChoicePanel();
         DiscardItem();
     }
@@ -157,16 +157,19 @@ public class MenuManager : MonoBehaviour
     {
         characterChoicePanel.SetActive(true);
 
-        for (int i = 0; i < playerStats.Length; i++)
+        if (activeItem)
         {
-            PlayerStats activePlayer = GameManager.instance.GetPlayerStats()[i];
-            itemCharacterChoiceName[i].text = activePlayer.playerName;
+            for (int i = 0; i < playerStats.Length; i++)
+            {
+                PlayerStats activePlayer = GameManager.instance.GetPlayerStats()[i];
+                itemCharacterChoiceName[i].text = activePlayer.playerName;
 
-            bool playerAvailable = activePlayer.gameObject.activeInHierarchy;
+                bool playerAvailable = activePlayer.gameObject.activeInHierarchy;
 
-            itemCharacterChoiceName[i].transform.parent.gameObject.SetActive(playerAvailable);
+                itemCharacterChoiceName[i].transform.parent.gameObject.SetActive(playerAvailable);
 
-        }
+            }
+        } 
     }
 
     public void CloseCharacterChoicePanel()
