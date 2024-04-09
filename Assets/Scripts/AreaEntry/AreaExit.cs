@@ -27,15 +27,15 @@ public class AreaExit : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Player.instance.playerTransition = transitionArea;
-            MenuManager.instance.FadeImage();
-            StartCoroutine(LoadSceneCoroutine());
+            Player.instance.playerTransition = transitionArea;          
+            MenuManager.instance.FadeImage();            
+            StartCoroutine(LoadSceneCoroutine());           
         }
         
     }
 
     IEnumerator LoadSceneCoroutine()
-    {
+    {        
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(sceneToLoad);
     }
