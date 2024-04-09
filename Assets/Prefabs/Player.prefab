@@ -211,7 +211,7 @@ MonoBehaviour:
   xpPerLevel: 
   baseLevelXP: 100
   maxHP: 100
-  currentHP: 100
+  currentHP: 70
   maxEnergy: 100
   currentEnergy: 100
   armor: 5

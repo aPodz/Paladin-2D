@@ -128,11 +128,6 @@ public class MenuManager : MonoBehaviour
         {
             armorImage.sprite = selectedPlayer.equippedArmor.itemImage;
         }    
-
-        
-        
-
-
     }
 
     public void UpdateInventory()
@@ -175,6 +170,9 @@ public class MenuManager : MonoBehaviour
         activeItem.UseItem(selectedCharacter);
         OpenCharacterChoicePanel();
         DiscardItem();
+        activeItem = null;
+        itemName.text = null;
+        itemDesc.text = null;
     }
 
     public void OpenCharacterChoicePanel()
