@@ -37,27 +37,31 @@ public class ShopManager : MonoBehaviour
 
     public void OpenShop()
     {
-        shopMenu.SetActive(true);
-        GameManager.instance.shopOpen = true;
         currentCoinText.text = "Coins: " + GameManager.instance.currentCoins;
-        buyPanel.SetActive(true);
         UpdateShop(itemBuyParent, itemsForSale);
+        shopMenu.SetActive(true);
+        GameManager.instance.shopOpen = true;            
+        buyPanel.SetActive(true);
+        
     }
 
     public void CloseShop()
     {
+        ResetActive();
         shopMenu.SetActive(false);
         GameManager.instance.shopOpen = false;
     }
 
     public void OpenBuyPanel()
     {
+        ResetActive();
         buyPanel.SetActive(true);
         sellPanel.SetActive(false);
         UpdateShop(itemBuyParent, itemsForSale);
     }    
     public void OpenSellPanel()
     {
+        ResetActive();
         buyPanel.SetActive(false);
         sellPanel.SetActive(true);
         UpdateShop(itemSellParent, Inventory.instance.GetItemList());
@@ -106,5 +110,47 @@ public class ShopManager : MonoBehaviour
         sellItemName.text = selectedItem.itemName;
         sellItemDesc.text = selectedItem.itemDesc;
         sellItemValue.text = "Cost: " + selectedItem.itemValue;
+    }
+
+    public void ResetActive()
+    {
+        selectedItem = null;
+        buyItemName.text = "";
+        buyItemDesc.text = "";
+        buyItemValue.text = "";
+        sellItemName.text = "";
+        sellItemDesc.text = "";
+        sellItemValue.text = "";
+
+    }
+
+    public void BuyItem()
+    {
+        if (GameManager.instance.currentCoins >= selectedItem.itemValue)
+        {
+            GameManager.instance.currentCoins -= selectedItem.itemValue;
+            Inventory.instance.AddItem(selectedItem);
+            itemsForSale.Remove(selectedItem);
+
+            currentCoinText.text = "Coins: " + GameManager.instance.currentCoins; 
+            ResetActive();                      
+        }
+        UpdateShop(itemBuyParent, itemsForSale);
+        OpenBuyPanel();
+    }
+
+    public void SellItem()
+    {
+        if (selectedItem)
+        {
+            GameManager.instance.currentCoins += selectedItem.itemValue;
+            Inventory.instance.RemoveItem(selectedItem);
+            itemsForSale.Add(selectedItem);
+
+            currentCoinText.text = "Coins: " + GameManager.instance.currentCoins;
+            ResetActive();
+
+            OpenSellPanel();
+        }       
     }
 }
