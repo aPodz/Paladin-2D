@@ -48,14 +48,16 @@ public class MenuManager : MonoBehaviour
         { 
             if (menu.activeInHierarchy)
             {
-                menu.SetActive(false);
+                menu.SetActive(false);               
                 GameManager.instance.gameMenuOpen = false;
             }
             else
             {
                 UpdateStats();
+                UpdateInventory();
                 menu.SetActive(true);
                 GameManager.instance.gameMenuOpen = true;
+                
             }
         }
     }

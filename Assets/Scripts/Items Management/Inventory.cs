@@ -12,10 +12,6 @@ public class Inventory : MonoBehaviour
     {
         instance = this;
         itemsList = new List<ItemsManager>();
-        
-
-
-
     }
 
     // Update is called once per frame
