@@ -9,10 +9,27 @@ public class ItemButton : MonoBehaviour
 
     public void ButtonPress()
     {
-        MenuManager.instance.itemName.text = itemOnButton.name; 
-        MenuManager.instance.itemDesc.text = itemOnButton.itemDesc;
+        if (MenuManager.instance.menu.activeInHierarchy)
+        {
+            MenuManager.instance.itemName.text = itemOnButton.name;
+            MenuManager.instance.itemDesc.text = itemOnButton.itemDesc;
 
-        MenuManager.instance.activeItem = itemOnButton;
+            MenuManager.instance.activeItem = itemOnButton;
+        }
+
+
+        if (ShopManager.instance.shopMenu.activeInHierarchy)
+        {
+            if(ShopManager.instance.buyPanel.activeInHierarchy)
+            {
+                ShopManager.instance.ActiveBuyItem(itemOnButton);
+            }
+            else if (ShopManager.instance.sellPanel.activeInHierarchy)
+            {
+                ShopManager.instance.ActiveSellItem(itemOnButton);
+            }
+        }    
+        
     }
 
 

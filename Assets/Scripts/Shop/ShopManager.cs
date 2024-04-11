@@ -18,6 +18,10 @@ public class ShopManager : MonoBehaviour
     [SerializeField] Transform itemBuyParent;
     [SerializeField] Transform itemSellParent;
 
+    [SerializeField] ItemsManager selectedItem;
+    [SerializeField] TextMeshProUGUI buyItemName, buyItemDesc, buyItemValue;
+    [SerializeField] TextMeshProUGUI sellItemName, sellItemDesc, sellItemValue;
+
 
     // Start is called before the first frame update
     void Start()
@@ -86,5 +90,21 @@ public class ShopManager : MonoBehaviour
 
             itemSlot.GetComponent<ItemButton>().itemOnButton = item;
         }
+    }
+
+    public void ActiveBuyItem(ItemsManager itemToBuy)
+    {
+        selectedItem = itemToBuy;
+        buyItemName.text = selectedItem.itemName;
+        buyItemDesc.text = selectedItem.itemDesc;
+        buyItemValue.text = "Cost: " + selectedItem.itemValue;
+    }
+    
+    public void ActiveSellItem(ItemsManager itemToSell)
+    {
+        selectedItem = itemToSell;
+        sellItemName.text = selectedItem.itemName;
+        sellItemDesc.text = selectedItem.itemDesc;
+        sellItemValue.text = "Cost: " + selectedItem.itemValue;
     }
 }

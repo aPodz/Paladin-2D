@@ -3609,6 +3609,13 @@ MonoBehaviour:
   itemBox: {fileID: 4034496479427837573, guid: fec0defdf04f4cb4e831d5d2871cfd71, type: 3}
   itemBuyParent: {fileID: 599329103}
   itemSellParent: {fileID: 667672185}
+  selectedItem: {fileID: 0}
+  buyItemName: {fileID: 1517791520}
+  buyItemDesc: {fileID: 1624924352}
+  buyItemValue: {fileID: 1938915949}
+  sellItemName: {fileID: 1682725102}
+  sellItemDesc: {fileID: 1762842251}
+  sellItemValue: {fileID: 757354156}
 --- !u!1 &1679249065
 GameObject:
   m_ObjectHideFlags: 0
