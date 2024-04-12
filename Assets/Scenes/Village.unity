@@ -1399,8 +1399,35 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1913858640253076654, guid: 5b18eaf09db34cb49baa2a2e3df968ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5789300841820323485}
   m_SourcePrefab: {fileID: 100100000, guid: 5b18eaf09db34cb49baa2a2e3df968ec, type: 3}
+--- !u!1 &5789300841820323484 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1913858640253076654, guid: 5b18eaf09db34cb49baa2a2e3df968ec, type: 3}
+  m_PrefabInstance: {fileID: 5789300841820323483}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5789300841820323485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5789300841820323484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb4de3cecb8c9842937c02f3bf37f43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questNames:
+  - 
+  - Find a town
+  - Go to the blacksmith
+  - Find a helper
+  - Defeat the bad guys
+  questMarkers: 
 --- !u!1001 &6539875499209706636
 PrefabInstance:
   m_ObjectHideFlags: 0
