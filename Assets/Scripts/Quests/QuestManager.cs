@@ -1,26 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
     [SerializeField] string[] questNames;
     [SerializeField] bool[] questMarkers;
+
+    public static QuestManager instance;
     // Start is called before the first frame update
     void Start()
     {
-        questMarkers = new bool[questNames.Length];
+        instance = this;
+        questMarkers = new bool[questNames.Length];       
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            print(CheckCompletion("Find a town"));
-            MarkQuestComplete("Go to the blacksmith");
-            MarkQuestIncomplete("Find a helper");
-        }
+
     }
 
     public int GetQuestNumber(string questToFind)
@@ -49,16 +48,33 @@ public class QuestManager : MonoBehaviour
         return false;
     }
 
+    public void UpdateQuestObjects()
+    {
+        QuestObject[] questObjects = FindObjectsOfType<QuestObject>();
+
+        if (questObjects.Length > 0)
+        {
+            foreach (QuestObject questObject in questObjects)
+            {
+                questObject.IsQuestCompleted();
+            }
+        }
+    }
+
     public void MarkQuestComplete(string questToMark)
     {
         int questNumberToCheck = GetQuestNumber(questToMark);
         questMarkers[questNumberToCheck] = true;
+
+        UpdateQuestObjects();
     }
     
     public void MarkQuestIncomplete(string questToMark)
     {
         int questNumberToCheck = GetQuestNumber(questToMark);
         questMarkers[questNumberToCheck] = false;
+
+        UpdateQuestObjects();
     }
 
 
