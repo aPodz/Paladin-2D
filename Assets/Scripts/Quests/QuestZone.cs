@@ -17,7 +17,7 @@ public class QuestZone : MonoBehaviour
         if (canMark && Input.GetButtonDown("Fire1"))
         {
             canMark = false;
-            MarkQuest();
+            MarkQuest();          
         }
     }
 
@@ -49,7 +49,4 @@ public class QuestZone : MonoBehaviour
             }
         }
     }
-
-
-
 }
