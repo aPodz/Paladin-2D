@@ -1353,8 +1353,8 @@ MonoBehaviour:
   - 
   - Find A Map
   - Get A Sword
-  - 
-  - 
+  - TestQuest
+  - TestQuest2
   questMarkers: 
 --- !u!1001 &8682755692043559407
 PrefabInstance:
