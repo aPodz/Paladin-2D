@@ -8,7 +8,9 @@ public class DialogHandler : MonoBehaviour
 {
     public string[] lines;
     private bool canActivateDialog;
-
+    [SerializeField] bool shouldActivateQuest;
+    [SerializeField] string questToMark;
+    [SerializeField] bool markAsComplete;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,11 @@ public class DialogHandler : MonoBehaviour
         if (canActivateDialog && Input.GetButtonDown("Fire1") && !DialogController.instance.isDialogBoxActive() && !MenuManager.instance.menu.activeInHierarchy)
         {            
             DialogController.instance.ActivateDialog(lines);
+
+            if (shouldActivateQuest)
+            {
+                DialogController.instance.ActivateQuest(questToMark, markAsComplete);
+            }
         }
     }
 
