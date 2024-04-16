@@ -1093,6 +1093,26 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 481581038963849794, guid: 0a8581024ded27e4ebcb3b25ddf78f23, type: 3}
+      propertyPath: armor
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 481581038963849794, guid: 0a8581024ded27e4ebcb3b25ddf78f23, type: 3}
+      propertyPath: strength
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 481581038963849794, guid: 0a8581024ded27e4ebcb3b25ddf78f23, type: 3}
+      propertyPath: currentHP
+      value: 69
+      objectReference: {fileID: 0}
+    - target: {fileID: 481581038963849794, guid: 0a8581024ded27e4ebcb3b25ddf78f23, type: 3}
+      propertyPath: playerLevel
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 481581038963849794, guid: 0a8581024ded27e4ebcb3b25ddf78f23, type: 3}
+      propertyPath: currentEnergy
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 2840183367633849483, guid: 0a8581024ded27e4ebcb3b25ddf78f23, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1279,6 +1299,10 @@ PrefabInstance:
     - target: {fileID: 1913858640253076654, guid: 5b18eaf09db34cb49baa2a2e3df968ec, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888741891428366505, guid: 5b18eaf09db34cb49baa2a2e3df968ec, type: 3}
+      propertyPath: currentCoins
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6888741891428366505, guid: 5b18eaf09db34cb49baa2a2e3df968ec, type: 3}
       propertyPath: playerStats.Array.data[0]
