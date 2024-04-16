@@ -19,6 +19,11 @@ public class ItemsManager : MonoBehaviour
     public bool isStackable;
     public int amount;
     
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     public void UseItem(int characterToUse)
     {
         PlayerStats selectedCharacter = GameManager.instance.GetPlayerStats()[characterToUse];

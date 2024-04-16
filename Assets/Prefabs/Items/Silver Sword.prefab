@@ -105,9 +105,8 @@ MonoBehaviour:
   itemValue: 10
   itemImage: {fileID: 21300000, guid: 4ad16adfdf2d1a441879a598de742eb6, type: 3}
   itemEffect: 0
-  weaponAP: 300
-  weaponStr: 3
-  armorDef: 2
+  weaponAP: 200
+  armorDef: 0
   isStackable: 0
   amount: 1
 --- !u!58 &2594501235394867801
