@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 9219273874595982589}
   - component: {fileID: 6888741891428366505}
   - component: {fileID: 9218971694286615598}
+  - component: {fileID: 6663644447806951030}
+  - component: {fileID: 1412338147732646400}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -49,6 +51,8 @@ MonoBehaviour:
   - {fileID: 0}
   gameMenuOpen: 0
   dialogBoxOpen: 0
+  shopOpen: 0
+  currentCoins: 200
 --- !u!114 &9218971694286615598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,5 +63,36 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58308a5dbb998874d982510ae4ba8d4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6663644447806951030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913858640253076654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb4de3cecb8c9842937c02f3bf37f43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questNames:
+  - 
+  - Find A Map
+  - Get A Sword
+  - TestQuest
+  - TestQuest2
+  questMarkers: 
+--- !u!114 &1412338147732646400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913858640253076654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81c31708e4cc0e64eaa81561c549bde1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
