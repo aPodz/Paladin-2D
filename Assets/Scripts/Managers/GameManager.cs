@@ -87,13 +87,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void LoadEquippedImage(int playerNumber)
-    {
-        PlayerStats selectedPlayer = playerStats[playerNumber];
-
-
-    }
-
     private static void LoadPlayerItems()
     {
         for (int i = 0; i < PlayerPrefs.GetInt("Number_Of_Items"); i++)
