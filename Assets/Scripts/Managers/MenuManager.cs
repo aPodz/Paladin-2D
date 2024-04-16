@@ -22,7 +22,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] GameObject[] characterPanel;
 
     [SerializeField] TextMeshProUGUI statName, statHP, statEP, statArm, statStr, statAP;
-    [SerializeField] Image weaponImage, armorImage;
+    public Image weaponImage, armorImage;
     [SerializeField] Image characterStatImage;
 
     [SerializeField] GameObject itemBox;

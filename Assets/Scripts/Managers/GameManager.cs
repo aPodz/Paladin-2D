@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.U2D.Animation;
 
 public class GameManager : MonoBehaviour
 {
@@ -59,10 +60,81 @@ public class GameManager : MonoBehaviour
 
     public void SavePlayerData()
     {
+        SavePlayerPosition();
+        SavePlayerStats();
+        SavePlayerItems();
+    }
+        public void LoadPlayerData()
+    {
+        LoadPlayerPosition();
+        LoadPlayerStats();
+        LoadPlayerItems();
+
+    }
+
+    private static void SavePlayerItems()
+    {
+        PlayerPrefs.SetInt("Number_Of_Items", Inventory.instance.GetItemList().Count);
+        for (int i = 0; i < Inventory.instance.GetItemList().Count; i++)
+        {
+            ItemsManager itemInInventory = Inventory.instance.GetItemList()[i];
+            PlayerPrefs.SetString("Item_" + i + "_Name", itemInInventory.itemName);
+
+            if (itemInInventory.isStackable)
+            {
+                PlayerPrefs.SetInt("Items_" + i + "_Amount", itemInInventory.amount);
+            }
+        }
+    }
+
+    private void LoadEquippedImage(int playerNumber)
+    {
+        PlayerStats selectedPlayer = playerStats[playerNumber];
+
+
+    }
+
+    private static void LoadPlayerItems()
+    {
+        for (int i = 0; i < PlayerPrefs.GetInt("Number_Of_Items"); i++)
+        {
+            string itemName = PlayerPrefs.GetString("Item_" + i + "_Name");
+            ItemsManager itemToAdd = ItemAssets.instance.GetItemAsset(itemName);
+            int itemAmount = 0;
+
+            if (PlayerPrefs.HasKey("Items_" + i + "_Amount"))
+            {
+                itemAmount = PlayerPrefs.GetInt("Item_" + i + "_Amount");
+            }
+
+            Inventory.instance.AddItem(itemToAdd);
+            if (itemToAdd.isStackable && itemAmount > 1)
+            {
+                itemToAdd.amount = itemAmount;
+            }           
+        }
+    }
+
+    private static void SavePlayerPosition()
+    {
         PlayerPrefs.SetFloat("Player_Pos_X", Player.instance.transform.position.x);
         PlayerPrefs.SetFloat("Player_Pos_Y", Player.instance.transform.position.y);
         PlayerPrefs.SetFloat("Player_Pos_Z", Player.instance.transform.position.z);
+    }
 
+
+
+    private static void LoadPlayerPosition()
+    {
+        Player.instance.transform.position = new Vector3(
+                    PlayerPrefs.GetFloat("Player_Pos_X"),
+                    PlayerPrefs.GetFloat("Player_Pos_Y"),
+                    PlayerPrefs.GetFloat("Player_Pos_Z")
+                    );
+    }
+
+    private void SavePlayerStats()
+    {
         for (int i = 0; i < playerStats.Length; i++)
         {
             if (playerStats[i].gameObject.activeInHierarchy)
@@ -95,14 +167,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void LoadPlayerData()
-    {
-        Player.instance.transform.position = new Vector3(
-            PlayerPrefs.GetFloat("Player_Pos_X"),
-            PlayerPrefs.GetFloat("Player_Pos_Y"),
-            PlayerPrefs.GetFloat("Player_Pos_Z")
-            );    
 
+
+    private void LoadPlayerStats()
+    {
         for (int i = 0; i < playerStats.Length; i++)
         {
             if (PlayerPrefs.GetInt("Player_" + playerStats[i].gameObject.name + "_active") == 0)
@@ -132,6 +200,7 @@ public class GameManager : MonoBehaviour
 
             playerStats[i].weaponAP = PlayerPrefs.GetInt("Player_" + playerStats[i].gameObject.name + "_WeaponAP");
             playerStats[i].armorDef = PlayerPrefs.GetInt("Player_" + playerStats[i].gameObject.name + "_ArmorDefence");
+
 
 
         }

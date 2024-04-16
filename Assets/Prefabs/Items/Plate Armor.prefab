@@ -108,7 +108,7 @@ MonoBehaviour:
   weaponAP: 0
   armorDef: 10
   isStackable: 0
-  amount: 1
+  amount: 0
 --- !u!58 &8585134557271512653
 CircleCollider2D:
   m_ObjectHideFlags: 0

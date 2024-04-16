@@ -21,18 +21,17 @@ public class Inventory : MonoBehaviour
     }
 
     public void AddItem(ItemsManager item)
-    {
-        bool itemAlreadyInInventory = false;
-
-        if(item.isStackable)
+    {      
+        if (item.isStackable)
         {
-            foreach(ItemsManager itemInInventory in itemsList)
+            bool itemAlreadyInInventory = false;
+
+            foreach (ItemsManager itemInInventory in itemsList)
             {
                 if(itemInInventory.itemName == item.itemName)
                 {
                     itemInInventory.amount += item.amount;
                     itemAlreadyInInventory = true;
-
                 }
             }
 

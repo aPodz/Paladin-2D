@@ -30,7 +30,6 @@ public class ItemAssets : MonoBehaviour
                 return item;
             }
         }
-
         return null;
     }
 
