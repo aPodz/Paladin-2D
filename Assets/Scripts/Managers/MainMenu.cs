@@ -36,4 +36,9 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Game has been closed");
     }
+
+    public void ContinueButton()
+    {
+        SceneManager.LoadScene("LoadingScene");
+    }
 }

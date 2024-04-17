@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -63,13 +64,14 @@ public class GameManager : MonoBehaviour
         SavePlayerPosition();
         SavePlayerStats();
         SavePlayerItems();
+
+        PlayerPrefs.SetString("Current_Scene", SceneManager.GetActiveScene().name);
     }
         public void LoadPlayerData()
     {
         LoadPlayerPosition();
         LoadPlayerStats();
         LoadPlayerItems();
-
     }
 
     private static void SavePlayerItems()

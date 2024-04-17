@@ -14,7 +14,7 @@ public class CamController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AudioManager.instance.StopMusic();
+        
         playerTarget = FindObjectOfType<Player>();
         virtualCamera = GetComponent<CinemachineVirtualCamera>();
         virtualCamera.Follow = playerTarget.transform;
