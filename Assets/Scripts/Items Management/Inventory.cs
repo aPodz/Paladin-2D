@@ -48,7 +48,8 @@ public class Inventory : MonoBehaviour
     }
 
     public void RemoveItem(ItemsManager item)
-    {
+    {      
+
         if (item.isStackable)
         {
             ItemsManager inventoryItem = null;

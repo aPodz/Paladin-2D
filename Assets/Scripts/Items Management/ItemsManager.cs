@@ -31,6 +31,7 @@ public class ItemsManager : MonoBehaviour
 
         if (itemType == ItemType.Item)
         {
+            AudioManager.instance.PlaySFX(15);
             if (effectType == EffectType.HP)
             {
                 selectedCharacter.AddHP(itemEffect);
@@ -44,7 +45,7 @@ public class ItemsManager : MonoBehaviour
             else
             {
                 selectedCharacter.AddStr(itemEffect);
-            }
+            }           
         }
 
         else if (itemType == ItemType.Weapon)

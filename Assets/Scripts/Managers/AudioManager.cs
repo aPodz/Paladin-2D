@@ -10,8 +10,14 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        instance = this;
-        DontDestroyOnLoad(gameObject);
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
     }
 
     // Update is called once per frame
@@ -19,7 +25,7 @@ public class AudioManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.M))
         {
-            PlaySFX(0);
+            PlayBackgroundMusic(0);
         }
     }
 
@@ -28,6 +34,24 @@ public class AudioManager : MonoBehaviour
         if (trackToPlay < SFX.Length)
         {
             SFX[trackToPlay].Play();
+        }
+    }
+
+    public void PlayBackgroundMusic(int trackToPlay)
+    {
+        StopMusic();
+
+        if (trackToPlay < backgroundMusic.Length)
+        {
+            backgroundMusic[trackToPlay].Play();
+        }
+    }
+
+    public void StopMusic()
+    {
+        foreach (AudioSource music in backgroundMusic)
+        {
+            music.Stop();
         }
     }
 }
