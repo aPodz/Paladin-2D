@@ -18,15 +18,13 @@ public class AudioManager : MonoBehaviour
         {
             instance = this;
         }
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            PlayBackgroundMusic(0);
-        }
+
     }
 
     public void PlaySFX(int trackToPlay)
