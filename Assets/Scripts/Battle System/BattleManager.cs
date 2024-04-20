@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BattleManager : MonoBehaviour
@@ -13,6 +14,9 @@ public class BattleManager : MonoBehaviour
 
     [SerializeField] List<BattleCharacters> activeCharacters = new List<BattleCharacters>();
 
+    [SerializeField] int currentTurn;
+    [SerializeField] bool waitingForTurn;
+    [SerializeField] GameObject UIHolder;
 
     // Start is called before the first frame update
     void Start()
@@ -28,14 +32,39 @@ public class BattleManager : MonoBehaviour
        {
             StartBattle(new string[]{"Undead Knight"});
        }
+
+       if (Input.GetKeyDown(KeyCode.N))
+        {
+            NextTurn();
+        }
+
+       if (isBattleActive)
+        {
+            if (waitingForTurn)
+            {
+                if (activeCharacters[currentTurn].IsCharacterAPlayer())
+                {
+                    UIHolder.SetActive(true);
+                }
+                else
+                {
+                    UIHolder.SetActive(false);
+                }
+            }
+        }
     }
 
     public void StartBattle(string[] enemiesToSpawn)
     {
-        BattleSceneSetup();
-        AddBattleCharacters();
-        AddEnemies(enemiesToSpawn);
+        if (!isBattleActive)
+        {
+            BattleSceneSetup();
+            AddBattleCharacters();
+            AddEnemies(enemiesToSpawn);
 
+            waitingForTurn = true;
+            currentTurn = 0;
+        }      
     }
 
     private void AddEnemies(string[] enemiesToSpawn)
@@ -106,15 +135,21 @@ public class BattleManager : MonoBehaviour
 
     private void BattleSceneSetup()
     {
-        if (!isBattleActive)
+        isBattleActive = true;
+        GameManager.instance.battleActive = true;
+        transform.position = new Vector3(
+            Camera.main.transform.position.x,
+            Camera.main.transform.position.y,
+            transform.position.z);
+        battleScene.SetActive(true);
+    }
+
+    private void NextTurn()
+    {
+        currentTurn++;
+        if (currentTurn >= activeCharacters.Count)
         {
-            isBattleActive = true;
-            GameManager.instance.battleActive = true;
-            transform.position = new Vector3(
-                Camera.main.transform.position.x,
-                Camera.main.transform.position.y,
-                transform.position.z);
-            battleScene.SetActive(true);
+            currentTurn = 0;
         }
     }
 }

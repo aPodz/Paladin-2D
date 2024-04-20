@@ -1008,7 +1008,7 @@ Transform:
   m_GameObject: {fileID: 333829900}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.32, y: 2.81, z: 10}
+  m_LocalPosition: {x: -3.32, y: 4.1299996, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1471,7 +1471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &490714138
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3364,7 +3364,7 @@ Transform:
   m_GameObject: {fileID: 1307524347}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.31, y: 2.27, z: 10}
+  m_LocalPosition: {x: 4.31, y: 3.5899997, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3414,6 +3414,9 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 4287385434855756506, guid: babbdf8ffd279a1429ceb235b84e46e8, type: 3}
   activeCharacters: []
+  currentTurn: 0
+  waitingForTurn: 0
+  UIHolder: {fileID: 1581950922}
 --- !u!4 &1339986921
 Transform:
   m_ObjectHideFlags: 0
@@ -3807,7 +3810,7 @@ Transform:
   m_GameObject: {fileID: 1798634938}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.44, y: 6.38, z: 10}
+  m_LocalPosition: {x: 0.44, y: 7.7, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
