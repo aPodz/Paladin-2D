@@ -11,6 +11,8 @@ public class BattleManager : MonoBehaviour
     [SerializeField] Transform[] playerPositions, enemyPositions;
     [SerializeField] BattleCharacters[] playerPrefabs, enemyPrefabs;
 
+    [SerializeField] List<BattleCharacters> activeCharacters = new List<BattleCharacters>();
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,32 @@ public class BattleManager : MonoBehaviour
     }
 
     public void StartBattle(string[] enemiesToSpawn)
+    {
+        
+        BattleSceneSetup();
+        for (int i = 0; i < GameManager.instance.GetPlayerStats().Length; i++)
+        {
+            if (GameManager.instance.GetPlayerStats()[i].gameObject.activeInHierarchy)
+            {
+                for (int j = 0; j < playerPrefabs.Length; j++)
+                {
+                    if (playerPrefabs[j].characterName == GameManager.instance.GetPlayerStats()[i].playerName)
+                    {
+                        BattleCharacters newCharacter = Instantiate(
+                            playerPrefabs[j],
+                            playerPositions[i].position,
+                            playerPositions[i].rotation,
+                            playerPositions[i]                                                       
+                            );
+
+                        activeCharacters.Add(newCharacter);
+                    }
+                }
+            }
+        }
+    }
+
+    private void BattleSceneSetup()
     {
         if (!isBattleActive)
         {

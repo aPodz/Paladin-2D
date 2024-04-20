@@ -210,12 +210,12 @@ MonoBehaviour:
   maxLevel: 20
   xpPerLevel: 
   baseLevelXP: 100
-  maxHP: 100
-  currentHP: 70
+  maxHP: 200
+  currentHP: 200
   maxEnergy: 100
   currentEnergy: 100
-  armor: 5
-  strength: 10
+  armor: 10
+  strength: 30
   attackPower: 100
   equippedWeaponName: 
   equippedArmorName: 

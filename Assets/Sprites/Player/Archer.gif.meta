@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: robin_hoodlike_0
+      name: Archer_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0274b9ef16464db4a855e32a0c409463
-      internalID: 1121478235
+      spriteID: 92701db6e183cf049a7873902c057ce3
+      internalID: -480311252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robin_hoodlike_1
+      name: Archer_1
       rect:
         serializedVersion: 2
         x: 0
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e70fdaf9c28c5b45bbd3cf381be1e60
-      internalID: -168261372
+      spriteID: 18d7733e669ba7442a2f4120e2eafb52
+      internalID: -735906745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robin_hoodlike_2
+      name: Archer_2
       rect:
         serializedVersion: 2
         x: 0
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20eefb697952e8f4686fafb44e899790
-      internalID: -1054638073
+      spriteID: 907ec7bc45174674e804f8f1f2aa29dd
+      internalID: 2014582376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robin_hoodlike_3
+      name: Archer_3
       rect:
         serializedVersion: 2
         x: 0
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2757ef51f2534ac41bc4ebb511045259
-      internalID: 737463873
+      spriteID: d69d90231d474c94e99845136d53b563
+      internalID: -1774827784
       vertices: []
       indices: 
       edges: []
@@ -217,10 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      robin_hoodlike_0: 1121478235
-      robin_hoodlike_1: -168261372
-      robin_hoodlike_2: -1054638073
-      robin_hoodlike_3: 737463873
+      Archer_0: -480311252
+      Archer_1: -735906745
+      Archer_2: 2014582376
+      Archer_3: -1774827784
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
