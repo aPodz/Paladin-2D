@@ -1,3 +1,5 @@
+using JetBrains.Annotations;
+//using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -28,31 +30,20 @@ public class BattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (Input.GetKeyDown(KeyCode.B))
-       {
-            StartBattle(new string[]{"Undead Knight"});
-       }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            StartBattle(new string[] { "Undead Knight" });
+        }
 
-       if (Input.GetKeyDown(KeyCode.N))
+        if (Input.GetKeyDown(KeyCode.N))
         {
             NextTurn();
         }
 
-       if (isBattleActive)
-        {
-            if (waitingForTurn)
-            {
-                if (activeCharacters[currentTurn].IsCharacterAPlayer())
-                {
-                    UIHolder.SetActive(true);
-                }
-                else
-                {
-                    UIHolder.SetActive(false);
-                }
-            }
-        }
+        CheckUIHolder();
     }
+
+    
 
     public void StartBattle(string[] enemiesToSpawn)
     {
@@ -150,6 +141,102 @@ public class BattleManager : MonoBehaviour
         if (currentTurn >= activeCharacters.Count)
         {
             currentTurn = 0;
+        }
+
+        waitingForTurn = true;
+        UpdateBattle();
+    }
+
+    private void UpdateBattle()
+    {
+        bool allEnemiesDead = true;
+        bool allPlayersDead = true;
+
+        for (int i = 0; i < activeCharacters.Count; i++)
+        {
+            if (activeCharacters[i].currentHP < 0)
+            {
+                activeCharacters[i].currentHP = 0;
+            }   
+            
+            if (activeCharacters[i].currentHP == 0)
+            {
+                //Kill Character
+            }
+            else
+            {
+                if (activeCharacters[i].IsCharacterAPlayer())
+                {
+                    allPlayersDead = false;
+                }
+                else
+                {
+                    allEnemiesDead = false;
+                }
+            }
+
+        }
+
+        if (allPlayersDead || allEnemiesDead)
+        {
+            if (allPlayersDead)
+            {
+                Debug.Log("YOU LOST");
+            }
+            else
+            {
+                Debug.Log("YOU WON");
+            }
+
+            battleScene.SetActive(false);
+            GameManager.instance.battleActive = false;
+            isBattleActive = false;
+        }
+    }
+
+    public IEnumerator EnemyMove()
+    {
+        waitingForTurn = false;
+        yield return new WaitForSeconds(1);
+        EnemyAttack();
+
+        yield return new WaitForSeconds(1);
+        NextTurn();
+    }
+
+    private void EnemyAttack()
+    {
+        List<int> players = new List<int>();
+        
+
+        for (int i = 0; i < activeCharacters.Count; i++) 
+        {
+            if (activeCharacters[i].IsCharacterAPlayer() && activeCharacters[i].currentHP > 0)
+            {
+                players.Add(i);
+            }
+
+        }
+
+        int selectedPlayerToAttack = players[Random.Range(0, players.Count)];
+    }
+
+    private void CheckUIHolder()
+    {
+        if (isBattleActive)
+        {
+            if (waitingForTurn)
+            {
+                if (activeCharacters[currentTurn].IsCharacterAPlayer())
+                {
+                    UIHolder.SetActive(true);
+                }
+                else
+                {
+                    UIHolder.SetActive(false);
+                    StartCoroutine(EnemyMove());
+                }
+            }
         }
     }
 }
