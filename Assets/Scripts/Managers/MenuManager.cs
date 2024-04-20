@@ -76,13 +76,13 @@ public class MenuManager : MonoBehaviour
             lvlText[i].text = playerStats[i].playerLevel.ToString();
             nameText[i].text = playerStats[i].playerName;
             hpText[i].text = playerStats[i].currentHP + "/" + playerStats[i].maxHP;
-            epText[i].text = playerStats[i].currentEnergy + "/" + playerStats[i].maxEnergy;
+            epText[i].text = playerStats[i].currentMana + "/" + playerStats[i].maxMana;
             xpText[i].text = playerStats[i].currentXP + "/" + playerStats[i].playerLevel*100;
 
             xpSlider[i].maxValue = playerStats[i].playerLevel * 100;
             xpSlider[i].value = playerStats[i].currentXP;
-            epSlider[i].maxValue = playerStats[i].maxEnergy;
-            epSlider[i].value = playerStats[i].currentEnergy;
+            epSlider[i].maxValue = playerStats[i].maxMana;
+            epSlider[i].value = playerStats[i].currentMana;
             hpSlider[i].maxValue = playerStats[i].maxHP;
             hpSlider[i].value = playerStats[i].currentHP;
 
@@ -107,7 +107,7 @@ public class MenuManager : MonoBehaviour
 
         statName.text = selectedPlayer.playerName;
         statHP.text = selectedPlayer.currentHP + "/" + selectedPlayer.maxHP;
-        statEP.text = selectedPlayer.currentEnergy + "/" + selectedPlayer.maxEnergy;
+        statEP.text = selectedPlayer.currentMana + "/" + selectedPlayer.maxMana;
         statStr.text = selectedPlayer.strength.ToString();
         statArm.text = selectedPlayer.armor.ToString() + "+" + selectedPlayer.armorDef.ToString();
         statAP.text = selectedPlayer.attackPower.ToString() + "+" + selectedPlayer.weaponAP.ToString();

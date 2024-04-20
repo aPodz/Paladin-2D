@@ -147,8 +147,8 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("Player_" + playerStats[i].gameObject.name + "_MaxHP", playerStats[i].maxHP);
             PlayerPrefs.SetInt("Player_" + playerStats[i].gameObject.name + "_CurrentHP", playerStats[i].currentHP);
 
-            PlayerPrefs.SetInt("Player_" + playerStats[i].gameObject.name + "_MaxEnergy", playerStats[i].maxEnergy);
-            PlayerPrefs.SetInt("Player_" + playerStats[i].gameObject.name + "_CurrentEnergy", playerStats[i].currentEnergy);
+            PlayerPrefs.SetInt("Player_" + playerStats[i].gameObject.name + "_MaxEnergy", playerStats[i].maxMana);
+            PlayerPrefs.SetInt("Player_" + playerStats[i].gameObject.name + "_CurrentEnergy", playerStats[i].currentMana);
 
             PlayerPrefs.SetInt("Player_" + playerStats[i].gameObject.name + "_Armor", playerStats[i].armor);
             PlayerPrefs.SetInt("Player_" + playerStats[i].gameObject.name + "_Strength", playerStats[i].strength);
@@ -183,8 +183,8 @@ public class GameManager : MonoBehaviour
             playerStats[i].maxHP = PlayerPrefs.GetInt("Player_" + playerStats[i].gameObject.name + "_MaxHP");
             playerStats[i].currentHP = PlayerPrefs.GetInt("Player_" + playerStats[i].gameObject.name + "_CurrentHP");
 
-            playerStats[i].maxEnergy = PlayerPrefs.GetInt("Player_" + playerStats[i].gameObject.name + "_MaxEnergy");
-            playerStats[i].currentEnergy = PlayerPrefs.GetInt("Player_" + playerStats[i].gameObject.name + "_CurrentEnergy");
+            playerStats[i].maxMana = PlayerPrefs.GetInt("Player_" + playerStats[i].gameObject.name + "_MaxEnergy");
+            playerStats[i].currentMana = PlayerPrefs.GetInt("Player_" + playerStats[i].gameObject.name + "_CurrentEnergy");
 
             playerStats[i].armor = PlayerPrefs.GetInt("Player_" + playerStats[i].gameObject.name + "_Armor");
             playerStats[i].strength = PlayerPrefs.GetInt("Player_" + playerStats[i].gameObject.name + "_Strength");

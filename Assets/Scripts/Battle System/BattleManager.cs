@@ -32,8 +32,38 @@ public class BattleManager : MonoBehaviour
 
     public void StartBattle(string[] enemiesToSpawn)
     {
-        
         BattleSceneSetup();
+        AddBattleCharacters();
+        AddEnemies(enemiesToSpawn);
+
+    }
+
+    private void AddEnemies(string[] enemiesToSpawn)
+    {
+        for (int i = 0; i < enemiesToSpawn.Length; i++)
+        {
+            if (enemiesToSpawn[i] != "")
+            {
+                for (int j = 0; j < enemyPrefabs.Length; j++)
+                {
+                    if (enemyPrefabs[j].characterName == enemiesToSpawn[j])
+                    {
+                        BattleCharacters newEnemy = Instantiate(
+                            enemyPrefabs[j],
+                            enemyPositions[i].position,
+                            enemyPositions[i].rotation,
+                            enemyPositions[i]
+                            );
+
+                        activeCharacters.Add(newEnemy);
+                    }
+                }
+            }
+        }
+    }
+
+    private void AddBattleCharacters()
+    {
         for (int i = 0; i < GameManager.instance.GetPlayerStats().Length; i++)
         {
             if (GameManager.instance.GetPlayerStats()[i].gameObject.activeInHierarchy)
@@ -46,14 +76,32 @@ public class BattleManager : MonoBehaviour
                             playerPrefabs[j],
                             playerPositions[i].position,
                             playerPositions[i].rotation,
-                            playerPositions[i]                                                       
+                            playerPositions[i]
                             );
 
                         activeCharacters.Add(newCharacter);
+                        ImportStats(i);
                     }
                 }
             }
         }
+    }
+
+    private void ImportStats(int i)
+    {
+        PlayerStats player = GameManager.instance.GetPlayerStats()[i];
+
+        activeCharacters[i].currentHP = player.currentHP;
+        activeCharacters[i].maxHP = player.maxHP;
+
+        activeCharacters[i].maxMana = player.maxMana;
+        activeCharacters[i].currentMana = player.currentMana;
+
+        activeCharacters[i].armor = player.armor;
+        activeCharacters[i].strength = player.strength;
+        activeCharacters[i].attackPower = player.attackPower;
+        activeCharacters[i].weaponPower = player.weaponAP;
+        activeCharacters[i].armorDef = player.armorDef;
     }
 
     private void BattleSceneSetup()

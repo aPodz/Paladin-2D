@@ -6,7 +6,7 @@ public class ItemsManager : MonoBehaviour
 {
     public enum ItemType { Item, Weapon, Armor}
     public ItemType itemType;
-    public enum EffectType { HP, Energy, Strength, AP }
+    public enum EffectType { HP, Mana, Strength, AP }
     public EffectType effectType;
 
     public string itemName, itemDesc;
@@ -37,9 +37,9 @@ public class ItemsManager : MonoBehaviour
                 selectedCharacter.AddHP(itemEffect);
             }
 
-            else if (effectType == EffectType.Energy)
+            else if (effectType == EffectType.Mana)
             {
-                selectedCharacter.AddEnergy(itemEffect);
+                selectedCharacter.AddMana(itemEffect);
             }
 
             else

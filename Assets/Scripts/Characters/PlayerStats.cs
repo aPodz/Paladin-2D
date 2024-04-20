@@ -19,8 +19,8 @@ public class PlayerStats : MonoBehaviour
     public int maxHP;
     public int currentHP;
 
-    public int maxEnergy;
-    public int currentEnergy;
+    public int maxMana;
+    public int currentMana;
 
     public int armor;
     public int strength;
@@ -73,11 +73,11 @@ public class PlayerStats : MonoBehaviour
             }
             else
             {
-                maxEnergy += 2;
+                maxMana += 2;
             }
 
             currentHP = maxHP;
-            currentEnergy = maxEnergy;
+            currentMana = maxMana;
 
         }
     }
@@ -92,13 +92,13 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    public void AddEnergy(int addedEP)
+    public void AddMana(int addedEP)
     {
-        currentEnergy += addedEP;
+        currentMana += addedEP;
 
-        if (currentEnergy > maxEnergy)
+        if (currentMana > maxMana)
         {
-            currentEnergy = maxEnergy;
+            currentMana = maxMana;
         }
     }
 
