@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] PlayerStats[] playerStats;
 
-    public bool gameMenuOpen, dialogBoxOpen, shopOpen;
+    public bool gameMenuOpen, dialogBoxOpen, shopOpen, battleActive;
 
     public int currentCoins;
 
@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
         {
             LoadPlayerData();
         }
-        if (gameMenuOpen || dialogBoxOpen || shopOpen)
+        if (gameMenuOpen || dialogBoxOpen || shopOpen || battleActive)
         {
             Player.instance.movementDisabled = true;
         }
