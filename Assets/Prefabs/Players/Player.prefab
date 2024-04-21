@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2995cc8f7c6438f409f2fe03e16eb286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: Player
+  playerName: You
   characterImage: {fileID: 1564793179, guid: 0f4a9168dffd9a14ca38031f6f5af6bd, type: 3}
   defaultWeapon: {fileID: 21300000, guid: ea1c0f14db3c07c40aeecfb5442b0cf9, type: 3}
   defaultArmor: {fileID: 21300000, guid: fc8542cdc3ac66d46901a4eca96d7870, type: 3}

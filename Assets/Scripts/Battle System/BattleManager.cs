@@ -2,9 +2,11 @@ using JetBrains.Annotations;
 //using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.Timeline.Actions;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BattleManager : MonoBehaviour
 {
@@ -23,6 +25,10 @@ public class BattleManager : MonoBehaviour
 
     [SerializeField] BattleMoves[] battleMovesList;
     [SerializeField] CombatText damageText;
+
+    [SerializeField] GameObject[] characterBattleStats;
+    [SerializeField] TextMeshProUGUI[] characterNameText;
+    [SerializeField] Slider[] characterHPSlider, characterManaSlider;
 
 
     // Start is called before the first frame update
@@ -53,10 +59,11 @@ public class BattleManager : MonoBehaviour
     public void StartBattle(string[] enemiesToSpawn)
     {
         if (!isBattleActive)
-        {
+        {           
             BattleSceneSetup();
             AddBattleCharacters();
             AddEnemies(enemiesToSpawn);
+            UpdateCharacterStats();
 
             waitingForTurn = true;
             currentTurn = 0;
@@ -244,6 +251,8 @@ public class BattleManager : MonoBehaviour
 
         DealDamage(selectedPlayerToAttack, abilityPower);
 
+        UpdateCharacterStats();
+
     }
 
     private void CheckUIHolder()
@@ -300,6 +309,38 @@ public class BattleManager : MonoBehaviour
         else 
         {
             return damageDealt;
+        }
+    }
+
+    public void UpdateCharacterStats()
+    {
+        for (int i = 0; i < characterNameText.Length; i++)
+        {
+            if (activeCharacters.Count > i)
+            {
+                if (activeCharacters[i].IsCharacterAPlayer())
+                {
+                    BattleCharacters playerData = activeCharacters[i];
+                    characterNameText[i].text = playerData.characterName;
+
+                    characterHPSlider[i].maxValue = playerData.maxHP;
+                    characterHPSlider[i].value = playerData.currentHP;
+
+                    characterManaSlider[i].maxValue = playerData.maxMana;
+                    characterManaSlider[i].value = playerData.currentMana;
+                }
+
+                else
+                {
+                    characterBattleStats[i].SetActive(false);
+                }
+
+            }
+
+            else
+            {
+                characterBattleStats[i].SetActive(false);
+            }
         }
     }
 
