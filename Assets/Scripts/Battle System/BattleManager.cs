@@ -27,7 +27,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField] CombatText damageText;
 
     [SerializeField] GameObject[] characterBattleStats;
-    [SerializeField] TextMeshProUGUI[] characterNameText;
+    [SerializeField] TextMeshProUGUI[] characterNameText, characterHPText, characterManaText;
     [SerializeField] Slider[] characterHPSlider, characterManaSlider;
 
 
@@ -204,6 +204,17 @@ public class BattleManager : MonoBehaviour
             GameManager.instance.battleActive = false;
             isBattleActive = false;
         }
+        else
+        {
+            while (activeCharacters[currentTurn].currentHP == 0)
+            {
+                currentTurn++;
+                if (currentTurn >= activeCharacters.Count)
+                {
+                    currentTurn = 0;
+                }
+            }
+        }
     }
 
     public IEnumerator EnemyMove()
@@ -325,9 +336,11 @@ public class BattleManager : MonoBehaviour
 
                     characterHPSlider[i].maxValue = playerData.maxHP;
                     characterHPSlider[i].value = playerData.currentHP;
+                    characterHPText[i].text = (playerData.currentHP.ToString() + "/" + playerData.maxHP.ToString());
 
                     characterManaSlider[i].maxValue = playerData.maxMana;
                     characterManaSlider[i].value = playerData.currentMana;
+                    characterManaText[i].text = (playerData.currentMana.ToString() + "/" + playerData.maxMana.ToString());
                 }
 
                 else
