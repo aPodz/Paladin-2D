@@ -156,7 +156,7 @@ RectTransform:
   m_Father: {fileID: 668900549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0, y: 0.47719955}
   m_SizeDelta: {x: -5.7264, y: -16.2246}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -615,7 +615,7 @@ RectTransform:
   m_Father: {fileID: 1925603408}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.11130524, y: 0}
   m_SizeDelta: {x: -2.2774, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -856,7 +856,7 @@ RectTransform:
   m_Father: {fileID: 932720944}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0, y: 0.47719955}
   m_SizeDelta: {x: -5.7264, y: -16.2246}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1142,10 +1142,10 @@ RectTransform:
   - {fileID: 1980236668}
   m_Father: {fileID: 1581950923}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 82, y: -132.5}
+  m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &356015249
 MonoBehaviour:
@@ -1370,10 +1370,10 @@ RectTransform:
   - {fileID: 1306712573}
   m_Father: {fileID: 1581950923}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 82, y: -37.5}
+  m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &451487981
 MonoBehaviour:
@@ -2095,6 +2095,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 752994221456002889, guid: 6431007cd3a6b08459f275746a8f311f, type: 3}
+      propertyPath: backgroundMusic.Array.data[5]
+      value: 
+      objectReference: {fileID: 1832063742}
+    - target: {fileID: 3359429957722651728, guid: 6431007cd3a6b08459f275746a8f311f, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3916394171732412468, guid: 6431007cd3a6b08459f275746a8f311f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2141,7 +2149,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 0e8df9c4a69f39e46ba24de4bac499b3, type: 3}
     - target: {fileID: 4823406909822398452, guid: 6431007cd3a6b08459f275746a8f311f, type: 3}
       propertyPath: m_PlayOnAwake
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5785124854641373974, guid: 6431007cd3a6b08459f275746a8f311f, type: 3}
       propertyPath: m_audioClip
@@ -3440,6 +3448,39 @@ MonoBehaviour:
   currentTurn: 0
   waitingForTurn: 0
   UIHolder: {fileID: 1581950922}
+  battleMovesList:
+  - abilityName: Melee Attack
+    abilityPower: 5
+    manaCost: 0
+    effect: {fileID: 8320099129145556228, guid: f84fce630f7234141954bba6bad8a5da, type: 3}
+  - abilityName: Explosive Arrow
+    abilityPower: 20
+    manaCost: 10
+    effect: {fileID: 7009733425155297649, guid: e0dd0859d1e231c499af39bae2e93596, type: 3}
+  - abilityName: Holy Smite
+    abilityPower: 50
+    manaCost: 40
+    effect: {fileID: 2420511391880064718, guid: 9a2832230e55eb84896cb44948573786, type: 3}
+  - abilityName: Undead Knight Slash
+    abilityPower: 30
+    manaCost: 0
+    effect: {fileID: 6883002104184707135, guid: b35bd0e4a623e2f4dbac9db930091d2c, type: 3}
+  - abilityName: Holy Prayer
+    abilityPower: 30
+    manaCost: 30
+    effect: {fileID: 6952677536634294066, guid: a78aa34331884e443abfe0dc7a87a65e, type: 3}
+  - abilityName: Necrotic Bolt
+    abilityPower: 30
+    manaCost: 0
+    effect: {fileID: 4758957338288315056, guid: 74ba6fe5bde78524f921b82af8669abe, type: 3}
+  - abilityName: Unholy Reinforcement
+    abilityPower: 0
+    manaCost: 0
+    effect: {fileID: 1369307464265749650, guid: 24e3683375d911e4daf03bc8d66ba151, type: 3}
+  - abilityName: Dark Bite
+    abilityPower: 20
+    manaCost: 0
+    effect: {fileID: 6174009433641610142, guid: 36f77b833d8d1d84885af18f5fe2dfe7, type: 3}
 --- !u!4 &1339986921
 Transform:
   m_ObjectHideFlags: 0
@@ -3471,8 +3512,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0e8df9c4a69f39e46ba24de4bac499b3, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: f1cb5d83282f2904a85f73111d068616, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3590,7 +3631,7 @@ RectTransform:
   m_Father: {fileID: 107113739}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0, y: 0}
   m_SizeDelta: {x: -2.6388, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3956,7 +3997,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1822818791
 Transform:
   m_ObjectHideFlags: 0
@@ -3976,6 +4017,11 @@ Transform:
   - {fileID: 359902530}
   m_Father: {fileID: 1339986921}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1832063742 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3359429957722651728, guid: 6431007cd3a6b08459f275746a8f311f, type: 3}
+  m_PrefabInstance: {fileID: 702494658}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1914500522
 GameObject:
   m_ObjectHideFlags: 0
@@ -4293,7 +4339,7 @@ RectTransform:
   m_Father: {fileID: 987243590}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0, y: 0.47719955}
   m_SizeDelta: {x: -5.7264, y: -16.2246}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4369,10 +4415,10 @@ RectTransform:
   - {fileID: 526811487}
   m_Father: {fileID: 1581950923}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 252, y: -132.5}
+  m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2055728973
 MonoBehaviour:
@@ -4490,10 +4536,10 @@ RectTransform:
   - {fileID: 1056916232}
   m_Father: {fileID: 1581950923}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 252, y: -37.5}
+  m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2076646950
 MonoBehaviour:
@@ -4699,7 +4745,7 @@ RectTransform:
   m_Father: {fileID: 148180378}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.13749695, y: 0}
   m_SizeDelta: {x: -2.2748, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4940,7 +4986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3862402821649478268, guid: 78855e2d42e0bbe4fa800d276e4007c4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7098829006010659663, guid: 78855e2d42e0bbe4fa800d276e4007c4, type: 3}
       propertyPath: m_LocalScale.x
@@ -5017,7 +5063,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 712842219849783365, guid: babbdf8ffd279a1429ceb235b84e46e8, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4287385434855756506, guid: babbdf8ffd279a1429ceb235b84e46e8, type: 3}
+      propertyPath: attacksAvailable.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4287385434855756506, guid: babbdf8ffd279a1429ceb235b84e46e8, type: 3}
+      propertyPath: attacksAvailable.Array.data[0]
+      value: Necrotic Bolt
+      objectReference: {fileID: 0}
+    - target: {fileID: 4287385434855756506, guid: babbdf8ffd279a1429ceb235b84e46e8, type: 3}
+      propertyPath: attacksAvailable.Array.data[3]
+      value: Melee Attack
       objectReference: {fileID: 0}
     - target: {fileID: 8612425411415351817, guid: babbdf8ffd279a1429ceb235b84e46e8, type: 3}
       propertyPath: m_LocalPosition.x

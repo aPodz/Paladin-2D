@@ -28,4 +28,9 @@ public class BattleCharacters : MonoBehaviour
     {
         return isPlayer;
     }
+
+    public string[] AttacksAvailable()
+    { 
+        return attacksAvailable;
+    }
 }

@@ -98,7 +98,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  attacksAvailable: []
+  attacksAvailable:
+  - Dark Bite
+  - Necrotic Bolt
+  - Explosive Arrow
   characterName: Undead Knight
   currentHP: 500
   maxHP: 500
