@@ -3454,15 +3454,15 @@ MonoBehaviour:
     manaCost: 0
     effect: {fileID: 8320099129145556228, guid: f84fce630f7234141954bba6bad8a5da, type: 3}
   - abilityName: Explosive Arrow
-    abilityPower: 20
+    abilityPower: 5
     manaCost: 10
     effect: {fileID: 7009733425155297649, guid: e0dd0859d1e231c499af39bae2e93596, type: 3}
   - abilityName: Holy Smite
-    abilityPower: 50
+    abilityPower: 8
     manaCost: 40
     effect: {fileID: 2420511391880064718, guid: 9a2832230e55eb84896cb44948573786, type: 3}
   - abilityName: Undead Knight Slash
-    abilityPower: 30
+    abilityPower: 8
     manaCost: 0
     effect: {fileID: 6883002104184707135, guid: b35bd0e4a623e2f4dbac9db930091d2c, type: 3}
   - abilityName: Holy Prayer
@@ -3470,7 +3470,7 @@ MonoBehaviour:
     manaCost: 30
     effect: {fileID: 6952677536634294066, guid: a78aa34331884e443abfe0dc7a87a65e, type: 3}
   - abilityName: Necrotic Bolt
-    abilityPower: 30
+    abilityPower: 6
     manaCost: 0
     effect: {fileID: 4758957338288315056, guid: 74ba6fe5bde78524f921b82af8669abe, type: 3}
   - abilityName: Unholy Reinforcement
@@ -3478,7 +3478,7 @@ MonoBehaviour:
     manaCost: 0
     effect: {fileID: 1369307464265749650, guid: 24e3683375d911e4daf03bc8d66ba151, type: 3}
   - abilityName: Dark Bite
-    abilityPower: 20
+    abilityPower: 6
     manaCost: 0
     effect: {fileID: 6174009433641610142, guid: 36f77b833d8d1d84885af18f5fe2dfe7, type: 3}
 --- !u!4 &1339986921

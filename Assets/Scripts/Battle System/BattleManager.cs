@@ -3,6 +3,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Timeline.Actions;
 using UnityEngine;
 
 public class BattleManager : MonoBehaviour
@@ -223,6 +224,7 @@ public class BattleManager : MonoBehaviour
         int selectedPlayerToAttack = players[Random.Range(0, players.Count)];
 
         int selectedAttack = Random.Range(0, activeCharacters[currentTurn].AttacksAvailable().Length);
+        int abilityPower = 0;
 
         for (int i = 0; i < battleMovesList.Length; i++)
         {
@@ -233,8 +235,12 @@ public class BattleManager : MonoBehaviour
                     activeCharacters[selectedPlayerToAttack].transform.position,
                     activeCharacters[selectedPlayerToAttack].transform.rotation
                     );
+
+                abilityPower = battleMovesList[i].abilityPower;
             }
         }
+
+        DealDamage(selectedPlayerToAttack, abilityPower);
     }
 
     private void CheckUIHolder()
@@ -255,4 +261,38 @@ public class BattleManager : MonoBehaviour
             }
         }
     }
+
+    private void DealDamage(int characterToAttack, int abilityPower)
+    {
+        
+        float attackPower = activeCharacters[currentTurn].strength + activeCharacters[currentTurn].attackPower + activeCharacters[currentTurn].weaponPower;
+        float defenceAmount = activeCharacters[characterToAttack].armor + activeCharacters[characterToAttack].armorDef;
+
+        float damageAmount = (attackPower / defenceAmount) * abilityPower * Random.Range(0.8f, 1.2f);
+        int damageDealt = (int)damageAmount;
+
+        damageDealt = CriticalChance(damageDealt);
+        Debug.Log(activeCharacters[currentTurn].name + "´just dealt " + damageDealt + " to " + activeCharacters[characterToAttack]);
+
+
+
+        activeCharacters[characterToAttack].TakeDamage(damageDealt);
+
+        
+    }
+
+    private int CriticalChance(int damageDealt)
+    {
+        if (Random.value <= 0.1f)
+        {
+            Debug.Log("Critical hit!");
+            return (damageDealt * 2);
+        }
+        else 
+        {
+            return damageDealt;
+        }
+    }
+
+
 }

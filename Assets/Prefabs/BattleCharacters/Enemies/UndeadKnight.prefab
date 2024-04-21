@@ -99,17 +99,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   attacksAvailable:
-  - Dark Bite
-  - Necrotic Bolt
-  - Explosive Arrow
+  - Undead Knight Slash
   characterName: Undead Knight
   currentHP: 500
   maxHP: 500
   currentMana: 300
   maxMana: 300
-  strength: 50
+  strength: 25
   armor: 10
-  attackPower: 200
-  weaponPower: 300
+  attackPower: 20
+  weaponPower: 30
   armorDef: 30
   isDead: 0

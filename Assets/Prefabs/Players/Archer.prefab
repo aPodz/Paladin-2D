@@ -172,11 +172,11 @@ MonoBehaviour:
   baseLevelXP: 100
   maxHP: 150
   currentHP: 150
-  maxEnergy: 50
-  currentEnergy: 50
+  maxMana: 0
+  currentMana: 0
   armor: 5
   strength: 20
-  attackPower: 100
+  attackPower: 10
   equippedWeaponName: 
   equippedArmorName: 
   weaponAP: 0
