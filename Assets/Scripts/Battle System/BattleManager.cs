@@ -22,6 +22,8 @@ public class BattleManager : MonoBehaviour
     [SerializeField] GameObject UIHolder;
 
     [SerializeField] BattleMoves[] battleMovesList;
+    [SerializeField] CombatText damageText;
+
 
     // Start is called before the first frame update
     void Start()
@@ -241,6 +243,7 @@ public class BattleManager : MonoBehaviour
         }
 
         DealDamage(selectedPlayerToAttack, abilityPower);
+
     }
 
     private void CheckUIHolder()
@@ -272,13 +275,19 @@ public class BattleManager : MonoBehaviour
         int damageDealt = (int)damageAmount;
 
         damageDealt = CriticalChance(damageDealt);
-        Debug.Log(activeCharacters[currentTurn].name + "´just dealt " + damageDealt + " to " + activeCharacters[characterToAttack]);
+        Debug.Log(activeCharacters[currentTurn].name + " dealt " + damageDealt + " to " + activeCharacters[characterToAttack]);
 
 
 
         activeCharacters[characterToAttack].TakeDamage(damageDealt);
 
-        
+        CombatText combatText = Instantiate(
+                        damageText,
+                        activeCharacters[characterToAttack].transform.position,
+                        activeCharacters[characterToAttack].transform.rotation
+                        );
+
+        combatText.DamageTextAmount(damageDealt);
     }
 
     private int CriticalChance(int damageDealt)
