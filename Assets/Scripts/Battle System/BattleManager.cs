@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 //using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.Timeline.Actions;
@@ -29,6 +30,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField] GameObject[] characterBattleStats;
     [SerializeField] TextMeshProUGUI[] characterNameText, characterHPText, characterManaText;
     [SerializeField] Slider[] characterHPSlider, characterManaSlider;
+    [SerializeField] GameObject[] onTurnIndicator;
 
 
     // Start is called before the first frame update
@@ -64,6 +66,7 @@ public class BattleManager : MonoBehaviour
             AddBattleCharacters();
             AddEnemies(enemiesToSpawn);
             UpdateCharacterStats();
+            UpdateBattle();
 
             waitingForTurn = true;
             currentTurn = 0;
@@ -149,11 +152,20 @@ public class BattleManager : MonoBehaviour
 
     private void NextTurn()
     {
-        currentTurn++;
+
+        if (activeCharacters[currentTurn].IsCharacterAPlayer())
+        {
+            onTurnIndicator[currentTurn].SetActive(false);
+        }
+
+        currentTurn++; 
+        
         if (currentTurn >= activeCharacters.Count)
         {
             currentTurn = 0;
         }
+
+
 
         waitingForTurn = true;
         UpdateBattle();
@@ -163,6 +175,7 @@ public class BattleManager : MonoBehaviour
     {
         bool allEnemiesDead = true;
         bool allPlayersDead = true;
+
 
         for (int i = 0; i < activeCharacters.Count; i++)
         {
@@ -179,7 +192,7 @@ public class BattleManager : MonoBehaviour
             {
                 if (activeCharacters[i].IsCharacterAPlayer())
                 {
-                    allPlayersDead = false;
+                    allPlayersDead = false;                   
                 }
                 else
                 {
@@ -214,6 +227,10 @@ public class BattleManager : MonoBehaviour
                     currentTurn = 0;
                 }
             }
+        }
+        if (activeCharacters[currentTurn].IsCharacterAPlayer())
+        {
+            onTurnIndicator[currentTurn].SetActive(true);
         }
     }
 
