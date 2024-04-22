@@ -357,5 +357,30 @@ public class BattleManager : MonoBehaviour
         }
     }
 
+    public void PlayerAttack(string abilityName)
+    {
+        int enemyTarget = 3;
+        int abilityPower = 0;
+
+
+        for (int i = 0; i < battleMovesList.Length; i++)
+        {
+            if (battleMovesList[i].abilityName == abilityName)
+            {
+                Instantiate(
+                    battleMovesList[i].effect,
+                    activeCharacters[enemyTarget].transform.position,
+                    activeCharacters[enemyTarget].transform.rotation                                      
+                    );
+
+                abilityPower = battleMovesList[i].abilityPower;
+            }
+        }
+
+        DealDamage(enemyTarget, abilityPower);
+        NextTurn();
+
+    }
+
 
 }
