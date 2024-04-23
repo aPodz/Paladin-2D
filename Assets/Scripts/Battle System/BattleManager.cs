@@ -31,6 +31,8 @@ public class BattleManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI[] characterNameText, characterHPText, characterManaText;
     [SerializeField] Slider[] characterHPSlider, characterManaSlider;
     [SerializeField] GameObject[] onTurnIndicator;
+    public GameObject spellPanel;
+    [SerializeField] SpellButton[] spellButtons;
 
 
     // Start is called before the first frame update
@@ -395,8 +397,43 @@ public class BattleManager : MonoBehaviour
         }
 
         DealDamage(enemyTarget, abilityPower);
+        UpdateCharacterStats();
         NextTurn();
 
+    }
+
+    public void OpenSpellPanel()
+    {
+        spellPanel.SetActive(true);
+
+        for (int i = 0; i < spellButtons.Length; i++)
+        {
+            if (activeCharacters[currentTurn].AttacksAvailable().Length > i)
+            {
+                spellButtons[i].gameObject.SetActive(true);
+                spellButtons[i].spellName = ActiveCharacters().AttacksAvailable()[i];  
+                
+                for (int j = 0; j < battleMovesList.Length; j++)
+                {
+                    if (battleMovesList[j].abilityName == spellButtons[i].spellName)
+                    {
+                        spellButtons[i].spellCost = battleMovesList[j].manaCost;
+                        spellButtons[i].spellCostText.text = spellButtons[i].spellCost.ToString();
+                        spellButtons[i].spellIcon.sprite = battleMovesList[j].spellIcon;
+                    }
+                }
+            }
+            else
+            {
+                spellButtons[i].gameObject.SetActive(false);
+            }
+            
+        }
+    }
+
+    public BattleCharacters ActiveCharacters()
+    {
+        return activeCharacters[currentTurn];
     }
 
 

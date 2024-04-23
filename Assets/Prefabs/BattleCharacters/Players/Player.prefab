@@ -98,7 +98,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 1
-  attacksAvailable: []
+  attacksAvailable:
+  - Melee Attack
+  - Holy Smite
   characterName: You
   currentHP: 0
   maxHP: 0
