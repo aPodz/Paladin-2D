@@ -43,6 +43,9 @@ public class BattleManager : MonoBehaviour
     [SerializeField] Transform itemBoxParent;
     [SerializeField] TextMeshProUGUI itemName, itemDesc;
 
+    [SerializeField] GameObject characterChoicePanel;
+    [SerializeField] TextMeshProUGUI[] characterName;
+
 
     // Start is called before the first frame update
     void Start()
@@ -500,6 +503,48 @@ public class BattleManager : MonoBehaviour
         selectedItem = itemToUse;
         itemName.text = itemToUse.name;
         itemDesc.text = itemToUse.itemDesc;
+    }
+
+    public void OpenCharacterChoicePanel()
+    {
+        if (selectedItem)
+        {
+            characterChoicePanel.SetActive(true);
+            for (int i = 0; i < activeCharacters.Count; i++)
+            {
+                if (activeCharacters[i].IsCharacterAPlayer())
+                {
+                    PlayerStats activePlayer = GameManager.instance.GetPlayerStats()[i];
+
+                    characterName[i].text = activePlayer.name;
+
+                    bool playerActiveInHierarchy = activePlayer.gameObject.activeInHierarchy;
+                    characterName[i].transform.parent.gameObject.SetActive(playerActiveInHierarchy);
+                }
+            }
+        }
+        else
+        {
+            battleNotification.Text("No item selected");
+            battleNotification.Activate();
+        }
+    }
+
+    public void UseItemButton(int characterToUse)
+    {
+        activeCharacters[characterToUse].UseItemInBattle(selectedItem);
+        Inventory.instance.RemoveItem(selectedItem);
+
+        UpdateCharacterStats();
+        CloseCharacterChoicePanel();
+        UpdateInventory();
+        selectedItem = null;
+    }
+
+    public void CloseCharacterChoicePanel()
+    {
+        characterChoicePanel.SetActive(false);
+        battleItemsMenu.SetActive(false);
     }
 
 }
