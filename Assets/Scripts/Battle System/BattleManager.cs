@@ -37,6 +37,12 @@ public class BattleManager : MonoBehaviour
 
     [SerializeField] float chanceToRun;
 
+    public GameObject battleItemsMenu;
+    [SerializeField] ItemsManager selectedItem;
+    [SerializeField] GameObject itemBox;
+    [SerializeField] Transform itemBoxParent;
+    [SerializeField] TextMeshProUGUI itemName, itemDesc;
+
 
     // Start is called before the first frame update
     void Start()
@@ -453,6 +459,47 @@ public class BattleManager : MonoBehaviour
             battleNotification.Activate();
         }
 
+    }
+
+    public void UpdateInventory()
+    {
+        battleItemsMenu.SetActive(true);
+
+        foreach (Transform itemSlot in itemBoxParent)
+        {
+            Destroy(itemSlot.gameObject);
+        }
+
+        foreach (ItemsManager item in Inventory.instance.GetItemList())
+        {
+            if (item.isStackable)
+            {
+                RectTransform itemSlot = Instantiate(itemBox, itemBoxParent).GetComponent<RectTransform>();
+
+                Image itemImage = itemSlot.Find("ItemImage").GetComponent<Image>();
+                itemImage.sprite = item.itemImage;
+
+                TextMeshProUGUI itemAmountText = itemSlot.Find("Amount").GetComponent<TextMeshProUGUI>();
+
+                if (item.amount > 1)
+                {
+                    itemAmountText.text = item.amount.ToString();
+                }
+                else
+                {
+                    itemAmountText.text = "";
+                }
+
+                itemSlot.GetComponent<ItemButton>().itemOnButton = item;
+            }
+        }
+    }
+
+    public void SelectedBattleItem(ItemsManager itemToUse)
+    {
+        selectedItem = itemToUse;
+        itemName.text = itemToUse.name;
+        itemDesc.text = itemToUse.itemDesc;
     }
 
 }
