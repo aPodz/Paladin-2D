@@ -35,6 +35,8 @@ public class BattleManager : MonoBehaviour
     [SerializeField] SpellButton[] spellButtons;
     public Notification battleNotification;
 
+    [SerializeField] float chanceToRun;
+
 
     // Start is called before the first frame update
     void Start()
@@ -437,5 +439,20 @@ public class BattleManager : MonoBehaviour
         return activeCharacters[currentTurn];
     }
 
+    public void RunAway()
+    {
+        if(Random.value > chanceToRun)      
+        {
+            isBattleActive = false;
+            battleScene.SetActive(false);
+        }
+        else
+        {
+            NextTurn();
+            battleNotification.Text("THERE IS NO ESCAPE");
+            battleNotification.Activate();
+        }
+
+    }
 
 }
