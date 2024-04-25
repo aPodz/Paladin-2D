@@ -33,6 +33,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField] GameObject[] onTurnIndicator;
     public GameObject spellPanel;
     [SerializeField] SpellButton[] spellButtons;
+    public Notification battleNotification;
 
 
     // Start is called before the first frame update

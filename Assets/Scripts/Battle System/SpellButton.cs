@@ -35,7 +35,9 @@ public class SpellButton : MonoBehaviour
         }
         else
         {
-            Debug.Log("Not enough mana");
+            BattleManager.instance.battleNotification.Text("NOT ENOUGH MANA");
+            BattleManager.instance.battleNotification.Activate();
+            BattleManager.instance.spellPanel.SetActive(false);
         }
 
         
