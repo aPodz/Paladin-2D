@@ -202,7 +202,12 @@ public class BattleManager : MonoBehaviour
             {
                 if (activeCharacters[i].IsCharacterAPlayer() && !activeCharacters[i].isDead)
                 {
-                    activeCharacters[i].KillCharacter();
+                    activeCharacters[i].KillFriendlyCharacter();
+                }
+
+                if (!activeCharacters[i].IsCharacterAPlayer() && !activeCharacters[i].isDead)
+                {
+                    activeCharacters[i].KillEnemy();
                 }
             }
             else
@@ -227,12 +232,9 @@ public class BattleManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("YOU WON");
+                StartCoroutine(EndBattleCoroutine());
             }
-
-            battleScene.SetActive(false);
-            GameManager.instance.battleActive = false;
-            isBattleActive = false;
+            
         }
         else
         {
@@ -455,8 +457,7 @@ public class BattleManager : MonoBehaviour
     {
         if(Random.value > chanceToRun)      
         {
-            isBattleActive = false;
-            battleScene.SetActive(false);
+            StartCoroutine(EndBattleCoroutine());
         }
         else
         {
@@ -550,4 +551,37 @@ public class BattleManager : MonoBehaviour
         battleItemsMenu.SetActive(false);
     }
 
+    public IEnumerator EndBattleCoroutine()
+    {
+        isBattleActive = false;
+        UIHolder.SetActive(false);
+        spellPanel.SetActive(false);
+        // Add condition for Win/Loss later
+        battleNotification.Text("VICTORY");
+        battleNotification.Activate();
+
+        yield return new WaitForSeconds(3);
+
+        foreach(BattleCharacters charactersInBattle in activeCharacters)
+        {
+            if (charactersInBattle.IsCharacterAPlayer())
+            {
+                foreach(PlayerStats playerInBattle in GameManager.instance.GetPlayerStats())
+                {
+                    if (charactersInBattle.characterName == playerInBattle.playerName)
+                    {
+                        playerInBattle.currentHP = charactersInBattle.currentHP;
+                        playerInBattle.currentMana = charactersInBattle.currentMana;
+                    }
+                }
+            }
+
+            Destroy(charactersInBattle.gameObject);
+        }
+
+        battleScene.SetActive(false);
+        activeCharacters.Clear();       
+        currentTurn = 0;
+        GameManager.instance.battleActive = false;
+    }
 }
