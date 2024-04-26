@@ -200,7 +200,10 @@ public class BattleManager : MonoBehaviour
             
             if (activeCharacters[i].currentHP == 0)
             {
-                //Kill Character
+                if (activeCharacters[i].IsCharacterAPlayer() && !activeCharacters[i].isDead)
+                {
+                    activeCharacters[i].KillCharacter();
+                }
             }
             else
             {

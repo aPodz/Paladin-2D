@@ -12,6 +12,8 @@ public class BattleCharacters : MonoBehaviour
     public int currentHP, maxHP, currentMana, maxMana, strength, armor, attackPower, weaponPower, armorDef;
     public bool isDead;
 
+    public Sprite deadSprite;
+
 
     // Start is called before the first frame update
     void Start()
@@ -68,5 +70,14 @@ public class BattleCharacters : MonoBehaviour
     private void AddHP(int itemEffect)
     {
         currentHP += itemEffect;
+    }
+
+    public void KillCharacter()
+    {
+        if (deadSprite)
+        {
+            GetComponent<SpriteRenderer>().sprite = deadSprite;
+            isDead = true;
+        }
     }
 }
