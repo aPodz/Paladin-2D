@@ -8,6 +8,7 @@ using Unity.VisualScripting;
 using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BattleManager : MonoBehaviour
 {
@@ -45,6 +46,8 @@ public class BattleManager : MonoBehaviour
 
     [SerializeField] GameObject characterChoicePanel;
     [SerializeField] TextMeshProUGUI[] characterName;
+
+    [SerializeField] string gameOverScene;
 
 
     // Start is called before the first frame update
@@ -228,7 +231,7 @@ public class BattleManager : MonoBehaviour
         {
             if (allPlayersDead)
             {
-                Debug.Log("YOU LOST");
+                StartCoroutine(GameOverCoroutine());
             }
             else
             {
@@ -583,5 +586,15 @@ public class BattleManager : MonoBehaviour
         activeCharacters.Clear();       
         currentTurn = 0;
         GameManager.instance.battleActive = false;
+    }
+
+    public IEnumerator GameOverCoroutine()
+    {
+        battleNotification.Text("Defeat");
+        battleNotification.Activate();
+        yield return new WaitForSeconds(3);
+
+        isBattleActive = false;
+        SceneManager.LoadScene(gameOverScene);
     }
 }
