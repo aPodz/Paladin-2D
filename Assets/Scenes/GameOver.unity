@@ -918,6 +918,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 752994221456002889, guid: 6431007cd3a6b08459f275746a8f311f, type: 3}
+      propertyPath: backgroundMusic.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 752994221456002889, guid: 6431007cd3a6b08459f275746a8f311f, type: 3}
+      propertyPath: backgroundMusic.Array.data[7]
+      value: 
+      objectReference: {fileID: 1870768640}
     - target: {fileID: 3359429957722651728, guid: 6431007cd3a6b08459f275746a8f311f, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
@@ -964,7 +972,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4823406909822398452, guid: 6431007cd3a6b08459f275746a8f311f, type: 3}
       propertyPath: Loop
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4823406909822398452, guid: 6431007cd3a6b08459f275746a8f311f, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7347243755174770534, guid: 6431007cd3a6b08459f275746a8f311f, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1243,6 +1259,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1702038997}
   m_CullTransparentMesh: 1
+--- !u!82 &1870768640 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7347243755174770534, guid: 6431007cd3a6b08459f275746a8f311f, type: 3}
+  m_PrefabInstance: {fileID: 1696825439}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1885275856
 GameObject:
   m_ObjectHideFlags: 0
@@ -1388,6 +1409,7 @@ GameObject:
   - component: {fileID: 1915483425}
   - component: {fileID: 1915483424}
   - component: {fileID: 1915483423}
+  - component: {fileID: 1915483426}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1469,6 +1491,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1915483426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915483422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67c70047621c0a64da4278b4e9316bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicToPlay: 6
 --- !u!1 &2092085232
 GameObject:
   m_ObjectHideFlags: 0

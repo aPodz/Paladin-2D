@@ -21,6 +21,13 @@ public class CamController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+         while (playerTarget == null)
+        {
+            playerTarget = FindObjectOfType<Player>();
+            if (virtualCamera)
+            {
+                virtualCamera.Follow = playerTarget.transform;
+            }
+        }   
     }
 }
