@@ -10,8 +10,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject continueButton;
     // Start is called before the first frame update
     void Start()
-    {
-        AudioManager.instance.PlayBackgroundMusic(2);
+    {       
         if (PlayerPrefs.HasKey("Player_Pos_X"))
         {
             continueButton.SetActive(true);
