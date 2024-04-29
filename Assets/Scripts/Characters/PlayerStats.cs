@@ -61,7 +61,7 @@ public class PlayerStats : MonoBehaviour
     public void AddXP(int addedXP)
     {
         currentXP += addedXP;
-        if (currentXP >= xpPerLevel[playerLevel])
+        while (currentXP >= xpPerLevel[playerLevel])
         {
             currentXP -= xpPerLevel[playerLevel];
             playerLevel++;

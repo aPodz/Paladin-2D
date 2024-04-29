@@ -402,7 +402,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 467, y: 278}
+  m_AnchoredPosition: {x: 293, y: 162}
   m_SizeDelta: {x: 72.4085, y: 66.8806}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &607082069
@@ -903,7 +903,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 106, y: 106}
+  m_AnchoredPosition: {x: -45.000076, y: 106}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1107213527
@@ -1031,6 +1031,10 @@ PrefabInstance:
       propertyPath: currentMana
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 481581038963849794, guid: 0a8581024ded27e4ebcb3b25ddf78f23, type: 3}
+      propertyPath: xpPerLevel.Array.size
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2840183367633849483, guid: 0a8581024ded27e4ebcb3b25ddf78f23, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1127,8 +1131,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -889.7454, y: -428.7374}
+  m_AnchoredPosition: {x: 29, y: 4}
+  m_SizeDelta: {x: -1248.075, y: -669.6414}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1341463001
 MonoBehaviour:
@@ -1303,7 +1307,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -134.99994, y: 106}
+  m_AnchoredPosition: {x: -286, y: 106}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1488725030
@@ -1573,7 +1577,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 83, y: -60}
+  m_AnchoredPosition: {x: 213, y: -60}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1780009343
@@ -1656,8 +1660,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 197, y: -132}
-  m_SizeDelta: {x: -602.4551, y: -390.6029}
+  m_AnchoredPosition: {x: 138, y: -97.739365}
+  m_SizeDelta: {x: -371.2354, y: -267.1244}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2069432959
 MonoBehaviour:
@@ -1806,6 +1810,10 @@ PrefabInstance:
       propertyPath: characterImage
       value: 
       objectReference: {fileID: 2014582376, guid: 2d8a11e4798a4eb42af1747f0145f2a6, type: 3}
+    - target: {fileID: 1302708395323862526, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
+      propertyPath: xpPerLevel.Array.size
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1730462149169899358, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.64
@@ -1951,6 +1959,10 @@ PrefabInstance:
       propertyPath: currentMana
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 1841281813967649475, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
+      propertyPath: xpPerLevel.Array.size
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4463891421440143516, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
       propertyPath: m_Radius
       value: 0.13734183
@@ -1978,6 +1990,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
+      propertyPath: XPRewardAmount
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
+      propertyPath: itemsRewarded.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
+      propertyPath: itemsRewarded.Array.data[0]
+      value: 
+      objectReference: {fileID: 3488825904162333721, guid: b3f207d9b17f675499a3ac2ec353ccba, type: 3}
+    - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
+      propertyPath: itemsRewarded.Array.data[1]
+      value: 
+      objectReference: {fileID: 633110530338557799, guid: f96248c23704a0245b3f14bc2a21c27a, type: 3}
     - target: {fileID: 5737644029468779890, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
       propertyPath: m_Name
       value: BattleManager

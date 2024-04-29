@@ -48,6 +48,9 @@ public class BattleManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI[] characterName;
 
     [SerializeField] string gameOverScene;
+    private bool runningAway;
+    public int XPRewardAmount;
+    public ItemsManager[] itemsRewarded;
 
 
     // Start is called before the first frame update
@@ -460,7 +463,8 @@ public class BattleManager : MonoBehaviour
     {
         if(Random.value > chanceToRun)      
         {
-            StartCoroutine(EndBattleCoroutine());
+            runningAway = true;
+            StartCoroutine(EndBattleCoroutine());            
         }
         else
         {
@@ -559,8 +563,11 @@ public class BattleManager : MonoBehaviour
         isBattleActive = false;
         UIHolder.SetActive(false);
         spellPanel.SetActive(false);
-        // Add condition for Win/Loss later
-        battleNotification.Text("VICTORY");
+        if (!runningAway)
+        {
+            battleNotification.Text("VICTORY");
+            battleNotification.Activate();
+        }
         battleNotification.Activate();
 
         yield return new WaitForSeconds(3);
@@ -583,9 +590,20 @@ public class BattleManager : MonoBehaviour
         }
 
         battleScene.SetActive(false);
-        activeCharacters.Clear();       
+        activeCharacters.Clear();
         currentTurn = 0;
-        GameManager.instance.battleActive = false;
+
+
+        if (runningAway)
+        {
+            GameManager.instance.battleActive = false;
+            runningAway = false;
+        }
+        else
+        {
+            BattleRewards.instance.OpenRewardPanel(XPRewardAmount, itemsRewarded);
+        }
+        
     }
 
     public IEnumerator GameOverCoroutine()
