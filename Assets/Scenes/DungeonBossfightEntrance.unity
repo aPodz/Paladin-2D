@@ -195,7 +195,7 @@ Transform:
   m_GameObject: {fileID: 135131082}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.57, y: -7.27, z: 0}
+  m_LocalPosition: {x: 0.1, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -210,17 +210,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 135131082}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d227d18653cf55245b13613d5a00c490, type: 3}
+  m_Script: {fileID: 11500000, guid: daec71cf0d3e2d64d85db1e55df0c521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battles:
+  battleToStart:
   - enemies:
-    - UndeadKnight
-    XPReward: 300
+    - Undead Knight
+    XPReward: 1500
     rewardedItems:
     - {fileID: 5593815348457204828, guid: 440181a5c7f0d7841a5965964f9d5778, type: 3}
     - {fileID: 653364829072687289, guid: 101ad1014ac5f084a9238c561856685e, type: 3}
-  activateOnEnter: 0
+    battleMusic: 5
+  activateOnEntry: 1
 --- !u!1 &224903323
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,7 +465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67c70047621c0a64da4278b4e9316bbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicToPlay: 5
+  musicToPlay: 3
 --- !u!1 &607082067
 GameObject:
   m_ObjectHideFlags: 0
@@ -2088,6 +2089,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
+      propertyPath: battleZone
+      value: 
+      objectReference: {fileID: 135131085}
     - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
       propertyPath: XPRewardAmount
       value: 2000

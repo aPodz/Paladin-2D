@@ -8,5 +8,5 @@ public class BattleType
     public string[] enemies;
     public int XPReward;
     public ItemsManager[] rewardedItems;
-    public AudioManager battleMusic;
+    public int battleMusic;
 }

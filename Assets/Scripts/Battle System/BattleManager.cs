@@ -52,6 +52,7 @@ public class BattleManager : MonoBehaviour
     public int XPRewardAmount;
     public ItemsManager[] itemsRewarded;
 
+    [SerializeField] BattleInitiator battleZone;
 
     // Start is called before the first frame update
     void Start()
@@ -560,14 +561,16 @@ public class BattleManager : MonoBehaviour
 
     public IEnumerator EndBattleCoroutine()
     {
-        isBattleActive = false;
-        UIHolder.SetActive(false);
-        spellPanel.SetActive(false);
         if (!runningAway)
         {
+            Destroy(battleZone);
             battleNotification.Text("VICTORY");
             battleNotification.Activate();
         }
+        isBattleActive = false;
+        UIHolder.SetActive(false);
+        spellPanel.SetActive(false);
+
         battleNotification.Activate();
 
         yield return new WaitForSeconds(3);
