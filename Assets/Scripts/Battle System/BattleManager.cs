@@ -15,13 +15,13 @@ public class BattleManager : MonoBehaviour
     public static BattleManager instance;
     private bool isBattleActive;
 
-    [SerializeField] GameObject battleScene;
+    public GameObject battleScene;
     [SerializeField] Transform[] playerPositions, enemyPositions;
     [SerializeField] BattleCharacters[] playerPrefabs, enemyPrefabs;
 
-    [SerializeField] List<BattleCharacters> activeCharacters = new List<BattleCharacters>();
+    public List<BattleCharacters> activeCharacters = new List<BattleCharacters>();
 
-    [SerializeField] int currentTurn;
+    public int currentTurn;
     [SerializeField] bool waitingForTurn;
     [SerializeField] GameObject UIHolder;
 
@@ -52,7 +52,7 @@ public class BattleManager : MonoBehaviour
     public int XPRewardAmount;
     public ItemsManager[] itemsRewarded;
 
-    [SerializeField] BattleInitiator battleZone;
+    [SerializeField] GameObject battleEntry;
 
     // Start is called before the first frame update
     void Start()
@@ -64,16 +64,6 @@ public class BattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            StartBattle(new string[] { "Undead Knight" });
-        }
-
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            NextTurn();
-        }
-
         CheckUIHolder();
     }
 
@@ -563,19 +553,20 @@ public class BattleManager : MonoBehaviour
     {
         if (!runningAway)
         {
-            Destroy(battleZone);
+            yield return new WaitForSeconds(2);
+            Destroy(battleEntry);
             battleNotification.Text("VICTORY");
             battleNotification.Activate();
         }
-        isBattleActive = false;
-        UIHolder.SetActive(false);
-        spellPanel.SetActive(false);
+        else
+        {
+            battleNotification.Text("YOU ESCAPED");
+            battleNotification.Activate();
+        }
 
-        battleNotification.Activate();
-
-        yield return new WaitForSeconds(3);
-
-        foreach(BattleCharacters charactersInBattle in activeCharacters)
+        yield return new WaitForSeconds(2);
+        
+        foreach (BattleCharacters charactersInBattle in activeCharacters)
         {
             if (charactersInBattle.IsCharacterAPlayer())
             {
@@ -591,14 +582,14 @@ public class BattleManager : MonoBehaviour
 
             Destroy(charactersInBattle.gameObject);
         }
-
-        battleScene.SetActive(false);
-        activeCharacters.Clear();
-        currentTurn = 0;
-
-
+        isBattleActive = false;
+        spellPanel.SetActive(false);
+        UIHolder.SetActive(false);
         if (runningAway)
         {
+            battleScene.SetActive(false);
+            activeCharacters.Clear();
+            currentTurn = 0;
             GameManager.instance.battleActive = false;
             runningAway = false;
         }

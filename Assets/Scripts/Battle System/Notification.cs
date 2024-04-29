@@ -18,7 +18,6 @@ public class Notification : MonoBehaviour
     {
         gameObject.SetActive(true);
         StartCoroutine(NotifUptime());
-
     }
 
     IEnumerator NotifUptime()

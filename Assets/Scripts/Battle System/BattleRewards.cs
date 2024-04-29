@@ -46,6 +46,10 @@ public class BattleRewards : MonoBehaviour
 
     public void CloseRewardPanel()
     {
+        BattleManager.instance.battleScene.SetActive(false);
+        BattleManager.instance.activeCharacters.Clear();
+        BattleManager.instance.currentTurn = 0;
+
         foreach (PlayerStats activeplayer in GameManager.instance.GetPlayerStats())
         {
             if (activeplayer.gameObject.activeInHierarchy)
