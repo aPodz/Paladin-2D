@@ -46,6 +46,19 @@ public class BattleRewards : MonoBehaviour
 
     public void CloseRewardPanel()
     {
+        foreach (PlayerStats activeplayer in GameManager.instance.GetPlayerStats())
+        {
+            if (activeplayer.gameObject.activeInHierarchy)
+            {
+                activeplayer.AddXP(XPReward);
+            }
+        }
+
+        foreach (ItemsManager rewardedItem in rewardedItems)
+        {
+            Inventory.instance.AddItem(rewardedItem);
+        }
         rewardPanel.SetActive(false);
+        GameManager.instance.battleActive = false;
     }
 }
