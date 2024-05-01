@@ -611,12 +611,25 @@ public class BattleManager : MonoBehaviour
         battleNotification.Activate();
         yield return new WaitForSeconds(3);
 
+        
+        MenuManager.instance.FadeImage();
+
         DestroyBattleCharacters();
         isBattleActive = false;
         battleScene.SetActive(false);
         activeCharacters.Clear();
         currentTurn = 0;
-        
+
+        yield return new WaitForSeconds(2);
+        MenuManager.instance.FadeOut();
         SceneManager.LoadScene("GameOver");
+        
+        
+        
+
+        
+        
+        
+        
     }
 }

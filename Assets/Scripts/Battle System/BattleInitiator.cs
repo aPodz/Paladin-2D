@@ -17,10 +17,7 @@ public class BattleInitiator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inBattleEntrance && !Player.instance.movementDisabled && activateOnEntry) 
-        {
-            
-        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

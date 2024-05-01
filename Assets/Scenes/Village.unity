@@ -722,6 +722,8 @@ MonoBehaviour:
   shouldActivateQuest: 1
   questToMark: Find A Map
   markAsComplete: 1
+  autoActivate: 1
+  dialogSFX: 0
 --- !u!61 &1097410747
 BoxCollider2D:
   m_ObjectHideFlags: 0
