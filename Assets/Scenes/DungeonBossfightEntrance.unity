@@ -1639,6 +1639,11 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 3359429957722651728, guid: 6431007cd3a6b08459f275746a8f311f, type: 3}
   m_PrefabInstance: {fileID: 702494658}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1886654038 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4665873975956894938, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
+  m_PrefabInstance: {fileID: 4753875153601811514}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2069432957
 GameObject:
   m_ObjectHideFlags: 0
@@ -2063,6 +2068,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
+      propertyPath: runButton
+      value: 
+      objectReference: {fileID: 1886654038}
     - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
       propertyPath: battleZone
       value: 

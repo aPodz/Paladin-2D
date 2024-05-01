@@ -54,6 +54,8 @@ public class BattleManager : MonoBehaviour
 
     [SerializeField] GameObject battleEntry;
 
+    [SerializeField] GameObject runButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -462,6 +464,7 @@ public class BattleManager : MonoBehaviour
             NextTurn();
             battleNotification.Text("THERE IS NO ESCAPE");
             battleNotification.Activate();
+            runButton.SetActive(false);
         }
 
     }
@@ -570,6 +573,7 @@ public class BattleManager : MonoBehaviour
         isBattleActive = false;
         spellPanel.SetActive(false);
         UIHolder.SetActive(false);
+        runButton.SetActive(true);
         if (runningAway)
         {
             battleScene.SetActive(false);
