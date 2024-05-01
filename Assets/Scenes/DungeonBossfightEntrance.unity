@@ -1120,7 +1120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 481581038963849794, guid: 0a8581024ded27e4ebcb3b25ddf78f23, type: 3}
       propertyPath: currentHP
-      value: 10000
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 481581038963849794, guid: 0a8581024ded27e4ebcb3b25ddf78f23, type: 3}
       propertyPath: playerName
@@ -1899,7 +1899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1302708395323862526, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
       propertyPath: currentHP
-      value: 1500
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1302708395323862526, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
       propertyPath: currentMana
@@ -2052,7 +2052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1841281813967649475, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
       propertyPath: currentHP
-      value: 1000
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1841281813967649475, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
       propertyPath: currentMana

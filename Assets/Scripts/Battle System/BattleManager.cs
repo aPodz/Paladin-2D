@@ -565,23 +565,8 @@ public class BattleManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(2);
-        
-        foreach (BattleCharacters charactersInBattle in activeCharacters)
-        {
-            if (charactersInBattle.IsCharacterAPlayer())
-            {
-                foreach(PlayerStats playerInBattle in GameManager.instance.GetPlayerStats())
-                {
-                    if (charactersInBattle.characterName == playerInBattle.playerName)
-                    {
-                        playerInBattle.currentHP = charactersInBattle.currentHP;
-                        playerInBattle.currentMana = charactersInBattle.currentMana;
-                    }
-                }
-            }
 
-            Destroy(charactersInBattle.gameObject);
-        }
+        DestroyBattleCharacters();
         isBattleActive = false;
         spellPanel.SetActive(false);
         UIHolder.SetActive(false);
@@ -597,7 +582,27 @@ public class BattleManager : MonoBehaviour
         {
             BattleRewards.instance.OpenRewardPanel(XPRewardAmount, itemsRewarded);
         }
-        
+
+    }
+
+    private void DestroyBattleCharacters()
+    {
+        foreach (BattleCharacters charactersInBattle in activeCharacters)
+        {
+            if (charactersInBattle.IsCharacterAPlayer())
+            {
+                foreach (PlayerStats playerInBattle in GameManager.instance.GetPlayerStats())
+                {
+                    if (charactersInBattle.characterName == playerInBattle.playerName)
+                    {
+                        playerInBattle.currentHP = charactersInBattle.currentHP;
+                        playerInBattle.currentMana = charactersInBattle.currentMana;
+                    }
+                }
+            }
+
+            Destroy(charactersInBattle.gameObject);
+        }
     }
 
     public IEnumerator GameOverCoroutine()
@@ -606,7 +611,12 @@ public class BattleManager : MonoBehaviour
         battleNotification.Activate();
         yield return new WaitForSeconds(3);
 
+        DestroyBattleCharacters();
         isBattleActive = false;
-        SceneManager.LoadScene(gameOverScene);
+        battleScene.SetActive(false);
+        activeCharacters.Clear();
+        currentTurn = 0;
+        
+        SceneManager.LoadScene("GameOver");
     }
 }
