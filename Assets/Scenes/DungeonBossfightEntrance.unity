@@ -1916,6 +1916,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: battleToStart.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: battleToStart.Array.data[1].XPReward
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: battleToStart.Array.data[1].battleMusic
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: battleToStart.Array.data[1].enemies.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: battleToStart.Array.data[1].enemies.Array.data[0]
+      value: Undead Knight
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: battleToStart.Array.data[1].rewardedItems.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: battleToStart.Array.data[1].rewardedItems.Array.data[0]
+      value: 
+      objectReference: {fileID: 5593815348457204828, guid: 440181a5c7f0d7841a5965964f9d5778, type: 3}
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: battleToStart.Array.data[1].rewardedItems.Array.data[1]
+      value: 
+      objectReference: {fileID: 653364829072687289, guid: 101ad1014ac5f084a9238c561856685e, type: 3}
     - target: {fileID: 7121105714566649269, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.1

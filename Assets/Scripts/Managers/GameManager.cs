@@ -191,13 +191,13 @@ public class GameManager : MonoBehaviour
             playerStats[i].attackPower = PlayerPrefs.GetInt("Player_" + playerStats[i].gameObject.name + "_AttackPower");
 
             playerStats[i].equippedWeaponName = PlayerPrefs.GetString("Player_" + playerStats[i].gameObject.name + "_EquippedWeapon");
-            playerStats[i].equippedArmorName = PlayerPrefs.GetString("Player_" + playerStats[i].gameObject.name + "_EquippedArmor");
+            playerStats[i].equippedArmorName = PlayerPrefs.GetString("Player_" + playerStats[i].gameObject.name + "_EquippedArmor");            
 
             playerStats[i].weaponAP = PlayerPrefs.GetInt("Player_" + playerStats[i].gameObject.name + "_WeaponAP");
             playerStats[i].armorDef = PlayerPrefs.GetInt("Player_" + playerStats[i].gameObject.name + "_ArmorDefence");
 
-
-
+            playerStats[i].equippedWeapon = ItemAssets.instance.GetItemAsset(playerStats[i].equippedWeaponName);
+            playerStats[i].equippedArmor = ItemAssets.instance.GetItemAsset(playerStats[i].equippedArmorName);
         }
     }
 }
