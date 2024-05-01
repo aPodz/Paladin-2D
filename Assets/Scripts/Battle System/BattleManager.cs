@@ -609,10 +609,9 @@ public class BattleManager : MonoBehaviour
     {
         battleNotification.Text("Defeat");
         battleNotification.Activate();
-        yield return new WaitForSeconds(3);
-
-        
         MenuManager.instance.FadeImage();
+        
+        yield return new WaitForSeconds(3);
 
         DestroyBattleCharacters();
         isBattleActive = false;
