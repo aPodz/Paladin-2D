@@ -14,6 +14,8 @@ public class BattleRewards : MonoBehaviour
     [SerializeField] ItemsManager[] rewardedItems;
     [SerializeField] int XPReward;
     [SerializeField] Image[] awardedItems;
+    public bool completeQuest;
+    public string questToComplete;
     // Start is called before the first frame update
     void Start()
     {
@@ -64,5 +66,10 @@ public class BattleRewards : MonoBehaviour
         }
         rewardPanel.SetActive(false);
         GameManager.instance.battleActive = false;
+
+        if (completeQuest)
+        {
+            QuestManager.instance.MarkQuestComplete(questToComplete);
+        }
     }
 }

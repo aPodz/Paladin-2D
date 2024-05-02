@@ -7,7 +7,9 @@ public class BattleInitiator : MonoBehaviour
     [SerializeField] BattleType[] battleToStart;
     [SerializeField] bool activateOnEntry;
     [SerializeField] bool canRunAway;
-    
+    [SerializeField] bool questObjective;
+    public string questToComplete;
+
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +47,9 @@ public class BattleInitiator : MonoBehaviour
 
         BattleManager.instance.itemsRewarded = battleToStart[0].rewardedItems;
         BattleManager.instance.XPRewardAmount = battleToStart[0].XPReward;
+
+        BattleRewards.instance.completeQuest = questObjective;
+        BattleRewards.instance.questToComplete = questToComplete;
 
         yield return new WaitForSeconds(2);
 
