@@ -315,15 +315,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4455049120505306389, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: m_Name
-      value: TempleInterior2Entry
+      value: TempleExit
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544541734810951126, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
+      propertyPath: sceneToLoad
+      value: TempleEntrance
       objectReference: {fileID: 0}
     - target: {fileID: 5544541734810951126, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: transitionArea
-      value: TempleIn - 2
+      value: Temple - Entry
       objectReference: {fileID: 0}
     - target: {fileID: 5544541734810951126, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: instantTransition
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7170738557100468659, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -335,7 +339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8509763245716718709, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: transitionAreaName
-      value: TempleIn - 1
+      value: Temple - Exit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -554,15 +558,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4455049120505306389, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: m_Name
-      value: TempleExit
+      value: TempleInterior2
       objectReference: {fileID: 0}
     - target: {fileID: 5544541734810951126, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: sceneToLoad
-      value: TempleEntrance
+      value: TempleInterior2
       objectReference: {fileID: 0}
     - target: {fileID: 5544541734810951126, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: transitionArea
-      value: Temple - Entry
+      value: TempleIn - 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544541734810951126, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
+      propertyPath: instantTransition
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7170738557100468659, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -574,7 +582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8509763245716718709, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: transitionAreaName
-      value: Temple - Exit
+      value: TempleIn - 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

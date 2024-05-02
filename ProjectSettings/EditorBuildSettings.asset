@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TempleInterior1.unity
     guid: ecba8c6260b2f7542961e641713a11c8
   - enabled: 1
+    path: Assets/Scenes/TempleInterior2.unity
+    guid: 29aa6948b019d3640acd2ba249c33249
+  - enabled: 1
     path: Assets/Scenes/Shop.unity
     guid: 87975f3d2a773b04f8744814c6b637da
   - enabled: 1

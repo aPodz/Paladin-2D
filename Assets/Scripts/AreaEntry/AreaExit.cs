@@ -35,6 +35,7 @@ public class AreaExit : MonoBehaviour
             }
             else
             {
+                Player.instance.playerTransition = transitionArea;
                 SceneManager.LoadScene(sceneToLoad);
             }
                      
