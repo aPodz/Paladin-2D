@@ -25,7 +25,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField] bool waitingForTurn;
     [SerializeField] GameObject UIHolder;
 
-    [SerializeField] BattleMoves[] battleMovesList;
+    [SerializeField] BattleMoves[] battleMovesList;   
     [SerializeField] CombatText damageText;
 
     [SerializeField] GameObject[] characterBattleStats;

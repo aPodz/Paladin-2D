@@ -13,6 +13,7 @@ public class BattleCharacters : MonoBehaviour
     public bool isDead;
 
     public Sprite deadSprite;
+    [SerializeField] Animation deathAnimation;
 
 
     // Start is called before the first frame update
