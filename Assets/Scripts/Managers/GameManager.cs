@@ -36,14 +36,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F2))
-        {
-            SavePlayerData();
-        }
-        if (Input.GetKeyDown(KeyCode.F5))
-        {
-            LoadPlayerData();
-        }
         if (gameMenuOpen || dialogBoxOpen || shopOpen || battleActive)
         {
             Player.instance.movementDisabled = true;

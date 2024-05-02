@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -9,6 +10,8 @@ public class QuestManager : MonoBehaviour
     [SerializeField] bool[] questMarkers;
 
     public static QuestManager instance;
+    public GameObject questPanel;
+    public TextMeshProUGUI questText;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +22,22 @@ public class QuestManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            ShowActiveQuest();
+        }
+        
+    }
 
+    public void ShowActiveQuest()
+    {
+        for (int i = 0; i < questNames.Length; i++)
+        {
+            if (questMarkers[i])
+            {
+                questText.text = questNames[i]; 
+            }
+        }
     }
 
     public int GetQuestNumber(string questToFind)
@@ -56,7 +74,7 @@ public class QuestManager : MonoBehaviour
         {
             foreach (QuestObject questObject in questObjects)
             {
-                questObject.IsQuestCompleted();
+                questObject.IsQuestCompleted();           
             }
         }
     }

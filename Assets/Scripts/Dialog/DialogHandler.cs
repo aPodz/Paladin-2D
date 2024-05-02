@@ -12,7 +12,6 @@ public class DialogHandler : MonoBehaviour
     [SerializeField] string questToMark;
     [SerializeField] bool markAsComplete;
     [SerializeField] bool autoActivate;
-    [SerializeField] int dialogSFX;
 
 
     // Start is called before the first frame update
@@ -28,13 +27,11 @@ public class DialogHandler : MonoBehaviour
         {  
             if (autoActivate && canActivateDialog)
             {
-                AudioManager.instance.PlaySFX(dialogSFX);
                 DialogController.instance.ActivateDialog(lines);
                 autoActivate = false;
             }
-            else if (!autoActivate && Input.GetButtonDown("Fire1"))
+            else if (!autoActivate && Input.GetButtonDown("Fire1") && canActivateDialog)
             {
-                AudioManager.instance.PlaySFX(dialogSFX);
                 DialogController.instance.ActivateDialog(lines);
             }
 

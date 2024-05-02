@@ -7,18 +7,13 @@ public class QuestZone : MonoBehaviour
     [SerializeField] string questToMark;
     [SerializeField] bool markAsComplete;
     [SerializeField] bool markOnEnter;
-
-    private bool canMark;
+  
 
     public bool deactivateOnMark;
 
     private void Update()
     {
-        if (canMark && Input.GetButtonDown("Fire1"))
-        {
-            canMark = false;
-            MarkQuest();          
-        }
+
     }
 
     public void MarkQuest()
@@ -30,6 +25,7 @@ public class QuestZone : MonoBehaviour
         else
         {
             QuestManager.instance.MarkQuestIncomplete(questToMark);
+            QuestManager.instance.questText.text = questToMark;
         }
 
         gameObject.SetActive(!deactivateOnMark);
@@ -45,7 +41,7 @@ public class QuestZone : MonoBehaviour
             }
             else
             {
-                canMark = true;
+                
             }
         }
     }
