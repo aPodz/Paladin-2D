@@ -6,7 +6,8 @@ public class BattleInitiator : MonoBehaviour
 {
     [SerializeField] BattleType[] battleToStart;
     [SerializeField] bool activateOnEntry;
-    private bool inBattleEntrance;  
+    [SerializeField] bool canRunAway;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,7 @@ public class BattleInitiator : MonoBehaviour
             }
             else
             {
-                inBattleEntrance = true;
+                
             }
         }
     }
@@ -50,7 +51,7 @@ public class BattleInitiator : MonoBehaviour
         MenuManager.instance.FadeOut();
         AudioManager.instance.PlayBackgroundMusic(battleToStart[0].battleMusic);
 
-        BattleManager.instance.StartBattle(battleToStart[0].enemies);
+        BattleManager.instance.StartBattle(battleToStart[0].enemies, canRunAway);
        
     }
 }

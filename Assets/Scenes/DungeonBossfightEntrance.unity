@@ -1644,6 +1644,99 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4665873975956894938, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
   m_PrefabInstance: {fileID: 4753875153601811514}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1969321634
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: battleToStart.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: battleToStart.Array.data[1].XPReward
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: battleToStart.Array.data[1].battleMusic
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: battleToStart.Array.data[1].enemies.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: battleToStart.Array.data[0].enemies.Array.data[0]
+      value: Unholy Priest
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: battleToStart.Array.data[1].enemies.Array.data[0]
+      value: Undead Knight
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: battleToStart.Array.data[1].rewardedItems.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: battleToStart.Array.data[1].rewardedItems.Array.data[0]
+      value: 
+      objectReference: {fileID: 5593815348457204828, guid: 440181a5c7f0d7841a5965964f9d5778, type: 3}
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: battleToStart.Array.data[1].rewardedItems.Array.data[1]
+      value: 
+      objectReference: {fileID: 653364829072687289, guid: 101ad1014ac5f084a9238c561856685e, type: 3}
+    - target: {fileID: 7121105714566649269, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121105714566649269, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -22.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121105714566649269, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121105714566649269, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121105714566649269, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121105714566649269, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121105714566649269, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121105714566649269, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121105714566649269, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121105714566649269, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8848906826105477712, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: m_Name
+      value: BattleEntry (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
 --- !u!1 &2069432957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1917,6 +2010,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: canRunAway
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
       propertyPath: battleToStart.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -2117,9 +2214,21 @@ PrefabInstance:
       value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
+      propertyPath: deathEffect.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
+      propertyPath: enemyPrefabs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
       propertyPath: itemsRewarded.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
+      propertyPath: enemyPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 821419099643701378, guid: 3fad42ede793bee43bb20aa9b3355a6c, type: 3}
     - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
       propertyPath: itemsRewarded.Array.data[0]
       value: 
@@ -2128,6 +2237,14 @@ PrefabInstance:
       propertyPath: itemsRewarded.Array.data[1]
       value: 
       objectReference: {fileID: 633110530338557799, guid: f96248c23704a0245b3f14bc2a21c27a, type: 3}
+    - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
+      propertyPath: deathEffect.Array.data[0].effect
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
+      propertyPath: deathEffect.Array.data[0].abilityName
+      value: PriestDeath
+      objectReference: {fileID: 0}
     - target: {fileID: 5737644029468779890, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
       propertyPath: m_Name
       value: BattleManager
@@ -2196,3 +2313,4 @@ SceneRoots:
   - {fileID: 3981885902514147100}
   - {fileID: 2040537929280678986}
   - {fileID: 2352793389468345568}
+  - {fileID: 1969321634}

@@ -12,8 +12,7 @@ public class BattleCharacters : MonoBehaviour
     public int currentHP, maxHP, currentMana, maxMana, strength, armor, attackPower, weaponPower, armorDef;
     public bool isDead;
 
-    public Sprite deadSprite;
-    [SerializeField] Animation deathAnimation;
+    public Sprite deadSprite;   
 
 
     // Start is called before the first frame update

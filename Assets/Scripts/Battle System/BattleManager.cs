@@ -55,6 +55,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField] GameObject battleEntry;
 
     [SerializeField] GameObject runButton;
+    private bool canRun;
 
     // Start is called before the first frame update
     void Start()
@@ -71,10 +72,11 @@ public class BattleManager : MonoBehaviour
 
     
 
-    public void StartBattle(string[] enemiesToSpawn)
+    public void StartBattle(string[] enemiesToSpawn, bool canRunAway)
     {
         if (!isBattleActive)
-        {           
+        {
+            canRun = canRunAway;
             BattleSceneSetup();
             AddBattleCharacters();
             AddEnemies(enemiesToSpawn);
@@ -94,7 +96,7 @@ public class BattleManager : MonoBehaviour
             {
                 for (int j = 0; j < enemyPrefabs.Length; j++)
                 {
-                    if (enemyPrefabs[j].characterName == enemiesToSpawn[j])
+                    if (enemyPrefabs[j].characterName == enemiesToSpawn[i])
                     {
                         BattleCharacters newEnemy = Instantiate(
                             enemyPrefabs[j],
@@ -254,6 +256,10 @@ public class BattleManager : MonoBehaviour
 
     public IEnumerator EnemyMove()
     {
+        if (canRun)
+        {
+            runButton.SetActive(true);
+        }
         waitingForTurn = false;
         yield return new WaitForSeconds(1);
         EnemyAttack();
@@ -454,10 +460,20 @@ public class BattleManager : MonoBehaviour
 
     public void RunAway()
     {
-        if(Random.value > chanceToRun)      
+        if (canRun)
         {
-            runningAway = true;
-            StartCoroutine(EndBattleCoroutine());            
+            if (Random.value > chanceToRun)
+            {
+                runningAway = true;
+                StartCoroutine(EndBattleCoroutine());
+            }
+            else
+            {
+                NextTurn();
+                battleNotification.Text("ESCAPE FAILED");
+                battleNotification.Activate();
+                runButton.SetActive(false);
+            }
         }
         else
         {
@@ -466,6 +482,7 @@ public class BattleManager : MonoBehaviour
             battleNotification.Activate();
             runButton.SetActive(false);
         }
+
 
     }
 
