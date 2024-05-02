@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Forest.unity
     guid: 135da18768ddabb4c8bf2d30e6eb89aa
   - enabled: 1
+    path: Assets/Scenes/TempleEntrance.unity
+    guid: 08fcae80253de034eb6fa49c5feb3790
+  - enabled: 1
     path: Assets/Scenes/Shop.unity
     guid: 87975f3d2a773b04f8744814c6b637da
   - enabled: 1
