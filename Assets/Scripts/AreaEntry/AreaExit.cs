@@ -9,8 +9,8 @@ public class AreaExit : MonoBehaviour
 
     [SerializeField] string sceneToLoad;
     [SerializeField] string transitionArea;
+    [SerializeField] bool instantTransition;
     
-  
     // Start is called before the first frame update
     void Start()
     {
@@ -27,16 +27,24 @@ public class AreaExit : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Player.instance.playerTransition = transitionArea;          
-            MenuManager.instance.FadeImage();            
-            StartCoroutine(LoadSceneCoroutine());           
+            if (!instantTransition)
+            {
+                Player.instance.playerTransition = transitionArea;
+                MenuManager.instance.FadeImage();
+                StartCoroutine(LoadSceneCoroutine());
+            }
+            else
+            {
+                SceneManager.LoadScene(sceneToLoad);
+            }
+                     
         }
         
     }
 
     IEnumerator LoadSceneCoroutine()
     {        
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(sceneToLoad);
     }
 }
