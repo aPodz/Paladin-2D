@@ -2444,7 +2444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
       propertyPath: itemsRewarded.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
       propertyPath: enemyPrefabs.Array.data[1]

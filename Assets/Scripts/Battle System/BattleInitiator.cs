@@ -48,8 +48,8 @@ public class BattleInitiator : MonoBehaviour
         BattleManager.instance.itemsRewarded = battleToStart[0].rewardedItems;
         BattleManager.instance.XPRewardAmount = battleToStart[0].XPReward;
 
-        BattleRewards.instance.completeQuest = questObjective;
-        BattleRewards.instance.questToComplete = questToComplete;
+        //BattleRewards.instance.completeQuest = questObjective;
+        //BattleRewards.instance.questToComplete = questToComplete;
 
         yield return new WaitForSeconds(2);
 
