@@ -25,22 +25,24 @@ public class AreaExit : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (!Player.instance.movementDisabled)
         {
-            if (!instantTransition)
+            if (collision.CompareTag("Player"))
             {
-                Player.instance.playerTransition = transitionArea;
-                MenuManager.instance.FadeImage();
-                StartCoroutine(LoadSceneCoroutine());
+                if (!instantTransition)
+                {
+                    Player.instance.playerTransition = transitionArea;
+                    MenuManager.instance.FadeImage();
+                    StartCoroutine(LoadSceneCoroutine());
+                }
+                else
+                {
+                    Player.instance.playerTransition = transitionArea;
+                    SceneManager.LoadScene(sceneToLoad);
+                }
+
             }
-            else
-            {
-                Player.instance.playerTransition = transitionArea;
-                SceneManager.LoadScene(sceneToLoad);
-            }
-                     
-        }
-        
+        }             
     }
 
     IEnumerator LoadSceneCoroutine()

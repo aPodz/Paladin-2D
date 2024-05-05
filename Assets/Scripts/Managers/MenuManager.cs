@@ -165,8 +165,18 @@ public class MenuManager : MonoBehaviour
 
     public void DiscardItem()
     {
-        AudioManager.instance.PlaySFX(6);
-        Inventory.instance.RemoveItem(activeItem);
+        
+        if (activeItem != null)
+        {
+            Inventory.instance.RemoveItem(activeItem);
+            AudioManager.instance.PlaySFX(6);
+        }
+        else
+        {
+            GameManager.instance.notification.Text("No item selected");
+            GameManager.instance.notification.Activate();
+        }
+        
         UpdateInventory();
     }
 

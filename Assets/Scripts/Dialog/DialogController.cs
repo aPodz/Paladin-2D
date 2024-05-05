@@ -38,8 +38,7 @@ public class DialogController : MonoBehaviour
                     if (currentLine >= dialogLines.Length)
                     {                       
                         dialogBox.SetActive(false);
-                        GameManager.instance.dialogBoxOpen = false;
-                        DialogHandler.instance.DestroyTrigger();
+                        GameManager.instance.dialogBoxOpen = false;                      
 
                         if(shouldMarkQuest)
                         {

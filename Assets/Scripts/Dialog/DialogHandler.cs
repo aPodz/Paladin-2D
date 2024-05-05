@@ -14,13 +14,11 @@ public class DialogHandler : MonoBehaviour
     [SerializeField] bool autoActivate;
     [SerializeField] bool dialogFinished;
     public GameObject dialogTrigger;
-    public static DialogHandler instance;
-
 
     // Start is called before the first frame update
     void Start()
     {
-        instance = this;
+
     }
 
     // Update is called once per frame
@@ -46,12 +44,11 @@ public class DialogHandler : MonoBehaviour
             {
                 DialogController.instance.ActivateQuest(questToMark, markAsComplete);
             }
+            if (dialogFinished)
+            {
+                dialogTrigger.gameObject.SetActive(false);
+            }
         }
-    }
-
-    public void DestroyTrigger()
-    {
-        Destroy(dialogTrigger);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
