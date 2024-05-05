@@ -76,6 +76,7 @@ public class BattleManager : MonoBehaviour
     {
         if (!isBattleActive)
         {
+
             canRun = canRunAway;
             BattleSceneSetup();
             AddBattleCharacters();

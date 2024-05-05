@@ -53,7 +53,7 @@ public class MenuManager : MonoBehaviour
             }
             else
             {
-                if (!ShopManager.instance.shopMenu.activeInHierarchy)
+                if (!ShopManager.instance.shopMenu.activeInHierarchy && !GameManager.instance.battleActive)
                 {
                     UpdateStats();
                     UpdateInventory();

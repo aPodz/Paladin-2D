@@ -103,8 +103,8 @@ MonoBehaviour:
   - Necrotic Bolt
   - Dark Bite
   characterName: Unholy Priest
-  currentHP: 1
-  maxHP: 10000
+  currentHP: 100000
+  maxHP: 100000
   currentMana: 1000
   maxMana: 1000
   strength: 50
