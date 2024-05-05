@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     public int currentCoins;
 
+    public Notification notification;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +61,9 @@ public class GameManager : MonoBehaviour
         SavePlayerItems();
 
         PlayerPrefs.SetString("Current_Scene", SceneManager.GetActiveScene().name);
+
+        notification.Text("Game saved");
+        notification.Activate();
     }
         public void LoadPlayerData()
     {

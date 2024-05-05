@@ -896,7 +896,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2127103875891916032, guid: 4e22db58c5d3ee64c9e2b13be50463e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 550881165}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e22db58c5d3ee64c9e2b13be50463e7, type: 3}
 --- !u!4 &514180707 stripped
@@ -904,6 +907,200 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2127103875891916032, guid: 4e22db58c5d3ee64c9e2b13be50463e7, type: 3}
   m_PrefabInstance: {fileID: 514180706}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &550881164
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 514180707}
+    m_Modifications:
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: questToMark
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: autoActivate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: dialogTrigger
+      value: 
+      objectReference: {fileID: 550881166}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: '#Villager'
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[1]
+      value: OH! H-Hello..
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[2]
+      value: Welcome to the village.
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[3]
+      value: It's not much, but it's a nice place to live in.
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[4]
+      value: If you want to, you can visit the blacksmith, he might have something
+        useful.
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[5]
+      value: You can find him if you follow the road northeast, there is a guard
+        standing in front of his shop.
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[6]
+      value: There is also a tavern right here, if you wanted to rest before heading
+        out.
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[7]
+      value: It doesn't look very fancy, but it's actually much bigger than it looks
+        from the outside!
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[8]
+      value: Me and Thorm will be waiting in the forest, when you're ready to go.
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: shouldActivateQuest
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 905665989394935669, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_Size.x
+      value: 2.6220584
+      objectReference: {fileID: 0}
+    - target: {fileID: 905665989394935669, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_Size.y
+      value: 2.2896254
+      objectReference: {fileID: 0}
+    - target: {fileID: 905665989394935669, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.042425156
+      objectReference: {fileID: 0}
+    - target: {fileID: 905665989394935669, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.015084863
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813932848674459419, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_Name
+      value: DialogTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -0.0904364
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.11864013
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.98374224
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.882928
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.030138742
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.010958807
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.46841198
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -3.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -55.91
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 905665989394935669, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4813932848674459419, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 550881167}
+  m_SourcePrefab: {fileID: 100100000, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+--- !u!4 &550881165 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+  m_PrefabInstance: {fileID: 550881164}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &550881166 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4813932848674459419, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+  m_PrefabInstance: {fileID: 550881164}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &550881167
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550881166}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.2587496, y: 0.28589857}
+  serializedVersion: 2
+  m_Radius: 12.040222
 --- !u!1001 &676712193
 PrefabInstance:
   m_ObjectHideFlags: 0
