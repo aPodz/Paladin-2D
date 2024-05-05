@@ -11,7 +11,7 @@ public class AreaEntry : MonoBehaviour
         if (transitionAreaName == Player.instance.playerTransition) 
         {
             Player.instance.transform.position = transform.position;      
-        }
+        }       
     }
 
     // Update is called once per frame

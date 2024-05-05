@@ -34,8 +34,6 @@ public class PlayerStats : MonoBehaviour
 
     public ItemsManager equippedWeapon, equippedArmor;
 
-    public bool isTeamMember;
-    public bool isMainCharacter;
 
     // Start is called before the first frame update
     void Start()
@@ -49,7 +47,7 @@ public class PlayerStats : MonoBehaviour
         {
             xpPerLevel[i] = baseLevelXP * i;
         }
-
+        DontDestroyOnLoad(this);
     }
 
     // Update is called once per frame

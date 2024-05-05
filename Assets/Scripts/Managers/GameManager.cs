@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.U2D.Animation;
 using UnityEngine.SceneManagement;
 using System.Linq;
-using Unity.VisualScripting;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -17,12 +17,12 @@ public class GameManager : MonoBehaviour
 
     public int currentCoins;
 
-    public Notification notification;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
         if (instance != null && instance != this)
         {
             Destroy(this.gameObject);
@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {      
         if (gameMenuOpen || dialogBoxOpen || shopOpen || battleActive)
         {
             Player.instance.movementDisabled = true;
@@ -62,8 +62,8 @@ public class GameManager : MonoBehaviour
 
         PlayerPrefs.SetString("Current_Scene", SceneManager.GetActiveScene().name);
 
-        notification.Text("Game saved");
-        notification.Activate();
+        MenuManager.instance.notification.Text("Game saved");
+        MenuManager.instance.notification.Activate();
     }
         public void LoadPlayerData()
     {

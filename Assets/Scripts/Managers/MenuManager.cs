@@ -34,6 +34,7 @@ public class MenuManager : MonoBehaviour
 
     [SerializeField] GameObject characterChoicePanel;
     [SerializeField] TextMeshProUGUI[] itemCharacterChoiceName;
+    public Notification notification;
 
     // Start is called before the first frame update
     void Start()
@@ -71,7 +72,6 @@ public class MenuManager : MonoBehaviour
         for (int i = 0; i < playerStats.Length; i++)
         {           
             characterPanel[i].SetActive(true);
-
 
             lvlText[i].text = playerStats[i].playerLevel.ToString();
             nameText[i].text = playerStats[i].playerName;
@@ -173,8 +173,8 @@ public class MenuManager : MonoBehaviour
         }
         else
         {
-            GameManager.instance.notification.Text("No item selected");
-            GameManager.instance.notification.Activate();
+            notification.Text("No item selected");
+            notification.Activate();
         }
         
         UpdateInventory();

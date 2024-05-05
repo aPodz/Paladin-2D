@@ -33,12 +33,12 @@ public class AreaExit : MonoBehaviour
                 {
                     Player.instance.playerTransition = transitionArea;
                     MenuManager.instance.FadeImage();
-                    StartCoroutine(LoadSceneCoroutine());
+                    StartCoroutine(LoadSceneCoroutine());                   
                 }
                 else
                 {
                     Player.instance.playerTransition = transitionArea;
-                    SceneManager.LoadScene(sceneToLoad);
+                    SceneManager.LoadScene(sceneToLoad);                   
                 }
 
             }

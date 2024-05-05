@@ -119,7 +119,7 @@ public class BattleManager : MonoBehaviour
     {
         for (int i = 0; i < GameManager.instance.GetPlayerStats().Length; i++)
         {
-            if (GameManager.instance.GetPlayerStats()[i].gameObject.activeInHierarchy && GameManager.instance.GetPlayerStats()[i].isTeamMember)
+            if (GameManager.instance.GetPlayerStats()[i].gameObject.activeInHierarchy)
             {
                 for (int j = 0; j < playerPrefabs.Length; j++)
                 {
