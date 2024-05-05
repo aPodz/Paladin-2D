@@ -223,3 +223,5 @@ MonoBehaviour:
   armorDef: 0
   equippedWeapon: {fileID: 0}
   equippedArmor: {fileID: 0}
+  isTeamMember: 1
+  isMainCharacter: 1
