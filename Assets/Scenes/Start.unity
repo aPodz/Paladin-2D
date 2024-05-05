@@ -174,6 +174,7 @@ MonoBehaviour:
   markAsComplete: 0
   autoActivate: 1
   dialogFinished: 0
+  dialogTrigger: {fileID: 0}
 --- !u!61 &202794306
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -624,6 +625,7 @@ MonoBehaviour:
   markAsComplete: 0
   autoActivate: 1
   dialogFinished: 0
+  dialogTrigger: {fileID: 0}
 --- !u!61 &1307286177
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1124,66 +1126,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 129163441635622987, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
-      propertyPath: m_text
-      value: 'MP:'
-      objectReference: {fileID: 0}
-    - target: {fileID: 582220483956124417, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
-      propertyPath: m_Name
-      value: Char_MP
-      objectReference: {fileID: 0}
-    - target: {fileID: 628723686130239155, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 8c2342b25214a114e8d7ef3d2bfc4c23, type: 3}
-    - target: {fileID: 1250084081040066528, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -1953201221, guid: 82c063badc65feb4d933b3ca25e80f4f, type: 3}
-    - target: {fileID: 1536073631305336123, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
-      propertyPath: m_Name
-      value: MP_Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107242833406426754, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
-      propertyPath: m_Name
-      value: MP_Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 2202846438396716904, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 8c2342b25214a114e8d7ef3d2bfc4c23, type: 3}
-    - target: {fileID: 2236254794242937787, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 371800aa515e20945b6b2ba9e0a150cc, type: 3}
     - target: {fileID: 2236418514655323815, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 2865209717840387034, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 2014582376, guid: 2d8a11e4798a4eb42af1747f0145f2a6, type: 3}
-    - target: {fileID: 2889539391074918060, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
-      propertyPath: m_Name
-      value: Char_MP_Bar
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263878664739696413, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
-      propertyPath: m_Name
-      value: Char_MP_Bar
-      objectReference: {fileID: 0}
-    - target: {fileID: 3337294659848177766, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
-      propertyPath: m_text
-      value: 'MP:'
-      objectReference: {fileID: 0}
-    - target: {fileID: 3358020450597659715, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
-      propertyPath: m_Name
-      value: Char_MP
-      objectReference: {fileID: 0}
-    - target: {fileID: 4362303544489402541, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 371800aa515e20945b6b2ba9e0a150cc, type: 3}
     - target: {fileID: 4439603889971066098, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1263,38 +1209,6 @@ PrefabInstance:
     - target: {fileID: 4439603889971066098, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5939993390205132016, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
-      propertyPath: currentLine
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5939993390205132016, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
-      propertyPath: dialogLines.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6272147357514401042, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
-      propertyPath: m_text
-      value: 'MP:'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7422855887404142960, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
-      propertyPath: m_Name
-      value: Char_MP_Bar
-      objectReference: {fileID: 0}
-    - target: {fileID: 8066999616819884333, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 8c2342b25214a114e8d7ef3d2bfc4c23, type: 3}
-    - target: {fileID: 8125370292646003886, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
-      propertyPath: m_Name
-      value: Char_MP
-      objectReference: {fileID: 0}
-    - target: {fileID: 8144965065724654862, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 371800aa515e20945b6b2ba9e0a150cc, type: 3}
-    - target: {fileID: 8520521439761011997, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
-      propertyPath: m_Name
-      value: MP_Text
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
