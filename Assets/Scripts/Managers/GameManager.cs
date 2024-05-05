@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerStats = FindObjectsOfType<PlayerStats>().OrderBy(z => z.transform.position.z).ToArray();
+        
         if (instance != null && instance != this)
         {
             Destroy(this.gameObject);
@@ -31,8 +31,7 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
 
-        
-
+        playerStats = FindObjectsOfType<PlayerStats>().OrderBy(z => z.transform.position.z).ToArray();
     }
 
     // Update is called once per frame

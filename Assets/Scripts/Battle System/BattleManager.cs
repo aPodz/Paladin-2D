@@ -9,6 +9,8 @@ using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Linq;
+
 
 public class BattleManager : MonoBehaviour
 {
@@ -117,7 +119,7 @@ public class BattleManager : MonoBehaviour
     {
         for (int i = 0; i < GameManager.instance.GetPlayerStats().Length; i++)
         {
-            if (GameManager.instance.GetPlayerStats()[i].gameObject.activeInHierarchy)
+            if (GameManager.instance.GetPlayerStats()[i].gameObject.activeInHierarchy && GameManager.instance.GetPlayerStats()[i].isTeamMember)
             {
                 for (int j = 0; j < playerPrefabs.Length; j++)
                 {
@@ -401,7 +403,7 @@ public class BattleManager : MonoBehaviour
 
     public void PlayerAttack(string abilityName)
     {
-        int enemyTarget = 3;
+        int enemyTarget = GameManager.instance.GetPlayerStats().Length;
         int abilityPower = 0;
 
 

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1871013115532121450}
   - component: {fileID: 4529581101032854100}
   m_Layer: 0
-  m_Name: Healer
+  m_Name: Arathos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   attacksAvailable:
   - Holy Smite
   - Holy Prayer
-  characterName: Healer
+  characterName: Arathos
   currentHP: 0
   maxHP: 0
   currentMana: 0

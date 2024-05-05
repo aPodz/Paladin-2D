@@ -12,7 +12,7 @@ public class DialogController : MonoBehaviour
     [SerializeField] int currentLine;
 
     public static DialogController instance;
-    private bool dialogJustStarted;
+    public bool dialogJustStarted;
 
     private string questToMark;
     private bool markQuestComplete;
@@ -31,14 +31,15 @@ public class DialogController : MonoBehaviour
         if (dialogBox.activeInHierarchy)
         {               
             if (Input.GetButtonUp("Fire1"))
-            {   
+            {                
                 if (!dialogJustStarted)
                 {
                     currentLine++;
                     if (currentLine >= dialogLines.Length)
-                    {
+                    {                       
                         dialogBox.SetActive(false);
                         GameManager.instance.dialogBoxOpen = false;
+                        DialogHandler.instance.DestroyTrigger();
 
                         if(shouldMarkQuest)
                         {
@@ -59,7 +60,7 @@ public class DialogController : MonoBehaviour
                     }
                 }
                 else
-                {
+                {                   
                     dialogJustStarted = false;
                 }
             }
@@ -73,8 +74,7 @@ public class DialogController : MonoBehaviour
 
         SetDialogName();
         dialogText.text = dialogLines[currentLine];
-        dialogBox.SetActive(true);
-        dialogJustStarted = true;
+        dialogBox.SetActive(true);        
         GameManager.instance.dialogBoxOpen = true;
     }
 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4463891421440143516}
   - component: {fileID: 1841281813967649475}
   m_Layer: 0
-  m_Name: Healer
+  m_Name: Arathos
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2995cc8f7c6438f409f2fe03e16eb286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: Healer
+  playerName: Arathos
   characterImage: {fileID: -1953201221, guid: 82c063badc65feb4d933b3ca25e80f4f, type: 3}
   defaultWeapon: {fileID: 21300000, guid: ea1c0f14db3c07c40aeecfb5442b0cf9, type: 3}
   defaultArmor: {fileID: 21300000, guid: fc8542cdc3ac66d46901a4eca96d7870, type: 3}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3811225199739195556}
   - component: {fileID: 5162718362388461648}
   m_Layer: 0
-  m_Name: Archer
+  m_Name: Thorm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   attacksAvailable:
   - Melee Attack
   - Explosive Arrow
-  characterName: Archer
+  characterName: Thorm
   currentHP: 0
   maxHP: 0
   currentMana: 0

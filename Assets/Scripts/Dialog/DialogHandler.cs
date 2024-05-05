@@ -12,12 +12,15 @@ public class DialogHandler : MonoBehaviour
     [SerializeField] string questToMark;
     [SerializeField] bool markAsComplete;
     [SerializeField] bool autoActivate;
+    [SerializeField] bool dialogFinished;
+    public GameObject dialogTrigger;
+    public static DialogHandler instance;
 
 
     // Start is called before the first frame update
     void Start()
     {
-    
+        instance = this;
     }
 
     // Update is called once per frame
@@ -25,14 +28,18 @@ public class DialogHandler : MonoBehaviour
     {
         if  (!DialogController.instance.isDialogBoxActive() && !MenuManager.instance.menu.activeInHierarchy)
         {  
-            if (autoActivate && canActivateDialog)
+            if (autoActivate && canActivateDialog && !dialogFinished)
             {
+                DialogController.instance.dialogJustStarted = false;
                 DialogController.instance.ActivateDialog(lines);
                 autoActivate = false;
+                dialogFinished = true;
             }
-            else if (!autoActivate && Input.GetButtonDown("Fire1") && canActivateDialog)
+            else if (!autoActivate && Input.GetKeyDown(KeyCode.E) && canActivateDialog && !dialogFinished)
             {
+                DialogController.instance.dialogJustStarted = false;
                 DialogController.instance.ActivateDialog(lines);
+                dialogFinished = true;
             }
 
             if (shouldActivateQuest)
@@ -40,6 +47,11 @@ public class DialogHandler : MonoBehaviour
                 DialogController.instance.ActivateQuest(questToMark, markAsComplete);
             }
         }
+    }
+
+    public void DestroyTrigger()
+    {
+        Destroy(dialogTrigger);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
