@@ -48,8 +48,7 @@ public class BattleManager : MonoBehaviour
 
     [SerializeField] GameObject characterChoicePanel;
     [SerializeField] TextMeshProUGUI[] characterName;
-
-    [SerializeField] string gameOverScene;
+   
     private bool runningAway;
     public int XPRewardAmount;
     public ItemsManager[] itemsRewarded;

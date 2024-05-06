@@ -8,8 +8,8 @@ public class GameOverManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AudioManager.instance.PlayBackgroundMusic(6);
-        Player.instance.gameObject.SetActive(false);        
+        AudioManager.instance.PlayBackgroundMusic(6);       
+        MenuManager.instance.gameObject.SetActive(false);
         BattleManager.instance.gameObject.SetActive(false);
     }
 
@@ -26,16 +26,16 @@ public class GameOverManager : MonoBehaviour
     }
 
     public void LoadLastSave()
-    {       
-        GameManager.instance.LoadPlayerData();        
+    {
+        GameManager.instance.LoadPlayerData();
         SceneManager.LoadScene("LoadingScene");
+        Player.instance.movementDisabled = false;
     }
 
     public static void DestroySession()
     {
-        Destroy(GameManager.instance.gameObject);
-        Destroy(Player.instance.gameObject);       
+        Destroy(GameManager.instance.gameObject);       
+        Destroy(MenuManager.instance.gameObject);
         Destroy(BattleManager.instance.gameObject);
-        
     }
 }
