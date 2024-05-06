@@ -46,7 +46,8 @@ public class MenuManager : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) 
-        { 
+        {
+            notification.Deactivate();
             if (menu.activeInHierarchy)
             {
                 menu.SetActive(false);               
@@ -227,6 +228,11 @@ public class MenuManager : MonoBehaviour
     public void FadeOut()
     {
         imageToFade.GetComponent<Animator>().SetTrigger("End Fade");
+    }
+
+    public void SaveGame()
+    {
+        GameManager.instance.SavePlayerData();
     }
 
 

@@ -20,6 +20,11 @@ public class Notification : MonoBehaviour
         StartCoroutine(NotifUptime());
     }
 
+    public void Deactivate()
+    {
+        gameObject.SetActive(false);
+    }
+
     IEnumerator NotifUptime()
     {       
         yield return new WaitForSeconds(notificationUptime);

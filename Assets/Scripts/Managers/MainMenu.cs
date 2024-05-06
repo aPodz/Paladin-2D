@@ -28,8 +28,9 @@ public class MainMenu : MonoBehaviour
     }
 
     public void NewGameButton()
-    {       
+    {                    
         SceneManager.LoadScene(newGameScene);
+        Player.instance.transform.position = new Vector3(-50, 40, 1);
     }
 
     public void ExitButton()
@@ -41,4 +42,5 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("LoadingScene");
     }
+
 }

@@ -26,7 +26,6 @@ public class LoadingManager : MonoBehaviour
     public IEnumerator LoadScene()
     {
         yield return new WaitForSeconds(waitTime);
-
         SceneManager.LoadScene(PlayerPrefs.GetString("Current_Scene"));
         GameManager.instance.LoadPlayerData();
         QuestManager.instance.LoadQuestData();  

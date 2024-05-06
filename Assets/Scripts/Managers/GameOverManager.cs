@@ -26,8 +26,8 @@ public class GameOverManager : MonoBehaviour
     }
 
     public void LoadLastSave()
-    {
-        DestroySession();
+    {       
+        GameManager.instance.LoadPlayerData();        
         SceneManager.LoadScene("LoadingScene");
     }
 

@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {      
+    {
         if (gameMenuOpen || dialogBoxOpen || shopOpen || battleActive)
         {
             Player.instance.movementDisabled = true;
