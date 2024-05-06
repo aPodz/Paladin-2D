@@ -155,5 +155,6 @@ MonoBehaviour:
   armorDef: 0
   equippedWeapon: {fileID: 0}
   equippedArmor: {fileID: 0}
-  isTeamMember: 1
-  isMainCharacter: 0
+  baseHP: 100
+  baseMana: 200
+  baseStrength: 20

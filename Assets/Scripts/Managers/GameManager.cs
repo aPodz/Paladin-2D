@@ -5,13 +5,14 @@ using UnityEngine;
 using UnityEngine.U2D.Animation;
 using UnityEngine.SceneManagement;
 using System.Linq;
+using System.Buffers.Text;
 
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    [SerializeField] PlayerStats[] playerStats;
+    public PlayerStats[] playerStats;
 
     public bool gameMenuOpen, dialogBoxOpen, shopOpen, battleActive;
 
@@ -196,6 +197,26 @@ public class GameManager : MonoBehaviour
 
             playerStats[i].equippedWeapon = ItemAssets.instance.GetItemAsset(playerStats[i].equippedWeaponName);
             playerStats[i].equippedArmor = ItemAssets.instance.GetItemAsset(playerStats[i].equippedArmorName);
+        }
+    }
+
+    public void ResetPlayerStats()
+    {
+        for (int i = 0; i < playerStats.Length; i++)
+        {
+            playerStats[i].maxHP = playerStats[i].baseHP;
+            playerStats[i].maxMana = playerStats[i].baseMana;
+            playerStats[i].currentHP = playerStats[i].maxHP;
+            playerStats[i].currentMana = playerStats[i].maxMana;
+            playerStats[i].strength = playerStats[i].baseStrength;
+            playerStats[i].playerLevel = 1;
+            playerStats[i].currentXP = 0;
+            playerStats[i].equippedArmor = null;
+            playerStats[i].equippedWeapon = null;
+            playerStats[i].equippedArmorName = null;
+            playerStats[i].equippedWeaponName = null;
+            playerStats[i].weaponAP = 0;
+            playerStats[i].armorDef = 0;
         }
     }
 }
