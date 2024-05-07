@@ -182,14 +182,16 @@ public class MenuManager : MonoBehaviour
     }
 
     public void UseItem(int selectedCharacter)
-    {
+    {       
         activeItem.UseItem(selectedCharacter);
         OpenCharacterChoicePanel();
+
         Inventory.instance.RemoveItem(activeItem);
         UpdateInventory();
+
         activeItem = null;
-        itemName.text = null;
-        itemDesc.text = null;
+        itemName.text = "";
+        itemDesc.text = "";
     }
 
     public void OpenCharacterChoicePanel()

@@ -211,10 +211,10 @@ public class GameManager : MonoBehaviour
             playerStats[i].strength = playerStats[i].baseStrength;
             playerStats[i].playerLevel = 1;
             playerStats[i].currentXP = 0;
-            playerStats[i].equippedArmor = null;
             playerStats[i].equippedWeapon = null;
-            playerStats[i].equippedArmorName = null;
-            playerStats[i].equippedWeaponName = null;
+            playerStats[i].equippedArmor = null;
+            playerStats[i].equippedArmorName = "";
+            playerStats[i].equippedWeaponName = "";
             playerStats[i].weaponAP = 0;
             playerStats[i].armorDef = 0;
         }

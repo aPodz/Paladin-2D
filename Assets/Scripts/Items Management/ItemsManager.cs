@@ -21,17 +21,16 @@ public class ItemsManager : MonoBehaviour
     
     private void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        
     }
 
     public void UseItem(int characterToUse)
     {
         PlayerStats selectedCharacter = GameManager.instance.GetPlayerStats()[characterToUse];
 
-
+        AudioManager.instance.PlaySFX(15);
         if (itemType == ItemType.Item)
-        {
-            AudioManager.instance.PlaySFX(15);
+        {          
             if (effectType == EffectType.HP)
             {
                 selectedCharacter.AddHP(itemEffect);
