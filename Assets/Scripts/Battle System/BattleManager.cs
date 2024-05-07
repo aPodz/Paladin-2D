@@ -32,8 +32,8 @@ public class BattleManager : MonoBehaviour
     [SerializeField] CombatText damageText;
 
     [SerializeField] GameObject[] characterBattleStats;
-    [SerializeField] TextMeshProUGUI[] characterNameText, characterHPText, characterManaText;
-    [SerializeField] Slider[] characterHPSlider, characterManaSlider;
+    [SerializeField] TextMeshProUGUI[] characterNameText, characterHPText, characterManaText, enemyNameText;    
+    [SerializeField] Slider[] characterHPSlider, characterManaSlider, enemyHPSlider;
     [SerializeField] GameObject[] onTurnIndicator;
     public GameObject spellPanel;
     [SerializeField] SpellButton[] spellButtons;
@@ -110,6 +110,7 @@ public class BattleManager : MonoBehaviour
                             );
 
                         activeCharacters.Add(newEnemy);
+
                     }
                 }
             }
@@ -370,10 +371,11 @@ public class BattleManager : MonoBehaviour
         for (int i = 0; i < characterNameText.Length; i++)
         {
             if (activeCharacters.Count > i)
-            {
+            {               
                 if (activeCharacters[i].IsCharacterAPlayer())
                 {
                     BattleCharacters playerData = activeCharacters[i];
+
                     characterNameText[i].text = playerData.characterName;
 
                     characterHPSlider[i].maxValue = playerData.maxHP;
@@ -384,18 +386,28 @@ public class BattleManager : MonoBehaviour
                     characterManaSlider[i].value = playerData.currentMana;
                     characterManaText[i].text = (playerData.currentMana.ToString() + "/" + playerData.maxMana.ToString());
                 }
-
                 else
                 {
                     characterBattleStats[i].SetActive(false);
                 }
-
             }
-
             else
             {
                 characterBattleStats[i].SetActive(false);
             }
+        }
+
+        for (int i = 0; i < activeCharacters.Count; i++)
+        {           
+            if (!activeCharacters[i].IsCharacterAPlayer())
+            {
+                BattleCharacters enemyData = activeCharacters[i];
+
+                enemyNameText[0].text = enemyData.characterName;
+
+                enemyHPSlider[0].maxValue = enemyData.maxHP;
+                enemyHPSlider[0].value = enemyData.currentHP;
+            } 
         }
     }
 
@@ -513,9 +525,9 @@ public class BattleManager : MonoBehaviour
 
                 TextMeshProUGUI itemAmountText = itemSlot.Find("Amount").GetComponent<TextMeshProUGUI>();
 
-                if (item.amount > 1)
+                if (item.amountInInventory > 1)
                 {
-                    itemAmountText.text = item.amount.ToString();
+                    itemAmountText.text = item.amountInInventory.ToString();
                 }
                 else
                 {
