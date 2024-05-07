@@ -123,6 +123,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &21134719
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1870029424}
+    m_Modifications:
+    - target: {fileID: 4352684946251136455, guid: 004aa1db7d819a64fae27b6634c27dc9, type: 3}
+      propertyPath: m_Name
+      value: Arathos
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454879504719968310, guid: 004aa1db7d819a64fae27b6634c27dc9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1953201221, guid: 82c063badc65feb4d933b3ca25e80f4f, type: 3}
+    - target: {fileID: 8513834193548528053, guid: 004aa1db7d819a64fae27b6634c27dc9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.992229
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513834193548528053, guid: 004aa1db7d819a64fae27b6634c27dc9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.839472
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513834193548528053, guid: 004aa1db7d819a64fae27b6634c27dc9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.15110822
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513834193548528053, guid: 004aa1db7d819a64fae27b6634c27dc9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513834193548528053, guid: 004aa1db7d819a64fae27b6634c27dc9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513834193548528053, guid: 004aa1db7d819a64fae27b6634c27dc9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513834193548528053, guid: 004aa1db7d819a64fae27b6634c27dc9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513834193548528053, guid: 004aa1db7d819a64fae27b6634c27dc9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513834193548528053, guid: 004aa1db7d819a64fae27b6634c27dc9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513834193548528053, guid: 004aa1db7d819a64fae27b6634c27dc9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8513834193548528053, guid: 004aa1db7d819a64fae27b6634c27dc9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 472134420}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 004aa1db7d819a64fae27b6634c27dc9, type: 3}
+--- !u!4 &21134720 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8513834193548528053, guid: 004aa1db7d819a64fae27b6634c27dc9, type: 3}
+  m_PrefabInstance: {fileID: 21134719}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &35068606
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,11 +619,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2127103875891916032, guid: 4e22db58c5d3ee64c9e2b13be50463e7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.93
+      value: 27.16
       objectReference: {fileID: 0}
     - target: {fileID: 2127103875891916032, guid: 4e22db58c5d3ee64c9e2b13be50463e7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.84
+      value: 14.93
       objectReference: {fileID: 0}
     - target: {fileID: 2127103875891916032, guid: 4e22db58c5d3ee64c9e2b13be50463e7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -595,7 +664,7 @@ PrefabInstance:
     - target: {fileID: 9041456754622155214, guid: 4e22db58c5d3ee64c9e2b13be50463e7, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1746099426, guid: e9903c23ed9321942953b134ccd0e69d, type: 3}
+      objectReference: {fileID: -1132669506, guid: e9903c23ed9321942953b134ccd0e69d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -763,6 +832,192 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2127103875891916032, guid: 4e22db58c5d3ee64c9e2b13be50463e7, type: 3}
   m_PrefabInstance: {fileID: 425567300}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &472134419
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 21134720}
+    m_Modifications:
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: questToMark
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: autoActivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: dialogTrigger
+      value: 
+      objectReference: {fileID: 472134421}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: '#Arathos'
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[1]
+      value: Welcome to our village!
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[2]
+      value: In case you needed to resupply, we have a blacksmith here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[3]
+      value: You can go and check what he has to offer.
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[4]
+      value: His shop is just behind the corner, just take the northeast road.
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[5]
+      value: There is also a tavern you can hang around in.
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[6]
+      value: That would be the big building right next to us.
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[7]
+      value: The road south will take you to the forest
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[8]
+      value: Thorm and I will be waiting for you there, before we head into the temple.
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[9]
+      value: So meet us there whenever you're ready.
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: shouldActivateQuest
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[10]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 905665989394935669, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5493962
+      objectReference: {fileID: 0}
+    - target: {fileID: 905665989394935669, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7371874
+      objectReference: {fileID: 0}
+    - target: {fileID: 905665989394935669, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.12690604
+      objectReference: {fileID: 0}
+    - target: {fileID: 905665989394935669, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.22547919
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813932848674459419, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_Name
+      value: DialogTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.882928
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.030138742
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.010958807
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.46841198
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -3.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -55.91
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 905665989394935669, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4813932848674459419, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 472134422}
+  m_SourcePrefab: {fileID: 100100000, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+--- !u!4 &472134420 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+  m_PrefabInstance: {fileID: 472134419}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &472134421 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4813932848674459419, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+  m_PrefabInstance: {fileID: 472134419}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &472134422
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472134421}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03807463, y: 0.26923594}
+  serializedVersion: 2
+  m_Radius: 0.39339456
 --- !u!1001 &514180706
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1234,11 +1489,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6989206773947584, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.77
+      value: 34.3
       objectReference: {fileID: 0}
     - target: {fileID: 6989206773947584, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.94
+      value: 24.3
       objectReference: {fileID: 0}
     - target: {fileID: 6989206773947584, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1323,7 +1578,7 @@ PrefabInstance:
       objectReference: {fileID: 1228923313}
     - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: lines.Array.size
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: lines.Array.data[0]
@@ -1335,35 +1590,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: lines.Array.data[2]
-      value: I suppose the Order sent you here about the necromancer problem?
+      value: Fancy seeing one of the Order in our village.
       objectReference: {fileID: 0}
     - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: lines.Array.data[3]
-      value: Finally someone decided to do something about it.
+      value: If I could take a moment of your time.
       objectReference: {fileID: 0}
     - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: lines.Array.data[4]
-      value: You should visit our blacksmith if you need supplies.
+      value: See the tavern right behind me here?
       objectReference: {fileID: 0}
     - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: lines.Array.data[5]
-      value: He has a shop just down this road.
+      value: Well, people tend to not return from there for some reason.
       objectReference: {fileID: 0}
     - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: lines.Array.data[6]
-      value: My brother should be on guard duty in front of it now.
+      value: We as guards are not allowed to enter the tavern without a search order.
       objectReference: {fileID: 0}
     - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: lines.Array.data[7]
-      value: You'll recognize him easily, he looks just like me!
+      value: But they might let you in without an issue.
       objectReference: {fileID: 0}
     - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: lines.Array.data[8]
-      value: You can also visit our tavern if you'd like.
+      value: Could you maybe take a look inside and see if you find something?
       objectReference: {fileID: 0}
     - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: lines.Array.data[9]
-      value: It's the building just next to us.
+      value: We'd appretiate the help.
       objectReference: {fileID: 0}
     - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: shouldActivateQuest
@@ -1763,6 +2018,7 @@ Transform:
   - {fileID: 425567301}
   - {fileID: 305044463}
   - {fileID: 676712194}
+  - {fileID: 21134720}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1881472669

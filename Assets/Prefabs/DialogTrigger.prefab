@@ -94,8 +94,9 @@ MonoBehaviour:
   - '#You'
   - (I'm getting close to the village)
   - (Huh, who are these two?)
-  shouldActivateQuest: 1
-  questToMark: Get to the village
+  shouldActivateQuest: 0
+  questToMark: 
   markAsComplete: 0
   autoActivate: 1
   dialogFinished: 0
+  dialogTrigger: {fileID: 4813932848674459419}
