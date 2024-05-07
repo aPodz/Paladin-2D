@@ -12,6 +12,7 @@ using UnityEngine.SceneManagement;
 using System.Linq;
 
 
+
 public class BattleManager : MonoBehaviour
 {
     public static BattleManager instance;
@@ -57,6 +58,7 @@ public class BattleManager : MonoBehaviour
 
     [SerializeField] GameObject runButton;
     private bool canRun;
+    private bool attackOnHold;
 
     // Start is called before the first frame update
     void Start()
@@ -67,10 +69,11 @@ public class BattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckUIHolder();
+        if (!attackOnHold)
+        {
+            CheckUIHolder();
+        }      
     }
-
-    
 
     public void StartBattle(string[] enemiesToSpawn, bool canRunAway)
     {
@@ -180,8 +183,6 @@ public class BattleManager : MonoBehaviour
         {
             currentTurn = 0;
         }
-
-
 
         waitingForTurn = true;
         UpdateBattle();
@@ -355,8 +356,7 @@ public class BattleManager : MonoBehaviour
     private int CriticalChance(int damageDealt)
     {
         if (Random.value <= 0.1f)
-        {
-            Debug.Log("Critical hit!");
+        {            
             return (damageDealt * 2);
         }
         else 
@@ -401,10 +401,11 @@ public class BattleManager : MonoBehaviour
 
     public void PlayerAttack(string abilityName)
     {
+        attackOnHold = true;
+        UIHolder.SetActive(false);
         int enemyTarget = GameManager.instance.GetPlayerStats().Length;
         int abilityPower = 0;
-
-
+        
         for (int i = 0; i < battleMovesList.Length; i++)
         {
             if (battleMovesList[i].abilityName == abilityName)
@@ -412,17 +413,16 @@ public class BattleManager : MonoBehaviour
                 Instantiate(
                     battleMovesList[i].effect,
                     activeCharacters[enemyTarget].transform.position,
-                    activeCharacters[enemyTarget].transform.rotation                                      
+                    activeCharacters[enemyTarget].transform.rotation
                     );
 
                 abilityPower = battleMovesList[i].abilityPower;
             }
         }
-
         DealDamage(enemyTarget, abilityPower);
         UpdateCharacterStats();
-        NextTurn();
-
+        StartCoroutine(PlayerAttackCoroutine());
+        NextTurn();       
     }
 
     public void OpenSpellPanel()
@@ -457,6 +457,12 @@ public class BattleManager : MonoBehaviour
     public BattleCharacters ActiveCharacters()
     {
         return activeCharacters[currentTurn];
+    }
+
+    public IEnumerator PlayerAttackCoroutine()
+    {
+        yield return new WaitForSeconds(1);
+        attackOnHold = false;
     }
 
     public void RunAway()
@@ -572,6 +578,7 @@ public class BattleManager : MonoBehaviour
 
     public IEnumerator EndBattleCoroutine()
     {
+        UIHolder.SetActive(false);
         if (!runningAway)
         {
             yield return new WaitForSeconds(2);
@@ -589,8 +596,7 @@ public class BattleManager : MonoBehaviour
 
         DestroyBattleCharacters();
         isBattleActive = false;
-        spellPanel.SetActive(false);
-        UIHolder.SetActive(false);
+        spellPanel.SetActive(false);       
         runButton.SetActive(true);
         if (runningAway)
         {
@@ -644,13 +650,5 @@ public class BattleManager : MonoBehaviour
         yield return new WaitForSeconds(2);
         MenuManager.instance.FadeOut();
         SceneManager.LoadScene("GameOver");
-        
-        
-        
-
-        
-        
-        
-        
     }
 }

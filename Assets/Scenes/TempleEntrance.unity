@@ -285,6 +285,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1650529148}
     - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
+      propertyPath: itemsRewarded.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
       propertyPath: enemyPrefabs.Array.data[0]
       value: 
       objectReference: {fileID: 2528271850438075551, guid: bbfe329d234905e44893a60f76b9de43, type: 3}
