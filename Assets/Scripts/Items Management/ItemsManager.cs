@@ -18,7 +18,8 @@ public class ItemsManager : MonoBehaviour
 
     public bool isStackable;
     public int amount;
-    
+    public int amountInInventory;
+
     private void Start()
     {
         

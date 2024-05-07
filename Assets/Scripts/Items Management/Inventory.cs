@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UIElements;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
@@ -30,7 +31,7 @@ public class Inventory : MonoBehaviour
             {
                 if(itemInInventory.itemName == item.itemName)
                 {
-                    itemInInventory.amount += item.amount;
+                    itemInInventory.amountInInventory += item.amount;
                     itemAlreadyInInventory = true;
                 }
             }
@@ -38,6 +39,7 @@ public class Inventory : MonoBehaviour
             if(!itemAlreadyInInventory) 
             { 
                 itemsList.Add(item);
+                item.amountInInventory++;
             }
         }
         else
@@ -58,12 +60,12 @@ public class Inventory : MonoBehaviour
             {
                 if (itemInInventory.itemName == item.itemName)
                 {
-                    itemInInventory.amount--;
+                    itemInInventory.amountInInventory--;
                     inventoryItem = itemInInventory;
                 }
             }
 
-            if (inventoryItem != null && inventoryItem.amount <= 0)
+            if (inventoryItem != null && inventoryItem.amountInInventory <= 0)
             {
                 GetItemList().Remove(inventoryItem);
             }

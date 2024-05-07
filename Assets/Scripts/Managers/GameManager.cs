@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
 
             if (itemInInventory.isStackable)
             {
-                PlayerPrefs.SetInt("Items_" + i + "_Amount", itemInInventory.amount);
+                PlayerPrefs.SetInt("Items_" + i + "_Amount", itemInInventory.amountInInventory);
             }
         }
     }
@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
             Inventory.instance.AddItem(itemToAdd);
             if (itemToAdd.isStackable && itemAmount > 1)
             {
-                itemToAdd.amount = itemAmount;
+                itemToAdd.amountInInventory = itemAmount;
             }           
         }
     }

@@ -151,9 +151,9 @@ public class MenuManager : MonoBehaviour
 
             TextMeshProUGUI itemAmountText = itemSlot.Find("Amount").GetComponent<TextMeshProUGUI>();
 
-            if(item.amount > 1)
+            if(item.amountInInventory > 1)
             {
-                itemAmountText.text = item.amount.ToString(); 
+                itemAmountText.text = item.amountInInventory.ToString(); 
             }
             else
             {
