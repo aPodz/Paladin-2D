@@ -285,6 +285,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1650529148}
     - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
+      propertyPath: enemyHPSlider.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
+      propertyPath: enemyNameText.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
       propertyPath: itemsRewarded.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -292,6 +300,14 @@ PrefabInstance:
       propertyPath: enemyPrefabs.Array.data[0]
       value: 
       objectReference: {fileID: 2528271850438075551, guid: bbfe329d234905e44893a60f76b9de43, type: 3}
+    - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
+      propertyPath: enemyHPSlider.Array.data[0]
+      value: 
+      objectReference: {fileID: 375897820}
+    - target: {fileID: 303302872140587675, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
+      propertyPath: enemyNameText.Array.data[0]
+      value: 
+      objectReference: {fileID: 375897821}
     - target: {fileID: 306201304268460414, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -538,6 +554,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4665873975956894938, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
   m_PrefabInstance: {fileID: 375897818}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &375897820 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2035504441641477091, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
+  m_PrefabInstance: {fileID: 375897818}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &375897821 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5536182699732855199, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
+  m_PrefabInstance: {fileID: 375897818}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &475607125
 PrefabInstance:
   m_ObjectHideFlags: 0
