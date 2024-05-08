@@ -126,7 +126,7 @@ public class ShopManager : MonoBehaviour
 
     public void BuyItem()
     {
-        if (GameManager.instance.currentCoins >= selectedItem.itemValue)
+        if (selectedItem != null && GameManager.instance.currentCoins >= selectedItem.itemValue )
         {
             GameManager.instance.currentCoins -= selectedItem.itemValue;
             Inventory.instance.AddItem(selectedItem);
