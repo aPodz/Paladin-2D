@@ -194,7 +194,8 @@ public class BattleManager : MonoBehaviour
         bool allEnemiesDead = true;
         bool allPlayersDead = true;
 
-
+        attackOnHold = true;
+        UIHolder.SetActive(false);
         for (int i = 0; i < activeCharacters.Count; i++)
         {
             if (activeCharacters[i].currentHP < 0)
@@ -223,6 +224,7 @@ public class BattleManager : MonoBehaviour
                 else
                 {
                     allEnemiesDead = false;
+                    attackOnHold = false;
                 }
             }
 
@@ -230,6 +232,7 @@ public class BattleManager : MonoBehaviour
 
         if (allPlayersDead || allEnemiesDead)
         {
+            
             if (allPlayersDead)
             {
                 StartCoroutine(GameOverCoroutine());
@@ -413,8 +416,7 @@ public class BattleManager : MonoBehaviour
 
     public void PlayerAttack(string abilityName)
     {
-        attackOnHold = true;
-        UIHolder.SetActive(false);
+        
         int enemyTarget = GameManager.instance.GetPlayerStats().Length;
         int abilityPower = 0;
         
@@ -432,8 +434,7 @@ public class BattleManager : MonoBehaviour
             }
         }
         DealDamage(enemyTarget, abilityPower);
-        UpdateCharacterStats();
-        StartCoroutine(PlayerAttackCoroutine());
+        UpdateCharacterStats();        
         NextTurn();       
     }
 
@@ -469,12 +470,6 @@ public class BattleManager : MonoBehaviour
     public BattleCharacters ActiveCharacters()
     {
         return activeCharacters[currentTurn];
-    }
-
-    public IEnumerator PlayerAttackCoroutine()
-    {
-        yield return new WaitForSeconds(1);
-        attackOnHold = false;
     }
 
     public void RunAway()
@@ -590,6 +585,7 @@ public class BattleManager : MonoBehaviour
 
     public IEnumerator EndBattleCoroutine()
     {
+        attackOnHold = true;
         UIHolder.SetActive(false);
         if (!runningAway)
         {

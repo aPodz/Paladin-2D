@@ -6871,7 +6871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c433f876325026845945823a186457a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notificationUptime: 3
+  notificationUptime: 1.95
   notificationText: {fileID: 8268284199118978033}
 --- !u!1 &6762496271538011709
 GameObject:
