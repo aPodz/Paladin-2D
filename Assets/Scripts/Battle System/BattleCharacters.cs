@@ -88,11 +88,20 @@ public class BattleCharacters : MonoBehaviour
     private void AddMana(int itemEffect)
     {
         currentMana += itemEffect;
+        if (currentMana > maxMana)
+        {
+            currentMana = maxMana;
+        }
+
     }
 
     private void AddHP(int itemEffect)
     {
         currentHP += itemEffect;
+        if (currentHP > maxHP)
+        {
+            currentHP = maxHP;
+        }
     }
 
     public void KillFriendlyCharacter()
