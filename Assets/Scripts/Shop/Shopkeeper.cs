@@ -8,10 +8,12 @@ public class Shopkeeper : MonoBehaviour
     private bool canOpenShop;
 
     [SerializeField] List<ItemsManager> shopItems;
+    [SerializeField] int amountOfSoldItems;
+    private bool recentlyOpened;
     // Start is called before the first frame update
     void Start()
     {
-        
+        recentlyOpened = false;
     }
 
     // Update is called once per frame
@@ -19,7 +21,11 @@ public class Shopkeeper : MonoBehaviour
     {
         if (canOpenShop && Input.GetKeyDown(KeyCode.E) && !Player.instance.movementDisabled && !ShopManager.instance.shopMenu.activeInHierarchy)
         {
-            ShopManager.instance.itemsForSale = shopItems;
+            if (!recentlyOpened)
+            {
+                ShopManager.instance.itemsForSale = GenerateShopkeeperItems(shopItems);
+                recentlyOpened = true;
+            }            
             ShopManager.instance.OpenShop();             
         }
     }
@@ -39,4 +45,19 @@ public class Shopkeeper : MonoBehaviour
             canOpenShop = false;
         }
     }
+
+
+    public List<ItemsManager> GenerateShopkeeperItems(List<ItemsManager> items)
+    {
+        List<ItemsManager> randomItems = new List<ItemsManager>();
+
+        for (int i = 0; i < amountOfSoldItems; i++)
+        {
+            int randomItem = Random.Range(0, items.Count);
+            randomItems.Add(items[randomItem]);
+        }
+
+        return randomItems;
+    }
+
 }

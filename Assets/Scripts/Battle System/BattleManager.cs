@@ -557,7 +557,7 @@ public class BattleManager : MonoBehaviour
                 {
                     PlayerStats activePlayer = GameManager.instance.GetPlayerStats()[i];
 
-                    characterName[i].text = activePlayer.name;
+                    characterName[i].text = activePlayer.playerName;
 
                     bool playerActiveInHierarchy = activePlayer.gameObject.activeInHierarchy;
                     characterName[i].transform.parent.gameObject.SetActive(playerActiveInHierarchy);

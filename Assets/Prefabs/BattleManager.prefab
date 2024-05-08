@@ -5714,7 +5714,8 @@ MonoBehaviour:
   - {fileID: 5432649798293261860}
   - {fileID: 5666775944761560946}
   - {fileID: 2599303335627084833}
-  enemyNameText: []
+  enemyNameText:
+  - {fileID: 5536182699732855199}
   characterHPSlider:
   - {fileID: 5304781066286618273}
   - {fileID: 2661115388029179082}
@@ -5723,7 +5724,8 @@ MonoBehaviour:
   - {fileID: 8150989025015155641}
   - {fileID: 9067019974064014399}
   - {fileID: 4778501108040447188}
-  enemyHPSlider: []
+  enemyHPSlider:
+  - {fileID: 2035504441641477091}
   onTurnIndicator:
   - {fileID: 1316687874494416046}
   - {fileID: 1840191260471829213}
@@ -5749,7 +5751,7 @@ MonoBehaviour:
   XPRewardAmount: 0
   itemsRewarded: []
   battleEntry: {fileID: 0}
-  runButton: {fileID: 0}
+  runButton: {fileID: 4665873975956894938}
 --- !u!1 &5763311503119842177
 GameObject:
   m_ObjectHideFlags: 0

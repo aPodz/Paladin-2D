@@ -12,7 +12,7 @@ public class ShopManager : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI currentCoinText;
 
-    public List<ItemsManager> itemsForSale;
+    public List<ItemsManager> itemsForSale;  
 
     [SerializeField] GameObject itemBox;
     [SerializeField] Transform itemBuyParent;
@@ -23,10 +23,11 @@ public class ShopManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI sellItemName, sellItemDesc, sellItemValue;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
-        instance = this;
+        instance = this;       
     }
 
     // Update is called once per frame
@@ -34,15 +35,14 @@ public class ShopManager : MonoBehaviour
     {
         
     }
-
+    
     public void OpenShop()
-    {
+    {        
         currentCoinText.text = "Coins: " + GameManager.instance.currentCoins;
         UpdateShop(itemBuyParent, itemsForSale);
         shopMenu.SetActive(true);
         GameManager.instance.shopOpen = true;            
-        buyPanel.SetActive(true);
-        
+        buyPanel.SetActive(true);   
     }
 
     public void CloseShop()
@@ -83,7 +83,7 @@ public class ShopManager : MonoBehaviour
 
             TextMeshProUGUI itemAmountText = itemSlot.Find("Amount").GetComponent<TextMeshProUGUI>();
 
-            if (item.amountInInventory > 1)
+            if (item.amountInInventory > 1 && sellPanel.activeInHierarchy)
             {
                 itemAmountText.text = item.amountInInventory.ToString();
             }

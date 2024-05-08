@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class QuestObject : MonoBehaviour
 {
-    [SerializeField] GameObject objectToActivate;
+    [SerializeField] GameObject[] objectToActivate;
     [SerializeField] string questToCheck;
     [SerializeField] bool activateIfComplete;
 
@@ -18,7 +18,11 @@ public class QuestObject : MonoBehaviour
     {
         if (QuestManager.instance.CheckCompletion(questToCheck))
         {
-            objectToActivate.SetActive(activateIfComplete);
+            for (int i = 0; i < objectToActivate.Length; i++)
+            {
+                objectToActivate[i].SetActive(activateIfComplete);
+            }
+            
         }
     }
 

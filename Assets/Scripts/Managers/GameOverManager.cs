@@ -20,21 +20,14 @@ public class GameOverManager : MonoBehaviour
     }
 
     public void GoToMainMenu()
-    {
-        DestroySession();
+    {        
         SceneManager.LoadScene("MainMenu");
     }
 
     public void LoadLastSave()
-    {
-        DestroySession();
+    {       
         SceneManager.LoadScene("LoadingScene");      
     }
 
-    public static void DestroySession()
-    {
-        Destroy(GameManager.instance.gameObject);       
-        Destroy(MenuManager.instance.gameObject);
-        Destroy(BattleManager.instance.gameObject);
-    }
+
 }
