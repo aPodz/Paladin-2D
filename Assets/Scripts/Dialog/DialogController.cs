@@ -30,7 +30,7 @@ public class DialogController : MonoBehaviour
     {
         if (dialogBox.activeInHierarchy)
         {               
-            if (Input.GetButtonUp("Fire1"))
+            if (Input.GetKeyDown(KeyCode.E))
             {                
                 if (!dialogJustStarted)
                 {
