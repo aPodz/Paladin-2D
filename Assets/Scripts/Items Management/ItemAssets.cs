@@ -31,9 +31,11 @@ public class ItemAssets : MonoBehaviour
         return null;
     }
 
-
-
-
-
-
+    public void ResetAmounts()
+    {
+        foreach(ItemsManager item in itemsAvailable)
+        {
+            item.amountInInventory = 0;
+        }
+    }
 }

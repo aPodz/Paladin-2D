@@ -101,14 +101,15 @@ MonoBehaviour:
   itemType: 1
   effectType: 3
   itemName: Longsword
-  itemDesc: +400 AP
+  itemDesc: +150 AP
   itemValue: 15
   itemImage: {fileID: 21300000, guid: d31aa8412a4d374458c912d11686642a, type: 3}
   itemEffect: 0
-  weaponAP: 400
+  weaponAP: 150
   armorDef: 0
   isStackable: 0
   amount: 1
+  amountInInventory: 0
 --- !u!58 &7958456740089244404
 CircleCollider2D:
   m_ObjectHideFlags: 0

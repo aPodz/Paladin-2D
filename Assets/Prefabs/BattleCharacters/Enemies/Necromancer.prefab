@@ -103,14 +103,14 @@ MonoBehaviour:
   - Necrotic Bolt
   - Dark Bite
   characterName: Necromancer
-  currentHP: 1000
-  maxHP: 1000
+  currentHP: 600
+  maxHP: 600
   currentMana: 99999
   maxMana: 99999
-  strength: 30
-  armor: 20
+  strength: 10
+  armor: 5
   attackPower: 20
   weaponPower: 20
-  armorDef: 10
+  armorDef: 5
   isDead: 0
   deadSprite: {fileID: 232818716, guid: a9307198969cfa748a38dbca411f7915, type: 3}

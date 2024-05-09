@@ -5520,22 +5520,22 @@ MonoBehaviour:
   UIHolder: {fileID: 1744030540294343832}
   battleMovesList:
   - abilityName: Melee Attack
-    abilityPower: 5
+    abilityPower: 2
     manaCost: 0
     effect: {fileID: 8320099129145556228, guid: f84fce630f7234141954bba6bad8a5da, type: 3}
     spellIcon: {fileID: 21300000, guid: 3a88d46ed00b9214a8cc55ba6e67ab09, type: 3}
   - abilityName: Explosive Arrow
-    abilityPower: 5
+    abilityPower: 3
     manaCost: 20
     effect: {fileID: 7009733425155297649, guid: e0dd0859d1e231c499af39bae2e93596, type: 3}
     spellIcon: {fileID: 21300000, guid: 4637953d65a24364aab3372a525b9ed2, type: 3}
   - abilityName: Holy Smite
-    abilityPower: 8
-    manaCost: 40
+    abilityPower: 3
+    manaCost: 20
     effect: {fileID: 2420511391880064718, guid: 9a2832230e55eb84896cb44948573786, type: 3}
     spellIcon: {fileID: 21300000, guid: e32aad571b880e549a22b1cc2f2f84a2, type: 3}
   - abilityName: Undead Knight Slash
-    abilityPower: 8
+    abilityPower: 20
     manaCost: 0
     effect: {fileID: 6883002104184707135, guid: b35bd0e4a623e2f4dbac9db930091d2c, type: 3}
     spellIcon: {fileID: 21300000, guid: 00fbb4588136cde4fbf9001df788bcfb, type: 3}
@@ -5545,7 +5545,7 @@ MonoBehaviour:
     effect: {fileID: 6952677536634294066, guid: a78aa34331884e443abfe0dc7a87a65e, type: 3}
     spellIcon: {fileID: 21300000, guid: c16d3e5511c9e1341b0bd70dcb31fb81, type: 3}
   - abilityName: Necrotic Bolt
-    abilityPower: 6
+    abilityPower: 15
     manaCost: 0
     effect: {fileID: 4758957338288315056, guid: 74ba6fe5bde78524f921b82af8669abe, type: 3}
     spellIcon: {fileID: 21300000, guid: 2531e15fe967a354d9d28c9cfc1d71ca, type: 3}
@@ -5555,18 +5555,18 @@ MonoBehaviour:
     effect: {fileID: 1369307464265749650, guid: 24e3683375d911e4daf03bc8d66ba151, type: 3}
     spellIcon: {fileID: 21300000, guid: fb9bcc3943d1ca94497fd61e5e8c2fde, type: 3}
   - abilityName: Dark Bite
-    abilityPower: 6
+    abilityPower: 15
     manaCost: 0
     effect: {fileID: 6174009433641610142, guid: 36f77b833d8d1d84885af18f5fe2dfe7, type: 3}
     spellIcon: {fileID: 21300000, guid: c1d35b40e3fb0f9438f23087432d9765, type: 3}
   - abilityName: Ice Arrow
-    abilityPower: 20
+    abilityPower: 3
     manaCost: 20
     effect: {fileID: 6611769131482246678, guid: 164c99850dbcccc46a3df1a5670b3230, type: 3}
     spellIcon: {fileID: 21300000, guid: 62ce59ce09148c847b198159a3abc9f6, type: 3}
   - abilityName: Judgement
-    abilityPower: 20
-    manaCost: 20
+    abilityPower: 5
+    manaCost: 30
     effect: {fileID: 2822926257204491999, guid: 5baec6d2497e1754ba738ee1dfe76433, type: 3}
     spellIcon: {fileID: 21300000, guid: 448d600b6b959074d94c8933775142fc, type: 3}
   damageText: {fileID: 319760213415732091, guid: 84e4e98a7b7d61b4193da4c806182937, type: 3}

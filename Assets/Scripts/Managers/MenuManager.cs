@@ -240,6 +240,4 @@ public class MenuManager : MonoBehaviour
         FadeImage();
         yield return new WaitForSeconds(1);
     }
-
-
 }

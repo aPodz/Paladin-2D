@@ -756,7 +756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
       propertyPath: battleToStart.Array.data[0].enemies.Array.data[0]
-      value: Unholy Priest
+      value: ???
       objectReference: {fileID: 0}
     - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
       propertyPath: battleToStart.Array.data[0].rewardedItems.Array.size

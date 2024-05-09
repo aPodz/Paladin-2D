@@ -102,11 +102,11 @@ MonoBehaviour:
   - Holy Smite
   - Necrotic Bolt
   - Dark Bite
-  characterName: Unholy Priest
-  currentHP: 100000
-  maxHP: 100000
-  currentMana: 1000
-  maxMana: 1000
+  characterName: ???
+  currentHP: 999999
+  maxHP: 999999
+  currentMana: 9999
+  maxMana: 9999
   strength: 50
   armor: 30
   attackPower: 50

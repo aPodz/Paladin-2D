@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.UIElements;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class Inventory : MonoBehaviour
 {
@@ -43,7 +44,6 @@ public class Inventory : MonoBehaviour
 
     public void RemoveItem(ItemsManager item)
     {      
-
         if (item.isStackable)
         {
             ItemsManager inventoryItem = null;
@@ -52,7 +52,10 @@ public class Inventory : MonoBehaviour
             {
                 if (itemInInventory.itemName == item.itemName)
                 {
-                    itemInInventory.amountInInventory--;
+                    if (itemInInventory.amountInInventory != 0)
+                    {
+                        itemInInventory.amountInInventory--;
+                    }                   
                     inventoryItem = itemInInventory;
                 }
             }
@@ -62,7 +65,6 @@ public class Inventory : MonoBehaviour
                 GetItemList().Remove(inventoryItem);
             }
         }
-
         else
         {
             itemsList.Remove(item);
@@ -72,5 +74,10 @@ public class Inventory : MonoBehaviour
     public List<ItemsManager> GetItemList()
     {
         return itemsList;
+    }
+
+    public void ClearInventory()
+    {
+        itemsList.Clear();  
     }
 }

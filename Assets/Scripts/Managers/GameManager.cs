@@ -79,20 +79,23 @@ public class GameManager : MonoBehaviour
 
             if (itemInInventory.isStackable)
             {
-                PlayerPrefs.SetInt("Items_" + i + "_Amount", itemInInventory.amountInInventory);
+                Debug.Log(itemInInventory.amountInInventory);
+                PlayerPrefs.SetInt("Item_" + i + "_Amount", itemInInventory.amountInInventory);
             }
         }
     }
 
     private static void LoadPlayerItems()
     {
+        Inventory.instance.ClearInventory();
+        ItemAssets.instance.ResetAmounts();
         for (int i = 0; i < PlayerPrefs.GetInt("Number_Of_Items"); i++)
         {
             string itemName = PlayerPrefs.GetString("Item_" + i + "_Name");
             ItemsManager itemToAdd = ItemAssets.instance.GetItemAsset(itemName);
             int itemAmount = 0;
 
-            if (PlayerPrefs.HasKey("Items_" + i + "_Amount"))
+            if (PlayerPrefs.HasKey("Item_" + i + "_Amount"))
             {
                 itemAmount = PlayerPrefs.GetInt("Item_" + i + "_Amount");
             }
@@ -216,5 +219,7 @@ public class GameManager : MonoBehaviour
             playerStats[i].weaponAP = 0;
             playerStats[i].armorDef = 0;
         }
+        Inventory.instance.ClearInventory();
+        ItemAssets.instance.ResetAmounts();
     }
 }

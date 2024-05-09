@@ -102,12 +102,12 @@ MonoBehaviour:
   - Melee Attack
   - Undead Knight Slash
   characterName: Temple Guard
-  currentHP: 50
-  maxHP: 1000
+  currentHP: 800
+  maxHP: 800
   currentMana: 99999
   maxMana: 99999
-  strength: 30
-  armor: 20
+  strength: 15
+  armor: 10
   attackPower: 20
   weaponPower: 20
   armorDef: 10
