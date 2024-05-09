@@ -120,4 +120,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectTime: 0.4
-  AttacksSFX: 1
+  AttacksSFX: 7

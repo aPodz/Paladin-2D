@@ -99,8 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 1
   attacksAvailable:
-  - Melee Attack
   - Explosive Arrow
+  - Ice Arrow
   characterName: Thorm
   currentHP: 0
   maxHP: 0

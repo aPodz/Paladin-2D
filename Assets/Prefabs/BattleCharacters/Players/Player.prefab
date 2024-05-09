@@ -99,8 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 1
   attacksAvailable:
-  - Melee Attack
   - Holy Smite
+  - Judgement
   characterName: You
   currentHP: 0
   maxHP: 0

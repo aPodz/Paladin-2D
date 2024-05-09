@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectTime: 1.2
-  AttacksSFX: 22
+  AttacksSFX: 2
 --- !u!212 &1735118782647221176
 SpriteRenderer:
   m_ObjectHideFlags: 0

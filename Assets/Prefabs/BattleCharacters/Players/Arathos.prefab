@@ -100,7 +100,6 @@ MonoBehaviour:
   isPlayer: 1
   attacksAvailable:
   - Holy Smite
-  - Holy Prayer
   characterName: Arathos
   currentHP: 0
   maxHP: 0

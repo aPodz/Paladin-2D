@@ -5559,6 +5559,16 @@ MonoBehaviour:
     manaCost: 0
     effect: {fileID: 6174009433641610142, guid: 36f77b833d8d1d84885af18f5fe2dfe7, type: 3}
     spellIcon: {fileID: 21300000, guid: c1d35b40e3fb0f9438f23087432d9765, type: 3}
+  - abilityName: Ice Arrow
+    abilityPower: 20
+    manaCost: 20
+    effect: {fileID: 6611769131482246678, guid: 164c99850dbcccc46a3df1a5670b3230, type: 3}
+    spellIcon: {fileID: 21300000, guid: 62ce59ce09148c847b198159a3abc9f6, type: 3}
+  - abilityName: Judgement
+    abilityPower: 20
+    manaCost: 20
+    effect: {fileID: 2822926257204491999, guid: 5baec6d2497e1754ba738ee1dfe76433, type: 3}
+    spellIcon: {fileID: 21300000, guid: 448d600b6b959074d94c8933775142fc, type: 3}
   damageText: {fileID: 319760213415732091, guid: 84e4e98a7b7d61b4193da4c806182937, type: 3}
   characterBattleStats:
   - {fileID: 2647345066358099685}
@@ -5614,6 +5624,7 @@ MonoBehaviour:
   itemsRewarded: []
   battleEntry: {fileID: 0}
   runButton: {fileID: 4665873975956894938}
+  battleEnding: 0
 --- !u!1 &5763311503119842177
 GameObject:
   m_ObjectHideFlags: 0
@@ -6023,7 +6034,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Holy Smite
+          m_StringArgument: Melee Attack
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 551958444460945975}
