@@ -22,18 +22,9 @@ public class ShopManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI buyItemName, buyItemDesc, buyItemValue;
     [SerializeField] TextMeshProUGUI sellItemName, sellItemDesc, sellItemValue;
 
-
-
-    // Start is called before the first frame update
     void Start()
     {
         instance = this;       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     
     public void OpenShop()
@@ -112,7 +103,7 @@ public class ShopManager : MonoBehaviour
         sellItemValue.text = "Cost: " + selectedItem.itemValue;
     }
 
-    public void ResetActive()
+    public void ResetActive() //Resets active item so it can't be bought infinitely
     {
         selectedItem = null;
         buyItemName.text = "";
@@ -121,7 +112,6 @@ public class ShopManager : MonoBehaviour
         sellItemName.text = "";
         sellItemDesc.text = "";
         sellItemValue.text = "";
-
     }
 
     public void BuyItem()

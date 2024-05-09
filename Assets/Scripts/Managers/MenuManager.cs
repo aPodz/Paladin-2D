@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEditor.U2D;
+using UnityEngine.SceneManagement;
 
 
 public class MenuManager : MonoBehaviour
 {
-
     [SerializeField] Image imageToFade;
     public GameObject menu;
     public static MenuManager instance;
@@ -36,26 +36,24 @@ public class MenuManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI[] itemCharacterChoiceName;
     public Notification notification;
 
-    // Start is called before the first frame update
     void Start()
     {
         instance = this;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) 
-        {
-            notification.Deactivate();
-            if (menu.activeInHierarchy)
+        {           
+            if (menu.activeInHierarchy) // Checks if menu should be opened or closed
             {
+                notification.Deactivate();
                 menu.SetActive(false);               
                 GameManager.instance.gameMenuOpen = false;
             }
-            else
-            {
-                if (!ShopManager.instance.shopMenu.activeInHierarchy && !GameManager.instance.battleActive)
+            else // Opens menu if no other UI is active
+            {                
+                if (!ShopManager.instance.shopMenu.activeInHierarchy && !GameManager.instance.battleActive && !GameManager.instance.dialogBoxOpen)
                 {
                     UpdateStats();
                     UpdateInventory();
@@ -218,8 +216,9 @@ public class MenuManager : MonoBehaviour
 
     public void QuitGame()
     {
-        Application.Quit();
-        Debug.Log("We've quit the game.");
+        GameManager.instance.gameMenuOpen = false;        
+        StartCoroutine(LoadSceneCoroutine());
+        SceneManager.LoadScene("MainMenu");        
     }
 
     public void FadeImage()
@@ -235,6 +234,11 @@ public class MenuManager : MonoBehaviour
     public void SaveGame()
     {
         GameManager.instance.SavePlayerData();
+    }
+    private IEnumerator LoadSceneCoroutine()
+    {
+        FadeImage();
+        yield return new WaitForSeconds(1);
     }
 
 

@@ -14,15 +14,7 @@ public class BattleCharacters : MonoBehaviour
 
     public Sprite deadSprite;   
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
+    void Update() //Fades image of defeated enemy
     {
         if (!isPlayer && isDead)
         {
@@ -30,7 +22,7 @@ public class BattleCharacters : MonoBehaviour
         }
     }
 
-    private void EnemyFade()
+    private void EnemyFade() //Fades image until color.a is 0, then deactivates the object
     {
         GetComponent<SpriteRenderer>().color = new Color(
             Mathf.MoveTowards(GetComponent<SpriteRenderer>().color.r, 1f, 0.3f * Time.deltaTime),

@@ -8,9 +8,6 @@ public class CamController : MonoBehaviour
     private Player playerTarget;
     CinemachineVirtualCamera virtualCamera;
 
-
-
-    // Start is called before the first frame update
     void Start()
     {       
         playerTarget = FindObjectOfType<Player>();
@@ -18,8 +15,7 @@ public class CamController : MonoBehaviour
         virtualCamera.Follow = playerTarget.transform;
     }
 
-    // Update is called once per frame
-    void Update()
+    void Update() //Looks for Player while it has nothing to follow
     {
          while (playerTarget == null)
         {

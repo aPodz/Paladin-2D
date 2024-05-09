@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class Shopkeeper : MonoBehaviour
 {
-
     private bool canOpenShop;
 
     [SerializeField] List<ItemsManager> shopItems;
     [SerializeField] int amountOfSoldItems;
     private bool recentlyOpened;
-    // Start is called before the first frame update
+
     void Start()
     {
-        recentlyOpened = false;
+        recentlyOpened = false; // Makes sure items available in shop don't get updated every time shop is opened
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (canOpenShop && Input.GetKeyDown(KeyCode.E) && !Player.instance.movementDisabled && !ShopManager.instance.shopMenu.activeInHierarchy)
@@ -46,8 +44,7 @@ public class Shopkeeper : MonoBehaviour
         }
     }
 
-
-    public List<ItemsManager> GenerateShopkeeperItems(List<ItemsManager> items)
+    public List<ItemsManager> GenerateShopkeeperItems(List<ItemsManager> items) //Creates list of random shop items chosen from available items
     {
         List<ItemsManager> randomItems = new List<ItemsManager>();
 

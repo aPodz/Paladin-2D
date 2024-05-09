@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
 
     public string playerTransition;
     public bool movementDisabled = false;
-    // Start is called before the first frame update
+
     void Start()
     {
         if (instance != null && instance != this)
@@ -31,8 +31,7 @@ public class Player : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    void Update() //Player movement controls
     {
         float horizontalMovement = Input.GetAxisRaw("Horizontal");
         float verticalMovement = Input.GetAxisRaw("Vertical");

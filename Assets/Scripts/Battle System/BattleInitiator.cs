@@ -10,19 +10,6 @@ public class BattleInitiator : MonoBehaviour
     [SerializeField] bool questObjective;
     public string questToComplete;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -33,12 +20,12 @@ public class BattleInitiator : MonoBehaviour
             }
             else
             {
-                
+                //Might be used later for some pre-battle dialog/effects
             }
         }
     }
 
-    private IEnumerator StartBattleCoroutine()
+    private IEnumerator StartBattleCoroutine() //Starts the battle that is set up in the inspector
     {
         MenuManager.instance.FadeImage();
         AudioManager.instance.StopMusic();
@@ -48,8 +35,8 @@ public class BattleInitiator : MonoBehaviour
         BattleManager.instance.itemsRewarded = battleToStart[0].rewardedItems;
         BattleManager.instance.XPRewardAmount = battleToStart[0].XPReward;
 
-        //BattleRewards.instance.completeQuest = questObjective;
-        //BattleRewards.instance.questToComplete = questToComplete;
+        //BattleRewards.instance.completeQuest = questObjective; - will be used later
+        //BattleRewards.instance.questToComplete = questToComplete; - will be used later
 
         yield return new WaitForSeconds(2);
 

@@ -8,17 +8,10 @@ public class Inventory : MonoBehaviour
     private List<ItemsManager> itemsList;
     public static Inventory instance;
 
-    // Start is called before the first frame update
     void Start()
     {
         instance = this;
         itemsList = new List<ItemsManager>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void AddItem(ItemsManager item)
@@ -45,8 +38,7 @@ public class Inventory : MonoBehaviour
         else
         {
             itemsList.Add(item);
-        }
-        
+        }       
     }
 
     public void RemoveItem(ItemsManager item)

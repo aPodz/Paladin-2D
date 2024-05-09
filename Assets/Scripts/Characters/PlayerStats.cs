@@ -36,9 +36,6 @@ public class PlayerStats : MonoBehaviour
 
     public int baseHP, baseMana, baseStrength;
 
-
-
-    // Start is called before the first frame update
     void Start()
     {
         instance = this;
@@ -51,12 +48,6 @@ public class PlayerStats : MonoBehaviour
             xpPerLevel[i] = baseLevelXP * i;
         }
         DontDestroyOnLoad(this);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public void AddXP(int addedXP)

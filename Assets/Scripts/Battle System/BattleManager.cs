@@ -1,5 +1,5 @@
 using JetBrains.Annotations;
-//using System;
+//using System; - commented because of some conflicts with Unity
 using System.Collections;
 using System.Collections.Generic;
 using System.Net;
@@ -11,10 +11,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Linq;
 
-
-
 public class BattleManager : MonoBehaviour
-{
+{    
     public static BattleManager instance;
     private bool isBattleActive;
 
@@ -60,14 +58,13 @@ public class BattleManager : MonoBehaviour
     private bool canRun;
     private bool attackOnHold;
 
-    // Start is called before the first frame update
+
     void Start()
     {
             instance = this;      
     }
 
-    // Update is called once per frame
-    void Update()
+    void Update() //Disables "Actions" panel in battle scene
     {
         if (!attackOnHold)
         {
@@ -75,7 +72,7 @@ public class BattleManager : MonoBehaviour
         }      
     }
 
-    public void StartBattle(string[] enemiesToSpawn, bool canRunAway)
+    public void StartBattle(string[] enemiesToSpawn, bool canRunAway) //creates battle characters, adds enemies set in initiator, starts battle
     {
         if (!isBattleActive)
         {
@@ -92,7 +89,7 @@ public class BattleManager : MonoBehaviour
         }      
     }
 
-    private void AddEnemies(string[] enemiesToSpawn)
+    private void AddEnemies(string[] enemiesToSpawn) //adds enemies based on enemy set in initiator inspector
     {
         for (int i = 0; i < enemiesToSpawn.Length; i++)
         {
@@ -117,7 +114,7 @@ public class BattleManager : MonoBehaviour
         }
     }
 
-    private void AddBattleCharacters()
+    private void AddBattleCharacters() //Adds battle characters based on player stats array
     {
         for (int i = 0; i < GameManager.instance.GetPlayerStats().Length; i++)
         {
@@ -142,7 +139,7 @@ public class BattleManager : MonoBehaviour
         }
     }
 
-    private void ImportStats(int i)
+    private void ImportStats(int i) //imports stats to battle characters
     {
         PlayerStats player = GameManager.instance.GetPlayerStats()[i];
 
@@ -189,7 +186,7 @@ public class BattleManager : MonoBehaviour
         UpdateBattle();
     }
 
-    private void UpdateBattle()
+    private void UpdateBattle() //Checks if some or all characters/enemies are dead
     {
         bool allEnemiesDead = true;
         bool allPlayersDead = true;
@@ -227,12 +224,10 @@ public class BattleManager : MonoBehaviour
                     attackOnHold = false;
                 }
             }
-
         }
 
         if (allPlayersDead || allEnemiesDead)
-        {
-            
+        {          
             if (allPlayersDead)
             {
                 StartCoroutine(GameOverCoroutine());
@@ -240,8 +235,7 @@ public class BattleManager : MonoBehaviour
             else
             {
                 StartCoroutine(EndBattleCoroutine());
-            }
-            
+            }           
         }
         else
         {
@@ -274,11 +268,10 @@ public class BattleManager : MonoBehaviour
         NextTurn();
     }
 
-    private void EnemyAttack()
+    private void EnemyAttack() //Enemy attacks random available player with random available ability
     {
         List<int> players = new List<int>();
         
-
         for (int i = 0; i < activeCharacters.Count; i++) 
         {
             if (activeCharacters[i].IsCharacterAPlayer() && activeCharacters[i].currentHP > 0)
@@ -313,7 +306,7 @@ public class BattleManager : MonoBehaviour
 
     }
 
-    private void CheckUIHolder()
+    private void CheckUIHolder() // Hides/shows actions panel based on who is on turn
     {
         if (isBattleActive)
         {
@@ -332,19 +325,15 @@ public class BattleManager : MonoBehaviour
         }
     }
 
-    private void DealDamage(int characterToAttack, int abilityPower)
-    {
-        
+    private void DealDamage(int characterToAttack, int abilityPower) //Deals damage based on multiple variables
+    {       
         float attackPower = activeCharacters[currentTurn].strength + activeCharacters[currentTurn].attackPower + activeCharacters[currentTurn].weaponPower;
         float defenceAmount = activeCharacters[characterToAttack].armor + activeCharacters[characterToAttack].armorDef;
 
         float damageAmount = (attackPower / defenceAmount) * abilityPower * Random.Range(0.8f, 1.2f);
         int damageDealt = (int)damageAmount;
 
-        damageDealt = CriticalChance(damageDealt);
-        Debug.Log(activeCharacters[currentTurn].name + " dealt " + damageDealt + " to " + activeCharacters[characterToAttack]);
-
-
+        damageDealt = CriticalChance(damageDealt);        
 
         activeCharacters[characterToAttack].TakeDamage(damageDealt);
 
@@ -369,7 +358,7 @@ public class BattleManager : MonoBehaviour
         }
     }
 
-    public void UpdateCharacterStats()
+    public void UpdateCharacterStats() //Updates stats in the UI
     {
         for (int i = 0; i < characterNameText.Length; i++)
         {
@@ -414,9 +403,8 @@ public class BattleManager : MonoBehaviour
         }
     }
 
-    public void PlayerAttack(string abilityName)
-    {
-        
+    public void PlayerAttack(string abilityName) //Attacks enemy with a chosen ability
+    {     
         int enemyTarget = GameManager.instance.GetPlayerStats().Length;
         int abilityPower = 0;
         
@@ -496,8 +484,6 @@ public class BattleManager : MonoBehaviour
             battleNotification.Activate();
             runButton.SetActive(false);
         }
-
-
     }
 
     public void UpdateInventory()

@@ -4,10 +4,9 @@ using TMPro;
 using UnityEngine;
 
 public class Notification : MonoBehaviour
-{
+{   
     [SerializeField] float notificationUptime;
     [SerializeField] TextMeshProUGUI notificationText;
-
     
     public void Text(string text)
     {

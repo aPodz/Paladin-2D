@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class BattleRewards : MonoBehaviour
 {
-
     public static BattleRewards instance;
 
     [SerializeField] TextMeshProUGUI XPText;
@@ -16,19 +15,10 @@ public class BattleRewards : MonoBehaviour
     [SerializeField] Image[] awardedItems;
     public bool completeQuest;
     public string questToComplete;
-    // Start is called before the first frame update
+
     void Start()
     {
         instance = this;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            OpenRewardPanel(XPReward, rewardedItems);
-        }
     }
 
     public void OpenRewardPanel(int xp, ItemsManager[] items)

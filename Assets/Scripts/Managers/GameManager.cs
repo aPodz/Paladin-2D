@@ -18,9 +18,6 @@ public class GameManager : MonoBehaviour
 
     public int currentCoins;
 
-    
-
-    // Start is called before the first frame update
     void Start()
     {
 
@@ -34,14 +31,13 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
 
-        playerStats = FindObjectsOfType<PlayerStats>().OrderBy(z => z.transform.position.z).ToArray();
+        playerStats = FindObjectsOfType<PlayerStats>().OrderBy(z => z.transform.position.z).ToArray(); //Finds characters with assigned PlayerStats script and sorts them
     }
 
-    // Update is called once per frame
-    void Update()
+    void Update() //disables movement if any UI is active
     {
         if (gameMenuOpen || dialogBoxOpen || shopOpen || battleActive)
-        {
+        {           
             Player.instance.movementDisabled = true;
         }
         else
@@ -202,6 +198,8 @@ public class GameManager : MonoBehaviour
 
     public void ResetPlayerStats()
     {
+        gameMenuOpen = false; //To enable movement when going from game to main menu then to game again
+
         for (int i = 0; i < playerStats.Length; i++)
         {
             playerStats[i].maxHP = playerStats[i].baseHP;

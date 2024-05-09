@@ -7,7 +7,6 @@ public class ItemAssets : MonoBehaviour
     public static ItemAssets instance;
     [SerializeField] ItemsManager[] itemsAvailable;
 
-    // Start is called before the first frame update
     void Start()
     {
         if (instance != null && instance != this)
@@ -19,7 +18,6 @@ public class ItemAssets : MonoBehaviour
             instance = this;
         }
     }
-
 
     public ItemsManager GetItemAsset(string itemToGet)
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemsManager : MonoBehaviour
 {
-    public enum ItemType { Item, Weapon, Armor}
+    public enum ItemType { Item, Weapon, Armor }
     public ItemType itemType;
     public enum EffectType { HP, Mana, Strength, AP }
     public EffectType effectType;
@@ -20,12 +20,7 @@ public class ItemsManager : MonoBehaviour
     public int amount;
     public int amountInInventory;
 
-    private void Start()
-    {
-        
-    }
-
-    public void UseItem(int characterToUse)
+    public void UseItem(int characterToUse) //Uses item based on it's itemType (equipment or consumable)
     {
         PlayerStats selectedCharacter = GameManager.instance.GetPlayerStats()[characterToUse];
 
@@ -71,13 +66,12 @@ public class ItemsManager : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) //Adds item to inventory if collected
     {
         if (collision.CompareTag("Player"))
         {            
             Inventory.instance.AddItem(this);
-            SelfDestruct();
-            
+            SelfDestruct();         
         }
     }
 

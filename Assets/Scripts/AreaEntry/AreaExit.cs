@@ -11,19 +11,7 @@ public class AreaExit : MonoBehaviour
     [SerializeField] string transitionArea;
     [SerializeField] bool instantTransition;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) //Makes sure Player enters scene at the correct entry        
     {
         if (!Player.instance.movementDisabled)
         {
@@ -31,8 +19,7 @@ public class AreaExit : MonoBehaviour
             {
                 if (!instantTransition)
                 {
-                    Player.instance.playerTransition = transitionArea;
-                    MenuManager.instance.FadeImage();
+                    Player.instance.playerTransition = transitionArea;                   
                     StartCoroutine(LoadSceneCoroutine());                   
                 }
                 else
@@ -40,13 +27,13 @@ public class AreaExit : MonoBehaviour
                     Player.instance.playerTransition = transitionArea;
                     SceneManager.LoadScene(sceneToLoad);                   
                 }
-
             }
         }             
     }
 
     IEnumerator LoadSceneCoroutine()
-    {        
+    {
+        MenuManager.instance.FadeImage();
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(sceneToLoad);
     }

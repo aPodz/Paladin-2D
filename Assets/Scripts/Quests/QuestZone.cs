@@ -8,15 +8,9 @@ public class QuestZone : MonoBehaviour
     [SerializeField] bool markAsComplete;
     [SerializeField] bool markOnEnter;
   
-
     public bool deactivateOnMark;
 
-    private void Update()
-    {
-
-    }
-
-    public void MarkQuest()
+    public void MarkQuest() //Marks quest complete/incomplete when triggered
     {
         if (markAsComplete)
         {

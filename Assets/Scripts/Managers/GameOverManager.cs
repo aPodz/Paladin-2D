@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         AudioManager.instance.PlayBackgroundMusic(6);       
@@ -13,20 +12,20 @@ public class GameOverManager : MonoBehaviour
         BattleManager.instance.gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void GoToMainMenu()
-    {        
+    {
+        StartCoroutine(LoadSceneCoroutine());
         SceneManager.LoadScene("MainMenu");
     }
 
     public void LoadLastSave()
     {       
         SceneManager.LoadScene("LoadingScene");      
+    }
+    private IEnumerator LoadSceneCoroutine()
+    {
+        MenuManager.instance.FadeImage();
+        yield return new WaitForSeconds(1);
     }
 
 

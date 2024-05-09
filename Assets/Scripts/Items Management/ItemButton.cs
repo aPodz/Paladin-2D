@@ -6,7 +6,6 @@ public class ItemButton : MonoBehaviour
 {
     public ItemsManager itemOnButton;
 
-
     public void ButtonPress()
     {
         if (MenuManager.instance.menu.activeInHierarchy)
@@ -16,7 +15,6 @@ public class ItemButton : MonoBehaviour
 
             MenuManager.instance.activeItem = itemOnButton;
         }
-
 
         if (ShopManager.instance.shopMenu.activeInHierarchy)
         {

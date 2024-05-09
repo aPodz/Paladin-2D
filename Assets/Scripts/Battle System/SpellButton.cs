@@ -12,18 +12,6 @@ public class SpellButton : MonoBehaviour
     public TextMeshProUGUI spellCostText;
     public Image spellIcon;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void PressButton()
     {
         if (BattleManager.instance.ActiveCharacters().currentMana >= spellCost)

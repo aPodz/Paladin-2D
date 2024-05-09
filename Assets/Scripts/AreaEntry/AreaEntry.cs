@@ -5,18 +5,13 @@ using UnityEngine;
 public class AreaEntry : MonoBehaviour
 {
     public string transitionAreaName;
-    // Start is called before the first frame update
-    void Start()
+
+    void Start() 
+    //Sets player position to the area entrance position
     {
         if (transitionAreaName == Player.instance.playerTransition) 
         {
             Player.instance.transform.position = transform.position;      
         }       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

@@ -4,7 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class QuestManager : MonoBehaviour
+public class QuestManager : MonoBehaviour // Work in progress, quests are not used in game yet
 {
     [SerializeField] string[] questNames;
     [SerializeField] bool[] questMarkers;
@@ -12,14 +12,12 @@ public class QuestManager : MonoBehaviour
     public static QuestManager instance;
     public GameObject questPanel;
     public TextMeshProUGUI questText;
-    // Start is called before the first frame update
     void Start()
     {
         instance = this;
         questMarkers = new bool[questNames.Length];       
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))

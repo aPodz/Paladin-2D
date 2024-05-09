@@ -12,5 +12,4 @@ public class BattleMoves
     public int manaCost;
     public AttackEffect effect;
     public Sprite spellIcon;
-
 }

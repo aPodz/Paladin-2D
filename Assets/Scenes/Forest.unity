@@ -427,6 +427,99 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
+--- !u!1 &140854169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 140854171}
+  - component: {fileID: 140854170}
+  m_Layer: 0
+  m_Name: SceneBounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!68 &140854170
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140854169}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 11.497101, y: -0.18601418}
+  - {x: 34.816517, y: -0.30284882}
+  - {x: 21.770983, y: 14.754976}
+  - {x: 22.557232, y: 20.074902}
+  - {x: 33.124065, y: 31.949959}
+  - {x: 32.19799, y: 36.423523}
+  - {x: 17.548286, y: 51.584274}
+  - {x: 35.43817, y: 68.83685}
+  - {x: 16.68298, y: 68.83685}
+  - {x: 8.007674, y: 54.378002}
+  - {x: 21.309813, y: 38.184097}
+  - {x: 15.950799, y: 32.665115}
+  - {x: 10.83174, y: 37.064304}
+  - {x: 3.7930317, y: 36.66438}
+  - {x: 6.352564, y: 31.38535}
+  - {x: 4.432919, y: 27.226116}
+  - {x: 10.619476, y: 21.786215}
+  - {x: 13.49942, y: 23.066193}
+  - {x: 15.312723, y: 14.213024}
+  - {x: 9.979487, y: 9.199782}
+  - {x: 12.508495, y: 3.931017}
+  - {x: 11.138617, y: -0.17862129}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!4 &140854171
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140854169}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.9, y: -23.8, z: 0.049860124}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &384576397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1120,3 +1213,4 @@ SceneRoots:
   - {fileID: 532165423}
   - {fileID: 2064863991}
   - {fileID: 1901851619}
+  - {fileID: 140854171}

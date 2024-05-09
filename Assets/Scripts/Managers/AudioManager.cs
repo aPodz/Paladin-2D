@@ -7,7 +7,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource[] SFX, backgroundMusic;
     public static AudioManager instance;
 
-    // Start is called before the first frame update
     void Start()
     {
         if (instance != null && instance != this)
@@ -19,12 +18,6 @@ public class AudioManager : MonoBehaviour
             instance = this;
         }
         DontDestroyOnLoad(gameObject);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public void PlaySFX(int trackToPlay)

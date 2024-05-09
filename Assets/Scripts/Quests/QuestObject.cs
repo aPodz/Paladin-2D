@@ -8,23 +8,14 @@ public class QuestObject : MonoBehaviour
     [SerializeField] string questToCheck;
     [SerializeField] bool activateIfComplete;
 
-
-    private void Update()
-    {
-
-    }
-
-    public void IsQuestCompleted()
+    public void IsQuestCompleted() // Activates/Deactivates game object in certain quest is completed
     {
         if (QuestManager.instance.CheckCompletion(questToCheck))
         {
             for (int i = 0; i < objectToActivate.Length; i++)
             {
                 objectToActivate[i].SetActive(activateIfComplete);
-            }
-            
+            }           
         }
     }
-
-
 }

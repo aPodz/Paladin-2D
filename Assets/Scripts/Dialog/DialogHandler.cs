@@ -15,14 +15,7 @@ public class DialogHandler : MonoBehaviour
     [SerializeField] bool dialogFinished;
     public GameObject dialogTrigger;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
+    void Update() //Starts dialog either automatcally or on E key if dialog isn't autoActive, marks quest if shouldActivateQuest is true
     {
         if  (!DialogController.instance.isDialogBoxActive() && !MenuManager.instance.menu.activeInHierarchy)
         {  
