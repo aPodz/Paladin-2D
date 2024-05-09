@@ -116,14 +116,20 @@ public class ShopManager : MonoBehaviour
 
     public void BuyItem()
     {
+        
         if (selectedItem != null && GameManager.instance.currentCoins >= selectedItem.itemValue )
         {
+            AudioManager.instance.PlaySFX(0);
             GameManager.instance.currentCoins -= selectedItem.itemValue;
             Inventory.instance.AddItem(selectedItem);
             itemsForSale.Remove(selectedItem);
 
             currentCoinText.text = "Coins: " + GameManager.instance.currentCoins; 
             ResetActive();                      
+        }
+        else
+        {
+            AudioManager.instance.PlaySFX(1);
         }
         UpdateShop(itemBuyParent, itemsForSale);
         OpenBuyPanel();
@@ -133,6 +139,7 @@ public class ShopManager : MonoBehaviour
     {
         if (selectedItem)
         {
+            AudioManager.instance.PlaySFX(0);
             GameManager.instance.currentCoins += selectedItem.itemValue;
             Inventory.instance.RemoveItem(selectedItem);
             itemsForSale.Add(selectedItem);
@@ -141,6 +148,10 @@ public class ShopManager : MonoBehaviour
             ResetActive();
 
             OpenSellPanel();
-        }       
+        }   
+        else
+        {
+            AudioManager.instance.PlaySFX(1);
+        }
     }
 }

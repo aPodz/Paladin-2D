@@ -24,7 +24,7 @@ public class ItemsManager : MonoBehaviour
     {
         PlayerStats selectedCharacter = GameManager.instance.GetPlayerStats()[characterToUse];
 
-        AudioManager.instance.PlaySFX(15);
+        AudioManager.instance.PlaySFX(2);
         if (itemType == ItemType.Item)
         {          
             if (effectType == EffectType.HP)
