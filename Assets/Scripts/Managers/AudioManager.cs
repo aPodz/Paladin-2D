@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] AudioSource[] SFX, backgroundMusic;
+    [SerializeField] AudioSource[] SFX, backgroundMusic, battleMusic, battleSFX;
     public static AudioManager instance;
 
     void Start()
@@ -27,6 +27,14 @@ public class AudioManager : MonoBehaviour
             SFX[trackToPlay].Play();
         }
     }
+    
+    public void PlayBattleSFX(int trackToPlay)
+    {
+        if (trackToPlay < battleSFX.Length)
+        {
+            battleSFX[trackToPlay].Play();
+        }
+    }
 
     public void PlayBackgroundMusic(int trackToPlay)
     {
@@ -38,11 +46,24 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void PlayBattleMusic(int trackToPlay)
+    {
+        if (trackToPlay < battleMusic.Length)
+        {
+            battleMusic[trackToPlay].Play();
+        }
+    }
+
     public void StopMusic()
     {
         foreach (AudioSource music in backgroundMusic)
         {
             music.Stop();
         }
+        foreach (AudioSource music in battleMusic)
+        {
+            music.Stop();
+        }
+
     }
 }

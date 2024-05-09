@@ -41,7 +41,7 @@ public class BattleInitiator : MonoBehaviour
         yield return new WaitForSeconds(2);
 
         MenuManager.instance.FadeOut();
-        AudioManager.instance.PlayBackgroundMusic(battleToStart[0].battleMusic);
+        AudioManager.instance.PlayBattleMusic(battleToStart[0].battleMusic);
 
         BattleManager.instance.StartBattle(battleToStart[0].enemies, canRunAway);
        

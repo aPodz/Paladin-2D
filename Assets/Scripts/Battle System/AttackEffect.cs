@@ -9,7 +9,7 @@ public class AttackEffect : MonoBehaviour
 
     void Start()
     {
-        AudioManager.instance.PlaySFX(AttacksSFX);
+        AudioManager.instance.PlayBattleSFX(AttacksSFX);
     }
 
     void Update()

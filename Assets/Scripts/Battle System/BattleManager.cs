@@ -57,6 +57,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField] GameObject runButton;
     private bool canRun;
     private bool attackOnHold;
+    public bool battleEnding;
 
 
     void Start()
@@ -602,9 +603,9 @@ public class BattleManager : MonoBehaviour
         }
         else
         {
-            BattleRewards.instance.OpenRewardPanel(XPRewardAmount, itemsRewarded);
+            BattleRewards.instance.OpenRewardPanel(XPRewardAmount, itemsRewarded);                    
         }
-
+        battleEnding = true;
     }
 
     private void DestroyBattleCharacters()
