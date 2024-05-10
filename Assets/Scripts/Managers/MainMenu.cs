@@ -22,7 +22,8 @@ public class MainMenu : MonoBehaviour
 
     public void NewGameButton()
     {
-        GameManager.instance.ResetPlayerStats();       
+        GameManager.instance.ResetPlayerStats();
+        QuestManager.instance.ResetQuests();
         StartCoroutine(LoadSceneCoroutine());
         SceneManager.LoadScene(newGameScene);
         Player.instance.transform.position = new Vector3(-50, 40, 1);       

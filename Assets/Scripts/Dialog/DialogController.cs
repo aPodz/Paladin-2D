@@ -27,9 +27,10 @@ public class DialogController : MonoBehaviour
     void Update()
     {
         if (dialogBox.activeInHierarchy)
-        {               
-            if (Input.GetKeyDown(KeyCode.E))
-            {                
+        {          
+            if (Input.GetButtonDown("Fire1"))
+            {
+                
                 if (!dialogJustStarted)
                 {
                     currentLine++;
@@ -41,13 +42,15 @@ public class DialogController : MonoBehaviour
                         if(shouldMarkQuest)
                         {
                             shouldMarkQuest = false;
-                            if(markQuestComplete)
+                            if (markQuestComplete)
                             {
                                 QuestManager.instance.MarkQuestComplete(questToMark);
                             }
+                            else
                             {
                                 QuestManager.instance.MarkQuestIncomplete(questToMark);
                             }
+                            
                         }
                     }
                     else
@@ -65,7 +68,7 @@ public class DialogController : MonoBehaviour
     }
 
     public void ActivateDialog(string[] newLines)
-    {
+    {      
         dialogLines = newLines;
         currentLine = 0;
 
@@ -85,15 +88,14 @@ public class DialogController : MonoBehaviour
         if (dialogLines[currentLine].StartsWith("#"))
         {
             nameText.text = dialogLines[currentLine].Replace("#", "");
-            currentLine++;
+            currentLine++;           
         }
-
     }
 
     public void ActivateQuest(string questName, bool markComplete)
     {
         questToMark = questName;
         markQuestComplete = markComplete;
-        shouldMarkQuest = true;
+        shouldMarkQuest = true;       
     }
 }

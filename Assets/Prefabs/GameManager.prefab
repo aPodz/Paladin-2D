@@ -52,6 +52,7 @@ MonoBehaviour:
   gameMenuOpen: 0
   dialogBoxOpen: 0
   shopOpen: 0
+  battleActive: 0
   currentCoins: 200
 --- !u!114 &9218971694286615598
 MonoBehaviour:
@@ -79,11 +80,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questNames:
   - 
-  - Find A Map
-  - Get A Sword
-  - TestQuest
-  - TestQuest2
+  - Get To The Village
+  - Talk To Arathos
+  - Visit The Blacksmith
+  - Visit The Tavern
+  - Go To The Forest
+  - Go To The Temple
+  - Defeat The Temple Guard
+  - Defeat The Undead Knight
+  - Defeat The Unholy Priest
+  - Defeat The Necromancer
+  - Temple Entrance Closed
+  - Temple Entrance Open
   questMarkers: 
+  questPanel: {fileID: 0}
+  questText: {fileID: 0}
 --- !u!114 &1412338147732646400
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -18,15 +18,6 @@ public class QuestManager : MonoBehaviour // Work in progress, quests are not us
         questMarkers = new bool[questNames.Length];       
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            ShowActiveQuest();
-        }
-        
-    }
-
     public void ShowActiveQuest()
     {
         for (int i = 0; i < questNames.Length; i++)
@@ -35,6 +26,14 @@ public class QuestManager : MonoBehaviour // Work in progress, quests are not us
             {
                 questText.text = questNames[i]; 
             }
+        }
+    }
+
+    public void ResetQuests()
+    {
+        for (int i = 0; i < questNames.Length; ++i)
+        {
+            MarkQuestIncomplete(questNames[i]);
         }
     }
 
@@ -81,7 +80,6 @@ public class QuestManager : MonoBehaviour // Work in progress, quests are not us
     {
         int questNumberToCheck = GetQuestNumber(questToMark);
         questMarkers[questNumberToCheck] = true;
-
         UpdateQuestObjects();
     }
     

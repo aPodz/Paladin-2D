@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
         SavePlayerPosition();
         SavePlayerStats();
         SavePlayerItems();
+        QuestManager.instance.SaveQuestData();
 
         PlayerPrefs.SetString("Current_Scene", SceneManager.GetActiveScene().name);
 
@@ -67,6 +68,7 @@ public class GameManager : MonoBehaviour
         LoadPlayerPosition();
         LoadPlayerStats();
         LoadPlayerItems();
+        QuestManager.instance.LoadQuestData();
     }
 
     private static void SavePlayerItems()

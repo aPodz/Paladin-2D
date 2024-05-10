@@ -18,9 +18,10 @@ public class DialogHandler : MonoBehaviour
     void Update() //Starts dialog either automatcally or on E key if dialog isn't autoActive, marks quest if shouldActivateQuest is true
     {
         if  (!DialogController.instance.isDialogBoxActive() && !MenuManager.instance.menu.activeInHierarchy)
-        {  
+        {             
             if (autoActivate && canActivateDialog && !dialogFinished)
             {
+                
                 DialogController.instance.dialogJustStarted = false;
                 DialogController.instance.ActivateDialog(lines);
                 autoActivate = false;
@@ -28,18 +29,20 @@ public class DialogHandler : MonoBehaviour
             }
             else if (!autoActivate && Input.GetKeyDown(KeyCode.E) && canActivateDialog && !dialogFinished)
             {
+              
                 DialogController.instance.dialogJustStarted = false;
                 DialogController.instance.ActivateDialog(lines);
                 dialogFinished = true;
             }
 
             if (shouldActivateQuest)
-            {
-                DialogController.instance.ActivateQuest(questToMark, markAsComplete);
+            {              
+                DialogController.instance.ActivateQuest(questToMark, markAsComplete);                
             }
+
             if (dialogFinished)
             {
-                dialogTrigger.gameObject.SetActive(false);
+                dialogTrigger.SetActive(false);
             }
         }
     }

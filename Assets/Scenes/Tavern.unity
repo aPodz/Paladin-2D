@@ -1062,6 +1062,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: questObjective
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: questToComplete
+      value: Defeat The Necromancer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
       propertyPath: battleToStart.Array.data[0].XPReward
       value: 500
       objectReference: {fileID: 0}
@@ -1131,9 +1139,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7121105714566649269, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1194702289}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8848906826105477712, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 940999286}
   m_SourcePrefab: {fileID: 100100000, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+--- !u!4 &919695780 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7121105714566649269, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+  m_PrefabInstance: {fileID: 919695779}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &928969273 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4665873975956894938, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
@@ -1144,6 +1163,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8848906826105477712, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
   m_PrefabInstance: {fileID: 919695779}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &940999286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940999285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af2c4467f2f58a946afd9206fb4e0775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToActivate:
+  - {fileID: 940999285}
+  questToCheck: Defeat The Necromancer
+  activateIfComplete: 0
 --- !u!1001 &956077616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1739,7 +1774,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 919695780}
     m_Modifications:
     - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: questToMark
@@ -1778,12 +1813,16 @@ PrefabInstance:
       value: DialogTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -0.7900001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.42
+      value: -3.0700002
       objectReference: {fileID: 0}
     - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.54
+      value: -11.0199995
       objectReference: {fileID: 0}
     - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1825,6 +1864,11 @@ PrefabInstance:
 --- !u!1 &1194702288 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4813932848674459419, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+  m_PrefabInstance: {fileID: 1194702287}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1194702289 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
   m_PrefabInstance: {fileID: 1194702287}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1265170465
@@ -3095,5 +3139,4 @@ SceneRoots:
   - {fileID: 1547593082}
   - {fileID: 1382036723}
   - {fileID: 919695779}
-  - {fileID: 1194702287}
   - {fileID: 1151955714}

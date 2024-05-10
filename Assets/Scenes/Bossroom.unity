@@ -399,7 +399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5146435017231520012, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6330695302838667197, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
       propertyPath: m_AnchorMax.y
@@ -756,7 +756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
       propertyPath: battleToStart.Array.data[0].enemies.Array.data[0]
-      value: ???
+      value: Mysterious Wizard
       objectReference: {fileID: 0}
     - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
       propertyPath: battleToStart.Array.data[0].rewardedItems.Array.size
@@ -1145,7 +1145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7714115980048580029, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7772112839376296159, guid: 05e27b0ed75101a4f88105b5e635e3cd, type: 3}
       propertyPath: m_AnchorMax.x

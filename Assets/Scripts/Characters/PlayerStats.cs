@@ -43,7 +43,7 @@ public class PlayerStats : MonoBehaviour
         xpPerLevel = new int[maxLevel];
         xpPerLevel[1] = baseLevelXP;
 
-        for (int i = 2; i < xpPerLevel.Length; i++)
+        for (int i = 2; i < xpPerLevel.Length; i++) //Increases the amount of XP required for each level
         {
             xpPerLevel[i] = baseLevelXP * i;
         }
@@ -58,14 +58,14 @@ public class PlayerStats : MonoBehaviour
             currentXP -= xpPerLevel[playerLevel];
             playerLevel++;
 
-            if (playerLevel % 2 == 0)
+            if (playerLevel % 2 == 0) //Increases either MaxHP + Strength or MaxMana depending if level can be divided by 2
             {
-                maxHP += 20;
-                strength += 2;
+                maxHP += 100;
+                strength += 10;
             }
             else
             {
-                maxMana += 2;
+                maxMana += 100;
             }
 
             currentHP = maxHP;

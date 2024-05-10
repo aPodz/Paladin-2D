@@ -860,7 +860,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1989731091}
+    m_TransformParent: {fileID: 1650529147}
     m_Modifications:
     - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: questToMark
@@ -896,27 +896,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: m_LocalScale.x
-      value: -0.08535516
+      value: -0.8297597
       objectReference: {fileID: 0}
     - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.115045816
+      value: 0.9464099
       objectReference: {fileID: 0}
     - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.9653769
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.79
+      value: 0.6744747
       objectReference: {fileID: 0}
     - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.03
+      value: -9.547302
       objectReference: {fileID: 0}
     - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1185,6 +1185,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: questObjective
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: questToComplete
+      value: Defeat The Temple Guard
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
       propertyPath: battleToStart.Array.data[0].XPReward
       value: 500
       objectReference: {fileID: 0}
@@ -1258,7 +1266,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7121105714566649269, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
       insertIndex: -1
       addedObject: {fileID: 777395806}
-    m_AddedComponents: []
+    - targetCorrespondingSourceObject: {fileID: 7121105714566649269, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1216331443}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8848906826105477712, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1650529149}
   m_SourcePrefab: {fileID: 100100000, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
 --- !u!4 &1650529147 stripped
 Transform:
@@ -1270,6 +1284,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8848906826105477712, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
   m_PrefabInstance: {fileID: 1650529146}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1650529149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650529148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af2c4467f2f58a946afd9206fb4e0775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToActivate:
+  - {fileID: 1650529148}
+  questToCheck: Defeat The Temple Guard
+  activateIfComplete: 0
 --- !u!1001 &1912691660
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1468,17 +1498,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1302708395323862526, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1730462149169899358, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1216331443}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
---- !u!4 &1989731091 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1730462149169899358, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
-  m_PrefabInstance: {fileID: 1989731090}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

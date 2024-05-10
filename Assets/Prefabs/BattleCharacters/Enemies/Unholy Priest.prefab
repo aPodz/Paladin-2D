@@ -99,17 +99,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   attacksAvailable:
-  - Holy Smite
   - Necrotic Bolt
   - Dark Bite
-  characterName: ???
-  currentHP: 999999
-  maxHP: 999999
+  characterName: Mysterious Wizard
+  currentHP: 99999999
+  maxHP: 99999999
   currentMana: 9999
   maxMana: 9999
-  strength: 50
+  strength: 200
   armor: 30
-  attackPower: 50
+  attackPower: 200
   weaponPower: 50
   armorDef: 30
   isDead: 0

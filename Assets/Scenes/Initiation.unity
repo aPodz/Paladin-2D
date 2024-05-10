@@ -456,6 +456,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arathos
       objectReference: {fileID: 0}
+    - target: {fileID: 1218727445852375193, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1748099788118963439, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -526,6 +530,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Thorm
       objectReference: {fileID: 0}
+    - target: {fileID: 2669677112974512055, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4864797065409412951, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -544,6 +552,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6015114795221761, guid: 6431007cd3a6b08459f275746a8f311f, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 597183704558689020, guid: 6431007cd3a6b08459f275746a8f311f, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -586,6 +598,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3916394171732412468, guid: 6431007cd3a6b08459f275746a8f311f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6135765633488972288, guid: 6431007cd3a6b08459f275746a8f311f, type: 3}
+      propertyPath: m_Volume
+      value: 0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 6135765633488972288, guid: 6431007cd3a6b08459f275746a8f311f, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

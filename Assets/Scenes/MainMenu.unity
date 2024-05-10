@@ -1881,50 +1881,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 6663644447806951030, guid: 5b18eaf09db34cb49baa2a2e3df968ec, type: 3}
-      propertyPath: questNames.Array.size
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 6663644447806951030, guid: 5b18eaf09db34cb49baa2a2e3df968ec, type: 3}
-      propertyPath: questNames.Array.data[1]
-      value: Get To The Village
-      objectReference: {fileID: 0}
-    - target: {fileID: 6663644447806951030, guid: 5b18eaf09db34cb49baa2a2e3df968ec, type: 3}
-      propertyPath: questNames.Array.data[2]
-      value: Talk To Arathos
-      objectReference: {fileID: 0}
-    - target: {fileID: 6663644447806951030, guid: 5b18eaf09db34cb49baa2a2e3df968ec, type: 3}
-      propertyPath: questNames.Array.data[3]
-      value: Visit The Blacksmith
-      objectReference: {fileID: 0}
-    - target: {fileID: 6663644447806951030, guid: 5b18eaf09db34cb49baa2a2e3df968ec, type: 3}
-      propertyPath: questNames.Array.data[4]
-      value: Visit The Tavern
-      objectReference: {fileID: 0}
-    - target: {fileID: 6663644447806951030, guid: 5b18eaf09db34cb49baa2a2e3df968ec, type: 3}
-      propertyPath: questNames.Array.data[5]
-      value: Go To The Forest
-      objectReference: {fileID: 0}
-    - target: {fileID: 6663644447806951030, guid: 5b18eaf09db34cb49baa2a2e3df968ec, type: 3}
-      propertyPath: questNames.Array.data[6]
-      value: Talk To Arathos And Thorm
-      objectReference: {fileID: 0}
-    - target: {fileID: 6663644447806951030, guid: 5b18eaf09db34cb49baa2a2e3df968ec, type: 3}
-      propertyPath: questNames.Array.data[7]
-      value: Defeat The Temple Guard
-      objectReference: {fileID: 0}
-    - target: {fileID: 6663644447806951030, guid: 5b18eaf09db34cb49baa2a2e3df968ec, type: 3}
-      propertyPath: questNames.Array.data[8]
-      value: Defeat The Undead Knight
-      objectReference: {fileID: 0}
-    - target: {fileID: 6663644447806951030, guid: 5b18eaf09db34cb49baa2a2e3df968ec, type: 3}
-      propertyPath: questNames.Array.data[9]
-      value: Defeat The Unholy Priest
-      objectReference: {fileID: 0}
-    - target: {fileID: 6663644447806951030, guid: 5b18eaf09db34cb49baa2a2e3df968ec, type: 3}
-      propertyPath: questNames.Array.data[10]
-      value: Defeat The Necromancer
-      objectReference: {fileID: 0}
     - target: {fileID: 9219273874595982589, guid: 5b18eaf09db34cb49baa2a2e3df968ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

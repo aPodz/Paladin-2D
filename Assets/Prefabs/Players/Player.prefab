@@ -216,7 +216,7 @@ MonoBehaviour:
   currentMana: 300
   armor: 10
   strength: 30
-  attackPower: 50
+  attackPower: 80
   equippedWeaponName: 
   equippedArmorName: 
   weaponAP: 0

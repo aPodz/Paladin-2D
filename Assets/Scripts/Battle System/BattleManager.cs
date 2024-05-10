@@ -641,6 +641,7 @@ public class BattleManager : MonoBehaviour
         battleScene.SetActive(false);
         activeCharacters.Clear();
         currentTurn = 0;
+        GameManager.instance.battleActive = false;
 
         yield return new WaitForSeconds(2);
         MenuManager.instance.FadeOut();

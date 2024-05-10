@@ -366,9 +366,13 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: 1.1203246
       objectReference: {fileID: 0}
+    - target: {fileID: 3399102820246048158, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4455049120505306389, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: m_Name
-      value: TempleIn3Exit
+      value: TempleIn2Exit
       objectReference: {fileID: 0}
     - target: {fileID: 5544541734810951126, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: sceneToLoad
@@ -417,7 +421,7 @@ PrefabInstance:
       objectReference: {fileID: 1610432202}
     - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: lines.Array.size
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: lines.Array.data[0]
@@ -425,15 +429,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: lines.Array.data[1]
-      value: There seems to be another skeleton in our way
+      value: We're getting close to the tomb.
       objectReference: {fileID: 0}
     - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: lines.Array.data[2]
-      value: This guy looks almost like me! That's creepy.
+      value: I doubt the path from here will be as easy as it was.
       objectReference: {fileID: 0}
     - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: lines.Array.data[3]
-      value: 
+      value: '#Thorm'
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[4]
+      value: I heard some strange noises from that opening near the stairs.
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[5]
+      value: Can't be anything good.
       objectReference: {fileID: 0}
     - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       propertyPath: shouldActivateQuest
@@ -494,7 +506,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4813932848674459419, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1610432203}
   m_SourcePrefab: {fileID: 100100000, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
 --- !u!1001 &798430446
 PrefabInstance:
@@ -1038,6 +1053,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4813932848674459419, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
   m_PrefabInstance: {fileID: 560027550}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1610432203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610432202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af2c4467f2f58a946afd9206fb4e0775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToActivate:
+  - {fileID: 1610432202}
+  questToCheck: Defeat The Undead Knight
+  activateIfComplete: 0
 --- !u!1001 &1818051592
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -257,121 +257,6 @@ PolygonCollider2D:
       - {x: 5.12, y: -5.12}
       - {x: 5.12, y: 5.12}
   m_UseDelaunayMesh: 0
---- !u!1001 &473238134
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: questToMark
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: dialogTrigger
-      value: 
-      objectReference: {fileID: 473238135}
-    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: lines.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: lines.Array.data[0]
-      value: '#Thorm'
-      objectReference: {fileID: 0}
-    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: lines.Array.data[1]
-      value: Seems more like a cave than a temple.
-      objectReference: {fileID: 0}
-    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: lines.Array.data[2]
-      value: '#Arathos'
-      objectReference: {fileID: 0}
-    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: lines.Array.data[3]
-      value: It's been here since history can remember, I wonder what it looked like
-        before.
-      objectReference: {fileID: 0}
-    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: lines.Array.data[4]
-      value: '#Thorm'
-      objectReference: {fileID: 0}
-    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: lines.Array.data[5]
-      value: No time to waste now, we should keep going.
-      objectReference: {fileID: 0}
-    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: lines.Array.data[6]
-      value: Looks like the stairs lead deeper into the temple.
-      objectReference: {fileID: 0}
-    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: lines.Array.data[7]
-      value: '#Arathos'
-      objectReference: {fileID: 0}
-    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: lines.Array.data[8]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: shouldActivateQuest
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813932848674459419, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: m_Name
-      value: DialogTrigger
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 13.44
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 9.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.88
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.3801987
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.01619102
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.027681941
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.9243487
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -3.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -135.3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
---- !u!1 &473238135 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4813932848674459419, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-  m_PrefabInstance: {fileID: 473238134}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &486914430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -633,11 +518,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6989206773947584, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.17
+      value: 27.4
       objectReference: {fileID: 0}
     - target: {fileID: 6989206773947584, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.35
+      value: 28.06
       objectReference: {fileID: 0}
     - target: {fileID: 6989206773947584, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -685,7 +570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4455049120505306389, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5544541734810951126, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: sceneToLoad
@@ -701,11 +586,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7170738557100468659, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.64
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7170738557100468659, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.93
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 8509763245716718709, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: transitionAreaName
@@ -934,6 +819,96 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
+--- !u!1 &1362863674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1362863677}
+  - component: {fileID: 1362863676}
+  - component: {fileID: 1362863675}
+  m_Layer: 0
+  m_Name: ExitBlockCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1362863675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362863674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af2c4467f2f58a946afd9206fb4e0775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToActivate:
+  - {fileID: 1362863674}
+  questToCheck: Temple Entrance Closed
+  activateIfComplete: 1
+--- !u!68 &1362863676
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362863674}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -6.4883842, y: 0.12878227}
+  - {x: 11.060162, y: -0.12878036}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!4 &1362863677
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362863674}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.0000000017462298, w: 1}
+  m_LocalPosition: {x: 24.86, y: 24.98, z: -0.21801889}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1379550585
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1081,6 +1056,147 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
+--- !u!1001 &1456253570
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: questToMark
+      value: Temple Entrance Closed
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: dialogTrigger
+      value: 
+      objectReference: {fileID: 1456253571}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: markAsComplete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: '# '
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[1]
+      value: (You feel the ground shake and hear the temple entrance crumble)
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[2]
+      value: '#Arathos'
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[3]
+      value: Well, our way out is gone, great.
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[4]
+      value: '#Thorm'
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[5]
+      value: We'll find another way once we clear out the tomb.
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[6]
+      value: Let's get on with it, this place is creepy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[7]
+      value: '#Arathos'
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: lines.Array.data[8]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 409192924177026677, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: shouldActivateQuest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813932848674459419, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_Name
+      value: ExitBlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -0.7900002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 16.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.3801987
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.01619102
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.027681941
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.9243487
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -3.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889575420813551237, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -135.3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4813932848674459419, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1456253572}
+  m_SourcePrefab: {fileID: 100100000, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+--- !u!1 &1456253571 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4813932848674459419, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+  m_PrefabInstance: {fileID: 1456253570}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1456253572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456253571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af2c4467f2f58a946afd9206fb4e0775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToActivate:
+  - {fileID: 1362863674}
+  questToCheck: Temple Entrance Closed
+  activateIfComplete: 0
 --- !u!1 &1570986060
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,7 +1411,8 @@ SceneRoots:
   - {fileID: 583647605}
   - {fileID: 1419546668}
   - {fileID: 1576181265}
-  - {fileID: 473238134}
   - {fileID: 1570986063}
   - {fileID: 486914430}
   - {fileID: 736912545}
+  - {fileID: 1456253570}
+  - {fileID: 1362863677}

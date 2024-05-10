@@ -191,6 +191,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &135131087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135131082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af2c4467f2f58a946afd9206fb4e0775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToActivate:
+  - {fileID: 135131082}
+  questToCheck: Defeat The Undead Knight
+  activateIfComplete: 0
 --- !u!1 &224903323
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,7 +832,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6989206773947584, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -28.89
+      value: -28.5
       objectReference: {fileID: 0}
     - target: {fileID: 6989206773947584, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1014,6 +1030,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: questObjective
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      propertyPath: questToComplete
+      value: Defeat The Undead Knight
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
       propertyPath: battleToStart.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1108,6 +1132,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8848906826105477712, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
       insertIndex: -1
       addedObject: {fileID: 135131086}
+    - targetCorrespondingSourceObject: {fileID: 8848906826105477712, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 135131087}
   m_SourcePrefab: {fileID: 100100000, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
 --- !u!1001 &4753875153601811514
 PrefabInstance:

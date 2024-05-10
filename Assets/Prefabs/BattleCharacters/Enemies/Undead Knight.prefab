@@ -101,14 +101,14 @@ MonoBehaviour:
   attacksAvailable:
   - Undead Knight Slash
   characterName: Undead Knight
-  currentHP: 2000
-  maxHP: 2000
+  currentHP: 1000
+  maxHP: 1000
   currentMana: 300
   maxMana: 300
-  strength: 25
+  strength: 15
   armor: 15
   attackPower: 20
   weaponPower: 30
-  armorDef: 30
+  armorDef: 20
   isDead: 0
   deadSprite: {fileID: 0}
