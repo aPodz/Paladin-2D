@@ -719,7 +719,8 @@ Transform:
   m_LocalPosition: {x: -13.04, y: 19.92, z: 0.049860124}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1362863677}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &942671348
@@ -819,6 +820,56 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 513f9fd7bca066449bdb2f7c985631b6, type: 3}
+--- !u!1 &1274772112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1274772114}
+  - component: {fileID: 1274772113}
+  m_Layer: 0
+  m_Name: NPC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1274772113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274772112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af2c4467f2f58a946afd9206fb4e0775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToActivate:
+  - {fileID: 1274772112}
+  questToCheck: Temple Deeps Entered
+  activateIfComplete: 0
+--- !u!4 &1274772114
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274772112}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.0428772, y: 11.603619, z: 2.3150005}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1419546669}
+  - {fileID: 1576181266}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1362863674
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,11 +954,11 @@ Transform:
   m_GameObject: {fileID: 1362863674}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.0000000017462298, w: 1}
-  m_LocalPosition: {x: 24.86, y: 24.98, z: -0.21801889}
+  m_LocalPosition: {x: 37.9, y: 5.0599995, z: -0.267879}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 736912545}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1379550585
 PrefabInstance:
@@ -996,27 +1047,51 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4455049120505306389, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1379550587}
   m_SourcePrefab: {fileID: 100100000, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
+--- !u!1 &1379550586 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4455049120505306389, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
+  m_PrefabInstance: {fileID: 1379550585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1379550587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379550586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4395c4ebfd3835f46a9bdd2a69365665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questToMark: Temple Deeps Entered
+  markAsComplete: 1
+  markOnEnter: 1
+  deactivateOnMark: 0
 --- !u!1001 &1419546668
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1274772114}
     m_Modifications:
     - target: {fileID: 1730462149169899358, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.402667
+      value: 7.4455442
       objectReference: {fileID: 0}
     - target: {fileID: 1730462149169899358, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.852515
+      value: 0.2488966
       objectReference: {fileID: 0}
     - target: {fileID: 1730462149169899358, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2
+      value: -0.31500053
       objectReference: {fileID: 0}
     - target: {fileID: 1730462149169899358, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1024,15 +1099,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730462149169899358, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1730462149169899358, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1730462149169899358, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1730462149169899358, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1056,6 +1131,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
+--- !u!4 &1419546669 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1730462149169899358, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
+  m_PrefabInstance: {fileID: 1419546668}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1456253570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1175,6 +1255,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4813932848674459419, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1456253572}
+    - targetCorrespondingSourceObject: {fileID: 4813932848674459419, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1456253573}
   m_SourcePrefab: {fileID: 100100000, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
 --- !u!1 &1456253571 stripped
 GameObject:
@@ -1195,6 +1278,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToActivate:
   - {fileID: 1362863674}
+  questToCheck: Temple Entrance Closed
+  activateIfComplete: 1
+--- !u!114 &1456253573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456253571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af2c4467f2f58a946afd9206fb4e0775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToActivate:
+  - {fileID: 1456253571}
   questToCheck: Temple Entrance Closed
   activateIfComplete: 0
 --- !u!1 &1570986060
@@ -1271,19 +1370,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1274772114}
     m_Modifications:
     - target: {fileID: 859086029815299455, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.16
+      value: 5.202877
       objectReference: {fileID: 0}
     - target: {fileID: 859086029815299455, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.23
+      value: -6.3736186
       objectReference: {fileID: 0}
     - target: {fileID: 859086029815299455, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3
+      value: 0.68499947
       objectReference: {fileID: 0}
     - target: {fileID: 859086029815299455, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1291,15 +1390,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 859086029815299455, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 859086029815299455, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 859086029815299455, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 859086029815299455, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1327,6 +1426,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
+--- !u!4 &1576181266 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 859086029815299455, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
+  m_PrefabInstance: {fileID: 1576181265}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1619301588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1409,10 +1513,8 @@ SceneRoots:
   - {fileID: 942671348}
   - {fileID: 1379550585}
   - {fileID: 583647605}
-  - {fileID: 1419546668}
-  - {fileID: 1576181265}
   - {fileID: 1570986063}
   - {fileID: 486914430}
   - {fileID: 736912545}
   - {fileID: 1456253570}
-  - {fileID: 1362863677}
+  - {fileID: 1274772114}

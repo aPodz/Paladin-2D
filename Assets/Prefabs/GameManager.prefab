@@ -92,6 +92,9 @@ MonoBehaviour:
   - Defeat The Necromancer
   - Temple Entrance Closed
   - Temple Entrance Open
+  - Knight Room Entered
+  - Temple Deeps Entered
+  - Final Room Entered
   questMarkers: 
   questPanel: {fileID: 0}
   questText: {fileID: 0}

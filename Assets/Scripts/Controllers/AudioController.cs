@@ -28,6 +28,6 @@ public class AudioController : MonoBehaviour
     {
         BattleManager.instance.battleEnding = false;
         AudioManager.instance.StopMusic();
-        AudioManager.instance.PlayBackgroundMusic(musicToPlay);
+        AudioManager.instance.PlayBackgroundMusic(musicToPlay);       
     }
 }

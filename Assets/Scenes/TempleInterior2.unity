@@ -129,19 +129,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1352849421}
     m_Modifications:
     - target: {fileID: 859086029815299455, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.42
+      value: 9.63147
       objectReference: {fileID: 0}
     - target: {fileID: 859086029815299455, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.07
+      value: -10.944441
       objectReference: {fileID: 0}
     - target: {fileID: 859086029815299455, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3
+      value: -1.7457776
       objectReference: {fileID: 0}
     - target: {fileID: 859086029815299455, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
       propertyPath: m_LocalRotation.w
@@ -149,15 +149,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 859086029815299455, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 859086029815299455, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 859086029815299455, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 859086029815299455, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -185,6 +185,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
+--- !u!4 &82960765 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 859086029815299455, guid: f963caaec8acf214ba4d5fc8e108b725, type: 3}
+  m_PrefabInstance: {fileID: 82960764}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &299605729
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,8 +406,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4455049120505306389, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 456701142}
   m_SourcePrefab: {fileID: 100100000, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
+--- !u!1 &456701141 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4455049120505306389, guid: 208af02ab9e18cf49b434432220c1c4f, type: 3}
+  m_PrefabInstance: {fileID: 456701140}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &456701142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456701141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4395c4ebfd3835f46a9bdd2a69365665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questToMark: Knight Room Entered
+  markAsComplete: 1
+  markOnEnter: 1
+  deactivateOnMark: 0
 --- !u!1001 &560027550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -784,6 +813,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1352849419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1352849421}
+  - component: {fileID: 1352849420}
+  m_Layer: 0
+  m_Name: NPC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1352849420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352849419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af2c4467f2f58a946afd9206fb4e0775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToActivate:
+  - {fileID: 1352849419}
+  questToCheck: Knight Room Entered
+  activateIfComplete: 0
+--- !u!4 &1352849421
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352849419}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.21147, y: 10.874441, z: 4.7457776}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1527812148}
+  - {fileID: 82960765}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1394098320
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,19 +1003,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1352849421}
     m_Modifications:
     - target: {fileID: 1730462149169899358, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.05
+      value: 2.16147
       objectReference: {fileID: 0}
     - target: {fileID: 1730462149169899358, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.26
+      value: -11.134441
       objectReference: {fileID: 0}
     - target: {fileID: 1730462149169899358, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2
+      value: -2.7457776
       objectReference: {fileID: 0}
     - target: {fileID: 1730462149169899358, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -944,15 +1023,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730462149169899358, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1730462149169899358, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1730462149169899358, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1730462149169899358, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -980,6 +1059,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
+--- !u!4 &1527812148 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1730462149169899358, guid: 3c0383b94770d5945aad23c8a9ba44d2, type: 3}
+  m_PrefabInstance: {fileID: 1527812147}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1566978444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,9 +1227,8 @@ SceneRoots:
   - {fileID: 811721584}
   - {fileID: 798430446}
   - {fileID: 456701140}
-  - {fileID: 1527812147}
-  - {fileID: 82960764}
   - {fileID: 560027550}
   - {fileID: 1566978447}
   - {fileID: 850071179}
   - {fileID: 299605731}
+  - {fileID: 1352849421}

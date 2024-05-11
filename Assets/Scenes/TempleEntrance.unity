@@ -1211,7 +1211,7 @@ PrefabInstance:
     - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
       propertyPath: battleToStart.Array.data[0].rewardedItems.Array.data[0]
       value: 
-      objectReference: {fileID: 633110530338557799, guid: f96248c23704a0245b3f14bc2a21c27a, type: 3}
+      objectReference: {fileID: 653364829072687289, guid: 101ad1014ac5f084a9238c561856685e, type: 3}
     - target: {fileID: 5390548703225275885, guid: 3edcafaa7c700cd4f8cdb19489f24189, type: 3}
       propertyPath: battleToStart.Array.data[0].rewardedItems.Array.data[1]
       value: 
