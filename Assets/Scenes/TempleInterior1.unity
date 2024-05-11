@@ -611,6 +611,7 @@ GameObject:
   m_Component:
   - component: {fileID: 736912545}
   - component: {fileID: 736912544}
+  - component: {fileID: 736912546}
   m_Layer: 0
   m_Name: SceneBounds
   m_TagString: Untagged
@@ -723,6 +724,22 @@ Transform:
   - {fileID: 1362863677}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &736912546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736912543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af2c4467f2f58a946afd9206fb4e0775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToActivate:
+  - {fileID: 1362863674}
+  questToCheck: Temple Entrance Closed
+  activateIfComplete: 1
 --- !u!1001 &942671348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -880,7 +897,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1362863677}
   - component: {fileID: 1362863676}
-  - component: {fileID: 1362863675}
   m_Layer: 0
   m_Name: ExitBlockCollider
   m_TagString: Untagged
@@ -888,22 +904,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &1362863675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1362863674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af2c4467f2f58a946afd9206fb4e0775, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToActivate:
-  - {fileID: 1362863674}
-  questToCheck: Temple Entrance Closed
-  activateIfComplete: 1
 --- !u!68 &1362863676
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1254,9 +1254,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4813932848674459419, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1456253572}
-    - targetCorrespondingSourceObject: {fileID: 4813932848674459419, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1456253573}
   m_SourcePrefab: {fileID: 100100000, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
 --- !u!1 &1456253571 stripped
@@ -1264,22 +1261,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4813932848674459419, guid: a99225755ca10f742b9d2bd87a397971, type: 3}
   m_PrefabInstance: {fileID: 1456253570}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1456253572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1456253571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af2c4467f2f58a946afd9206fb4e0775, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToActivate:
-  - {fileID: 1362863674}
-  questToCheck: Temple Entrance Closed
-  activateIfComplete: 1
 --- !u!114 &1456253573
 MonoBehaviour:
   m_ObjectHideFlags: 0
