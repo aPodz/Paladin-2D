@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.U2D.Animation;
 using UnityEngine.SceneManagement;
 using System.Linq;
-using System.Buffers.Text;
+
 
 
 public class GameManager : MonoBehaviour
